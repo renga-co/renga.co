@@ -1,9 +1,11 @@
 ---
 title: Challenging The Myth of Social Media
 date: 2018-03-17
-tags:
-  - marketing
+cover: './media/L1050949.jpg'
+tags: marketing
 ---
+
+![](./media/L1050949.jpg)
 
 It’s 2018 and your business isn’t on Facebook?! You’re doomed.
 

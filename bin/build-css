@@ -1,0 +1,71 @@
+#!/usr/bin/env node
+
+const fs = require('mz/fs');
+const hibiscss = require('hibiscss').default;
+const kit = require('hibiscss/default');
+
+const styles = {
+  colors: {
+    white: '#fff',
+    geraldine: '#ff766a',
+    gentleGeraldine: '#eef9ff',
+    gray1: '#f2f2f2',
+    gray2: '#a9a9a9',
+    gray3: '#565656',
+    gray4: '#242424',
+    gray5: '#141414',
+    black: '#141414',
+  },
+  fontFamily: {
+    sans: 'adelle-sans, -apple-system, BlinkMacSystemFont, sans-serif',
+    mono: 'monospace',
+  },
+  fontSize: {
+    48: '48px',
+    36: '36px',
+    30: '30px',
+    24: '24px',
+    18: '18px',
+    16: '16px',
+    14: '14px',
+  },
+  fontWeight: {
+    normal: '400',
+    semibold: '600',
+  },
+  lineHeight: {
+    '1.25': 1.25,
+    '1.4': 1.4,
+    '1.5': 1.5,
+  },
+  letterSpacing: {
+    loose: '0.75px',
+    normal: '0px',
+  },
+  opacity: {
+    '0%': 0.0,
+    '25%': 0.25,
+    '50%': 0.5,
+    '60%': 0.6,
+    '75%': 0.75,
+    '100%': 1.0,
+  },
+  borderRadius: {
+    4: '4px',
+  },
+  spacing: [0, 8, 16, 24, 48, 64, 96],
+};
+
+const outputPath = './src/layouts/utilities.css';
+
+async function main() {
+  const css = hibiscss(kit(styles), { m: '768px' });
+  await fs.writeFile(outputPath, css);
+  console.log(`> Wrote styles to ${outputPath}`);
+}
+
+main().catch(err => {
+  console.error(`> ERR: ${err.message}`);
+  console.error(err.stack);
+  process.exit(1);
+});

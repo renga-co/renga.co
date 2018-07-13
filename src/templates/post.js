@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'react-helmet';
 import Link from 'gatsby-link';
 
-const postContentClass = ``;
-const postMetaClass = ``;
+import PostContent from '../components/post-content';
+import utils from '../utils';
 
 const PostPage = props => {
   const { data } = props;
@@ -20,23 +20,19 @@ const PostPage = props => {
           content={post.frontmatter.description || post.excerpt}
         />
       </Head>
-      <article>
-        <header className={postMetaClass}>
-          <div>
-            <h1 className="c-purple">{post.frontmatter.title}</h1>
-            <time className="o-50p" dateTime={date.toISOString()}>
-              {date.toString()}
-            </time>
-          </div>
-          <div className="d-none d-block-m mt-5">
-            <Link to="/">Back</Link>
-          </div>
+      <article className="Post">
+        <header className="ta-center mb-4">
+          <h1 className="fs-24 fw-semibold">{post.frontmatter.title}</h1>
+          <time className="d-block fs-14 mt-2" dateTime={date.toISOString()}>
+            {utils.formatPostTimestamp(date)}
+          </time>
+          <div className="Post-headerDivider" />
         </header>
-        <div className={postContentClass}>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div>
+          <PostContent html={post.html} />
         </div>
-        <div className="d-block d-none-m mv-6">
-          <Link to="/">Back</Link>
+        <div>
+          <Link to="/blog">Back</Link>
         </div>
       </article>
     </div>

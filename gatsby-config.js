@@ -4,7 +4,6 @@ module.exports = {
     titleTemplate: '%s – Renga',
     description: 'Brand therapy group based in Toronto, Canada.',
     url: 'https://renga.co',
-    typekitId: 'acj0jhy',
   },
   plugins: [
     'gatsby-plugin-react-next',

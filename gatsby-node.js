@@ -2,24 +2,40 @@ const { resolve } = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const slugify = require('slug');
 
+const toSlug = str => slugify(str).toLowerCase();
+
+const getSlug = (node, filePath) => {
+  if (node.frontmatter.slug) {
+    return toSlug(node.frontmatter.slug);
+  }
+  if (node.frontmatter.title) {
+    return toSlug(node.frontmatter.title);
+  }
+  return toSlug(filePath);
+};
+
 exports.onCreateNode = ({ boundActionCreators, getNode, node }) => {
   const { createNodeField } = boundActionCreators;
 
   if (node.internal.type === 'MarkdownRemark') {
-    const requestedSlug = node.frontmatter.slug;
-    const generatedSlug = createFilePath({
+    const filePath = createFilePath({
       node,
       getNode,
       basePath: 'content',
     });
 
-    const date = new Date(node.frontmatter.date);
-    const slug = node.frontmatter.slug
-      ? node.frontmatter.slug
-      : slugify(node.frontmatter.title).toLowerCase();
+    let type = 'unknown';
+    let slug = '/' + getSlug(node, filePath);
 
-    createNodeField({ node, name: 'date', value: date });
+    if (filePath.includes('blog')) {
+      const date = new Date(node.frontmatter.date);
+      createNodeField({ node, name: 'date', value: date });
+      type = 'blog';
+      slug = '/blog' + slug;
+    }
+
     createNodeField({ node, name: 'slug', value: slug });
+    createNodeField({ node, name: 'type', value: type });
   }
 };
 

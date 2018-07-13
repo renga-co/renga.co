@@ -1,8 +1,8 @@
 ---
 title: "More Than A Logo: A Primer on Brand Identity"
 date: 2017-11-14
-tags:
-  - branding
+cover: './media/L1050949.jpg'
+tags: branding
 ---
 
 Here’s a quick test: if I were to ask you if you wanted to join a competitive hike on the Inca Trail next spring what would your response be? How about if I offered you tickets to the Walnut Valley Bluegrass Festival next year? Or what if told you I had a spot for you to attend the 2018 North American Beekeeping Conference and Tradeshow? Would you be in?
