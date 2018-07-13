@@ -7,7 +7,7 @@ const IndexPage = () => (
     <div className="mb-6">
       <h1 className="fs-36 mb-4 lh-1d5">
         We are a brand therapy agency from Toronto. We help startups, companies,
-        and artists build for the web.
+        and artists build for their brands.
       </h1>
       <a
         className="Button bgc-geraldine fs-18 ph-2 c-white"
