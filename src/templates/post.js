@@ -23,7 +23,9 @@ const PostPage = props => {
       <article className="Post">
         <header className="ta-center mb-4">
           <h1 className="fs-24 fw-semibold">{post.frontmatter.title}</h1>
-          <time className="d-block fs-14 mt-2" dateTime={date.toISOString()}>
+          <time
+            className="d-block fs-14 mt-2 c-gray3"
+            dateTime={date.toISOString()}>
             {utils.formatPostTimestamp(date)}
           </time>
           <div className="Post-headerDivider" />
