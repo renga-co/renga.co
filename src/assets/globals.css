@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'Adelle Sans';
+  src: url('../assets/AdelleSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle Sans';
+  src: url('../assets/AdelleSans-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Adelle Sans';
+  src: url('../assets/AdelleSans-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #141414;
+  background-color: #fffefc;
+  font-family: 'Adelle Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.125rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(255, 118, 106, 0.25);
+}
+
+html,
+body,
+#___gatsby,
+#___gatsby > div,
+#___gatsby > div > div {
+  height: 100%;
+}
+
+img,
+svg,
+video {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.p-fill {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.xi {
+  display: inline-flex;
+}
+
+.ws-noWrap {
+  white-space: nowrap;
+}
+
+.h-100p {
+  height: 100%;
+}
+
+.w-33p {
+  width: calc(100% / 3);
+}
+
+.w-50p {
+  width: 50%;
+}
+
+.mw-120 {
+  max-width: 120px;
+}
+
+.mw-170 {
+  max-width: 170px;
+}
+
+.intro-squiggle {
+  background-image: url('./images/squiggle-b.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.va-middle {
+  vertical-align: middle;
+}
+
+.h {
+  transition: opacity 200ms ease;
+}
+
+.h:hover {
+  opacity: 1;
+}
+
+.h-fade {
+  transition: opacity 200ms ease;
+}
+
+.h-fade:hover {
+  opacity: 0.75;
+}
+
+.h-black {
+  transition: color 200ms ease;
+}
+
+.h-black:hover {
+  color: black;
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    font-size: 1.3125rem;
+  }
+
+  .w-50p-m {
+    width: 50%;
+  }
+
+  .mw-100-m {
+    max-width: 120px;
+  }
+
+  .mw-170-m {
+    max-width: 170px;
+  }
+
+  .t--0d5-m {
+    top: -0.5em;
+  }
+}

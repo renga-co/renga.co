@@ -1,0 +1,7 @@
+.PostPreview {
+  transition: opacity 150ms ease;
+}
+
+.PostPreview:hover {
+  opacity: 0.6;
+}

@@ -1,0 +1,46 @@
+{
+  "name": "renga",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "yarn build:css && gatsby build",
+    "build:css": "bin/build-css",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@rosszurowski/vanilla": "^1.3.2",
+    "classnames": "^2.2.6",
+    "fitvids": "^2.0.0",
+    "gatsby": "^2.0.7",
+    "gatsby-image": "^2.0.8",
+    "gatsby-plugin-drift": "^1.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "tinytime": "^0.2.6"
+  },
+  "devDependencies": {
+    "gatsby-plugin-catch-links": "^2.0.2",
+    "gatsby-plugin-feed": "^2.0.5",
+    "gatsby-plugin-google-analytics": "^2.0.6",
+    "gatsby-plugin-netlify": "^2.0.0",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.5",
+    "gatsby-remark-images": "^2.0.1",
+    "gatsby-remark-smartypants": "^2.0.5",
+    "gatsby-source-filesystem": "^2.0.1",
+    "gatsby-transformer-remark": "^2.1.3",
+    "gatsby-transformer-sharp": "^2.1.1",
+    "hibiscss": "^0.0.9",
+    "mz": "^2.7.0",
+    "prettier": "^1.14.3",
+    "slug": "^0.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renga-co/renga.co"
+  },
+  "license": "MIT"
+}

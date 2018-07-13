@@ -1,0 +1,83 @@
+#!/usr/bin/env node
+
+const fs = require('mz/fs');
+const hibiscss = require('hibiscss').default;
+const kit = require('hibiscss/default');
+
+const styles = {
+  colors: {
+    white: '#fff',
+    offwhite: '#fffefc',
+    brown: '#f5f1ec',
+    geraldine: '#ff766a',
+    gentleGeraldine: '#eef9ff',
+    gray1: '#f2f2f2',
+    gray2: '#a9a9a9',
+    gray3: '#565656',
+    gray4: '#424242',
+    gray5: '#282828',
+    gray6: '#141414',
+    black: '#141414',
+  },
+  fontFamily: {
+    sans: 'adelle-sans, -apple-system, BlinkMacSystemFont, sans-serif',
+    mono: 'monospace',
+  },
+  fontSize: {
+    36: '2.25rem',
+    30: '1.875rem',
+    24: '1.5rem',
+    21: '1.3125rem',
+    18: '1.125rem',
+    16: '1rem',
+    14: '0.875rem',
+  },
+  fontWeight: {
+    normal: 'normal',
+    semibold: 'bold',
+  },
+  lineHeight: {
+    '1.25': '1.25',
+    '1.5': '1.5',
+    '1.7': '1.7',
+    '2.0': '2.0',
+  },
+  letterSpacing: {
+    loose: '0.75px',
+    normal: '0px',
+  },
+  maxWidths: {
+    '450': '450px',
+    '700': '700px',
+    '900': '900px',
+    '1200': '1200px',
+  },
+  opacity: {
+    '0%': 0.0,
+    '25%': 0.25,
+    '50%': 0.5,
+    '60%': 0.6,
+    '75%': 0.75,
+    '100%': 1.0,
+  },
+  borderRadius: {
+    4: '4px',
+    30: '30px',
+    round: '50%',
+  },
+  spacing: [0, 8, 16, 24, 48, 64, 96],
+};
+
+const outputPath = './src/assets/utilities.css';
+
+async function main() {
+  const css = hibiscss(kit(styles), { m: '768px' });
+  await fs.writeFile(outputPath, css);
+  console.log(`> Wrote styles to ${outputPath}`);
+}
+
+main().catch(err => {
+  console.error(`> ERR: ${err.message}`);
+  console.error(err.stack);
+  process.exit(1);
+});
