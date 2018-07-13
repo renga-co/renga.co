@@ -16,23 +16,27 @@ const IndexPage = () => (
         <Icon className="ml-1" name="arrow-right" size={16} iconSize={18} />
       </a>
     </div>
-    <p className="PostContent mb-3">
-      <strong>Who are you?</strong>{' '}
-      <span className="c-gray4">
-        A small team of marketers, designers, and developers: Jared, Ben,
-        Landon, and Katrina. Collectively, we have a broad range of experience
-        building things for the web—from side projects to working for companies
-        like <a href="https://www.pkgshop.com/">PKG</a>, Bluesound, and Adobe.
-      </span>
-    </p>
-    <p>
-      <strong>What do you do?</strong>{' '}
-      <span className="c-gray4">
-        We employ pragmatic, functional, engineering-based principles to deliver
-        results on a wide range of projects. These include websites, brand
-        identities, and digital products.
-      </span>
-    </p>
+    <div className="PostContent">
+      <p>
+        <strong>Who are you?</strong>{' '}
+        <span className="c-gray4">
+          A small team of marketers, designers, and developers: Jared, Ben,
+          Landon, and Katrina. Collectively, we have a broad range of experience
+          building things for the web—from side projects to working for
+          companies like <a href="http://www.yugta.ca/">Youth Unlimited</a>,{' '}
+          <a href="http://www.bluesound.com/">Bluesound</a>, and{' '}
+          <a href="https://www.pkgshop.com/">PKG</a>.
+        </span>
+      </p>
+      <p>
+        <strong>What do you do?</strong>{' '}
+        <span className="c-gray4">
+          We employ pragmatic, functional, engineering-based principles to
+          deliver results on a wide range of projects. These include websites,
+          brand identities, and digital products.
+        </span>
+      </p>
+    </div>
   </div>
 );
 

@@ -67,7 +67,7 @@ strong {
 
 .PostContent a {
   border-bottom: 1px #ff766a solid;
-  transition: color 100ms ease;
+  transition: color 50ms ease;
 }
 
 .PostContent a:hover {
