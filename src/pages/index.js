@@ -4,16 +4,16 @@ import Icon from '../components/icon';
 
 const IndexPage = () => (
   <div className="lh-1d5">
-    <div className="mb-4">
-      <h1 className="fs-36 mb-3 lh-1d25">
+    <div className="mb-6">
+      <h1 className="fs-36 mb-4 lh-1d5">
         We are a brand therapy agency from Toronto. We help startups, companies,
         and artists build for the web.
       </h1>
       <a
-        className="fs-24 x xa-center c-geraldine va-baseline"
+        className="Button bgc-geraldine fs-18 ph-2 c-white"
         href="mailto:hello@renga.co">
         Get in touch{' '}
-        <Icon className="ml-1" name="arrow-right" size={24} iconSize={24} />
+        <Icon className="ml-1" name="arrow-right" size={16} iconSize={18} />
       </a>
     </div>
     <p className="PostContent mb-3">

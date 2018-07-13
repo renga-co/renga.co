@@ -22,7 +22,7 @@ const PostPage = props => {
       </Head>
       <article className="Post">
         <header className="ta-center mb-4">
-          <h1 className="fs-24 fw-semibold">{post.frontmatter.title}</h1>
+          <h1 className="fs-30 fw-semibold">{post.frontmatter.title}</h1>
           <time
             className="d-block fs-14 mt-2 c-gray3"
             dateTime={date.toISOString()}>

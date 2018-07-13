@@ -38,6 +38,15 @@ strong {
   margin-right: auto;
 }
 
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  height: 48px;
+  vertical-align: middle;
+}
+
 .Post-headerDivider {
   height: 2px;
   width: 50px;
@@ -45,7 +54,7 @@ strong {
 }
 
 .PostContent {
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .PostContent p + p {
@@ -58,6 +67,7 @@ strong {
 
 .PostContent a {
   border-bottom: 1px #ff766a solid;
+  transition: color 100ms ease;
 }
 
 .PostContent a:hover {

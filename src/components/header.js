@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => (
     style={{
       marginBottom: '1.45rem',
     }}>
-    <div className="x xa-center xj-spaceBetween pt-4 pb-5">
+    <div className="x xa-center xj-spaceBetween pt-4 pb-6">
       <Link className="x xa-center" to="/">
         <svg
           height="56"
@@ -27,12 +27,12 @@ const Header = ({ siteTitle }) => (
           </g>
         </svg>
       </Link>
-      <nav className="fs-16 ml-3">
-        <Link className="c-gray3 pa-1" activeClassName="c-gray5" to="/services">
+      <nav className="ml-3">
+        <Link className="c-gray2 pa-1" activeClassName="c-gray5" to="/services">
           Services
         </Link>
         <Link
-          className="c-gray3 pa-1 ml-2"
+          className="c-gray2 pa-1 ml-2"
           activeClassName="c-gray5"
           to="/blog">
           Blog
