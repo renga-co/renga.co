@@ -33,7 +33,26 @@ drift.SNIPPET_VERSION = '0.3.1';
 drift.load('6t8pw9tsh6zt');`
     : '';
 
+let stylesStr;
+if (process.env.NODE_ENV === `production`) {
+  try {
+    stylesStr = require(`!raw-loader!../public/styles.css`);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 export default function Html(props) {
+  let css;
+  if (process.env.NODE_ENV === 'production') {
+    css = (
+      <style
+        id="gatsby-inlined-css"
+        dangerouslySetInnerHTML={{ __html: stylesStr }}
+      />
+    );
+  }
+
   return (
     <html lang="en">
       <head>
@@ -49,6 +68,7 @@ export default function Html(props) {
           }}
         />
         {props.headComponents}
+        {css}
       </head>
       <body>
         {props.preBodyComponents}
