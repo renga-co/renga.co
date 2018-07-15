@@ -5,7 +5,7 @@ cover: './media/social.jpg'
 tags: marketing
 ---
 
-![](./media/L1050949.jpg)
+![](./media/social.jpg)
 
 It’s 2018 and your business isn’t on Facebook?! You’re doomed.
 
