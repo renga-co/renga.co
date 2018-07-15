@@ -1,30 +1,31 @@
 ---
-title: "New Baby"
-date: 2018-11-12
-cover: './media/L1050949.jpg'
+title: "The Best Beginning is the End"
+date: 2018-07-12
+cover: './media/austris-augusts-140145-unsplash.jpg'
 tags: branding
 ---
 
-Here’s a quick test: if I were to ask you if you wanted to join a competitive hike on the Inca Trail next spring what would your response be? How about if I offered you tickets to the Walnut Valley Bluegrass Festival next year? Or what if told you I had a spot for you to attend the 2018 North American Beekeeping Conference and Tradeshow? Would you be in?
+Have you ever been caught in an infinite consumer loop?
 
-I think most of us have a pretty good idea of how we would respond to these questions - probably something like “I appreciate the offer; but it’s not really my thing.”
+You know the kind I mean, a never-ending series of repetitive clicks created by a company with no discernible end point. Like the hero’s journey, but without any worthwhile character development.
 
-Yet, what’s fascinating is that there are people - and maybe you’re one of them - who wouldn’t even hesitate to accept one of those opportunities because it is **exactly who they are.**
+Here’s what this can look like: You are drawn in by a snippet of an intriguing post by a brand you follow on Facebook, you click it and are taken to the long form article on their blog which you read - and really enjoy.  Then as you finish this compelling piece of writing it ends with a strong invitation to follow the brand… on Facebook.
 
-Your personal identity matters. Knowing who you are gives you an important framework for making decisions. It can help you say no to opportunities that don’t line up with your passions, interests, skills, or lifestyle. It can also help you say yes to the things that allow you to become even an better version of yourself because they build upon who you already are.
+[face, meet palm]
 
-It’s the same thing with brands. **Every brand has an identity.**
 
-A brand is often (narrowly) defined as the Logo/s, Colours, Tagline, and Typefaces of your business - basically the external design assets that tie together everything that is touched, seen, and heard. Your brand’s identity is the way the internal conversations about your brand affect your business’s personality, values, and goals.
+What, may I ask, was the purpose of this journey? What was the intended destination? For that matter, where was the intended beginning?
 
-To put it another way, your brand is what is experienced while your brand identity is how you want to be experienced.
+Too often brands who are capable of creating some really amazing content, fail simply because they don’t know what to do with it. So instead they throw it out into the digital ether in hopes that the consumer will figure it out. It’s an unfortunate waste of creative energy.
 
-When starting a business, owners often focus on the external facing pieces of the brand without considering the internal ones. They often hire a designer to create a logo and typeface or build them a website; but have given no real thought to the why behind those things. When it comes to brand identity - those external pieces should flow out of carefully thought out internal elements. For example, your logo should be an expression of your business’s personality and represent who you are; not just something that looks nice and spells your name right.
+It’s become common in digital marketing to advocate for great content as what is needed to rise above the noise; however, what is less shared is that even mediocre content with a plan behind it is more effective than great content with absolutely no purpose to its existence. Regrettably, so many talented content creators seem unaware of this. As Erin Kissane so pointedly remarks, “Few people set out to produce content that bores, confuses, and irritates users, yet the web is filled with fluffy, purposeless, and annoying content. This sort of content isn’t neutral, either: it actively wastes time and money and works against user and business goals.”
 
-Knowing your brand identity will give you that decision making framework that I was talking about earlier. It can help you know when to say yes and when to say no. It also builds consistency between who you say you are to your customers and the experience they end up having. What can often happen is that when a business lacks clear values decision making becomes about reacting to financial concerns or opportunities. This leads to an inconsistent brand that customers are afraid to trust. On the other hand, when decisions are made within the framework of your brand’s identity (which includes clearly communicated values), a brand is established that customers can believe in.
+What truly sets great content apart is not only the quality of the content itself, but the intentionality of the purpose behind it.
 
-This is why worrying about your brand over your brand identity can often be a costly mistake; yet one that many business’s unfortunately make. Knowing who you are when you set out can end up saving you time and resources down the road.
+Content exists in order to take a potential customer on a journey with a clear and helpful endpoint. It requires a goal that builds off of where it came from and towards something actionable and useful. This is the essence of effective content strategy - having a plan for the content you create.
 
-Oscar Wilde once said, _“be yourself; everyone else is already taken.”_
+An easy question to ask yourself when crafting any piece of content is: what do you want people to do with with this interaction? Do you want them to sign up for a mailing list? Like a page? Attend an event? Buy your product? Each piece of content becomes a unique opportunity to help potential customers move towards the end goal of your content strategy by providing them with a single, clear, call to action.
 
-A dedicated conversation around discovering your brand’s identity is what will help separate you from others who may have a sweet new slogan and website, but no guiding sense of the why behind their brand. Here at Renga, we specialize in helping you discover your brand identity so that you can build trust with your customers without losing them over costly, avoidable mistakes.
+It turns out that knowing where you want to end is often the best place to start when it comes to content strategy.
+
+Here at Renga, we specialize in helping small to mid sized businesses develop this sort of strategic content delivery system by better understanding their own brand identity. We want to help you thrive in this ever-changing digital marketing landscape because you are operating from a healthy place of brand awareness. Would you be interested in sitting down for a content strategy consult? Let’s book a time to talk.
