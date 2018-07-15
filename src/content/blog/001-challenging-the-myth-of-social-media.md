@@ -1,7 +1,7 @@
 ---
 title: Challenging The Myth of Social Media
 date: 2018-03-17
-cover: './media/L1050949.jpg'
+cover: './media/social.jpg'
 tags: marketing
 ---
 
