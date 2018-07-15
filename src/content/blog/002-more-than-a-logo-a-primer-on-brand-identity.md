@@ -1,7 +1,7 @@
 ---
 title: "More Than A Logo: A Primer on Brand Identity"
 date: 2017-11-14
-cover: './media/L1050949.jpg'
+cover: './media/brand identity.jpg'
 tags: branding
 ---
 
