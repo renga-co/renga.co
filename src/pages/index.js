@@ -6,7 +6,7 @@ const IndexPage = () => (
   <div className="lh-1d5">
     <div className="mb-6">
       <h1 className="fs-36 mb-4 lh-1d5">
-        We are a brand therapy agency from Toronto. We help startups, companies,
+        We are a brand therapy group based in the Toronto area. We help startups, companies,
         and artists build for their brands.
       </h1>
       <a
