@@ -6,8 +6,11 @@ const IndexPage = () => (
   <div className="lh-1d5">
     <div className="mb-6">
       <h1 className="fs-36 mb-4 lh-1d5">
-        We are a brand therapy group based in the Toronto area. We'll work with your startup, existing business, or new idea to build a strong identity and reach the right people.
+        We are a brand therapy group based in the Toronto area.
       </h1>
+  
+      <strong>We'll work with your startup, existing business, or new idea to build a strong identity and reach the right people.</strong>
+  
       <a
         className="Button bgc-geraldine fs-18 ph-2 c-white"
         href="mailto:hello@renga.co">
