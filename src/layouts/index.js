@@ -18,7 +18,7 @@ const Layout = ({ children, data }) => {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
       </Helmet>
-      <main className="container ph-3 pb-4">
+      <main className="ph-3 pb-4">
         <Header siteTitle={meta.title} />
         {children()}
         <Footer />

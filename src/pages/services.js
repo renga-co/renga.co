@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ServicesPage = () => (
-  <div>
+  <div className="mw-700 mh-auto">
     <h1>Services</h1>
     <p>We offer…</p>
     <p>

@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Icon from '../components/icon';
 
 const Header = ({ siteTitle }) => (
   <div
+    className="mw-700 mh-auto"
     style={{
       marginBottom: '1.45rem',
     }}>
@@ -37,6 +39,12 @@ const Header = ({ siteTitle }) => (
           to="/blog">
           Blog
         </Link>
+        <a href="mailto:hello@renga.co" className="c-gray2 pa-1 ml-2">
+          Contact{' '}
+          <span className="p-relative" style={{ top: 2, left: 1 }}>
+            <Icon name="arrow-right" size={16} iconSize={18} />
+          </span>
+        </a>
       </nav>
     </div>
   </div>

@@ -10,7 +10,7 @@ const BlogIndexPage = ({ data }) => {
   const { siteMetadata: meta } = data.site;
 
   return (
-    <div>
+    <div className="mw-700 mh-auto">
       <Helmet title="Blog" />
       <header className="mb-4">
         <h1 className="fs-36 fw-semibold mb-2">Blog</h1>
