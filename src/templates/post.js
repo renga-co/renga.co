@@ -12,7 +12,7 @@ const PostPage = props => {
   const date = new Date(post.fields.date);
 
   return (
-    <div>
+    <div className="mw-700 mh-auto">
       <Head>
         <title>{post.frontmatter.title}</title>
         <meta
