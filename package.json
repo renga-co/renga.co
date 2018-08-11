@@ -1,10 +1,7 @@
 {
   "name": "renga-co",
-  "description": "Website for Renga",
   "version": "1.0.0",
-  "keywords": [
-    "gatsby"
-  ],
+  "private": true,
   "scripts": {
     "start": "gatsby develop",
     "build": "yarn build:css && gatsby build",
