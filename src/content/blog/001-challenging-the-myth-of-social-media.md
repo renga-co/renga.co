@@ -2,6 +2,7 @@
 title: Challenging The Myth of Social Media
 date: 2018-03-17
 cover: './media/social.jpg'
+author: jared
 tags: marketing
 ---
 

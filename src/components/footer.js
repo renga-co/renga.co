@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Link from 'gatsby-link';
+
+const Divider = () => (
+  <span className="p-relative ph-2 c-gray3" style={{ fontSize: 10, top: -2 }}>
+    &bull;
+  </span>
+);
+
+const links = [
+  { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/careers', label: 'Careers' },
+  { href: 'mailto:hello@renga.co', label: 'Contact Us' },
+];
 
 function Footer(props) {
   return (
     <footer className="mt-4 ta-center">
-      <div className="pv-4 c-gray3">
-        <a href="mailto:hello@renga.co">Contact Us</a>
-        <span
-          className="p-relative ph-3 o-50p"
-          style={{ fontSize: 10, top: -2 }}>
-          &bull;
-        </span>
-        <a href="/about">Blog</a>
+      <div className="fs-16 pv-4 c-gray3">
+        {links.map((link, i) => (
+          <Fragment>
+            <a href={link.href}>{link.label}</a>
+            {i < links.length - 1 && <Divider />}
+          </Fragment>
+        ))}
       </div>
     </footer>
   );

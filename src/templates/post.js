@@ -2,8 +2,15 @@ import React from 'react';
 import Head from 'react-helmet';
 import Link from 'gatsby-link';
 
+import './post.css';
 import PostContent from '../components/post-content';
 import utils from '../utils';
+
+const authorMap = {
+  jared: {
+    name: 'Jared Henriques',
+  },
+};
 
 const PostPage = props => {
   const { data } = props;
@@ -12,7 +19,7 @@ const PostPage = props => {
   const date = new Date(post.fields.date);
 
   return (
-    <div className="mw-700 mh-auto">
+    <div className="mw-700 mh-auto mt-4">
       <Head>
         <title>{post.frontmatter.title}</title>
         <meta
@@ -21,13 +28,18 @@ const PostPage = props => {
         />
       </Head>
       <article className="Post">
-        <header className="ta-center mb-4">
-          <h1 className="fs-30 fw-semibold">{post.frontmatter.title}</h1>
-          <time
-            className="d-block fs-14 mt-2 c-gray3"
-            dateTime={date.toISOString()}>
-            {utils.formatPostTimestamp(date)}
-          </time>
+        <header className="ta-center mt-4 mb-6">
+          <h1 className="fs-36 fw-semibold">{post.frontmatter.title}</h1>
+          <div className="fs-18 mt-2 c-gray3">
+            <span>{authorMap[post.frontmatter.author].name}</span>
+            <span className="fs-14 o-50p ph-1 p-relative" style={{ top: -1 }}>
+              &bull;
+            </span>
+            <time dateTime={date.toISOString()}>
+              {utils.formatPostTimestamp(date)}
+            </time>
+          </div>
+
           <div className="Post-headerDivider" />
         </header>
         <div>
@@ -54,6 +66,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        author
       }
     }
   }

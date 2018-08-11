@@ -12,8 +12,9 @@ const styles = {
     gray1: '#f2f2f2',
     gray2: '#a9a9a9',
     gray3: '#565656',
-    gray4: '#282828',
-    gray5: '#141414',
+    gray4: '#424242',
+    gray5: '#282828',
+    gray6: '#141414',
     black: '#141414',
   },
   fontFamily: {
@@ -30,8 +31,8 @@ const styles = {
     14: '14px',
   },
   fontWeight: {
-    normal: '400',
-    semibold: '600',
+    normal: 'normal',
+    semibold: 'bold',
   },
   lineHeight: {
     '1.25': 1.25,

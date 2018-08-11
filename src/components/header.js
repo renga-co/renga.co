@@ -3,13 +3,9 @@ import Link from 'gatsby-link';
 import Icon from '../components/icon';
 
 const Header = ({ siteTitle }) => (
-  <div
-    className="mw-700 mh-auto"
-    style={{
-      marginBottom: '1.45rem',
-    }}>
-    <div className="x xa-center xj-spaceBetween pt-4 pb-6">
-      <Link className="x xa-center" to="/">
+  <div className="ph-3-m">
+    <div className="x xa-center xj-spaceBetween pv-4">
+      <Link className="d-block x xa-center" to="/">
         <svg
           height="56"
           viewBox="0 0 140 140"
@@ -29,17 +25,17 @@ const Header = ({ siteTitle }) => (
           </g>
         </svg>
       </Link>
-      <nav className="ml-3">
-        <Link className="c-gray2 pa-1" activeClassName="c-gray5" to="/services">
+      <nav className="fs-18 ml-3">
+        <Link className="c-gray3 pa-1" activeClassName="c-gray6" to="/services">
           Services
         </Link>
         <Link
-          className="c-gray2 pa-1 ml-2"
-          activeClassName="c-gray5"
+          className="c-gray3 pa-1 ml-2"
+          activeClassName="c-gray6"
           to="/blog">
           Blog
         </Link>
-        <a href="mailto:hello@renga.co" className="c-gray2 pa-1 ml-2">
+        <a href="mailto:hello@renga.co" className="c-gray3 pa-1 ml-2">
           Contact{' '}
           <span className="p-relative" style={{ top: 2, left: 1 }}>
             <Icon name="arrow-right" size={16} iconSize={18} />

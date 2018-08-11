@@ -1,0 +1,32 @@
+.PostContent {
+  line-height: 1.7;
+}
+
+.PostContent p + p {
+  margin-top: 1.5rem;
+}
+
+.PostContent strong {
+  font-weight: 600;
+}
+
+.PostContent em {
+  font-style: italic;
+}
+
+.PostContent a {
+  border-bottom: 1px #ff766a solid;
+  transition: color 50ms ease;
+}
+
+.PostContent a:hover {
+  color: #ff766a;
+  border-bottom: 1px #ff766a solid;
+}
+
+.PostContent blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  border-left: 4px #e9e9e9 solid;
+}

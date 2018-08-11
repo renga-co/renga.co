@@ -2,6 +2,7 @@
 title: "The Best Beginning is the End"
 date: 2018-07-12
 cover: './media/austris-augusts-140145-unsplash.jpg'
+author: jared
 tags: branding
 ---
 
@@ -9,10 +10,9 @@ Have you ever been caught in an infinite consumer loop?
 
 You know the kind I mean, a never-ending series of repetitive clicks created by a company with no discernible end point. Like the hero’s journey, but without any worthwhile character development.
 
-Here’s what this can look like: You are drawn in by a snippet of an intriguing post by a brand you follow on Facebook, you click it and are taken to the long form article on their blog which you read - and really enjoy.  Then as you finish this compelling piece of writing it ends with a strong invitation to follow the brand… on Facebook.
+Here’s what this can look like: You are drawn in by a snippet of an intriguing post by a brand you follow on Facebook, you click it and are taken to the long form article on their blog which you read - and really enjoy. Then as you finish this compelling piece of writing it ends with a strong invitation to follow the brand… on Facebook.
 
 [face, meet palm]
-
 
 What, may I ask, was the purpose of this journey? What was the intended destination? For that matter, where was the intended beginning?
 

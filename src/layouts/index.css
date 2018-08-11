@@ -1,7 +1,21 @@
+@font-face {
+  font-family: 'Adelle Sans';
+  src: url('../assets/AdelleSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle Sans';
+  src: url('../assets/AdelleSans-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   color: #141414;
-  font-family: 'adelle-sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 18px;
+  font-family: 'Adelle Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 21px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,6 +40,10 @@ strong {
   font-weight: 600;
 }
 
+.xi {
+  display: inline-flex;
+}
+
 .ws-noWrap {
   white-space: nowrap;
 }
@@ -47,32 +65,4 @@ strong {
   border-radius: 3px;
   height: 48px;
   vertical-align: middle;
-}
-
-.Post-headerDivider {
-  height: 2px;
-  width: 50px;
-  display: block;
-}
-
-.PostContent {
-  line-height: 1.7;
-}
-
-.PostContent p + p {
-  margin-top: 1.5rem;
-}
-
-.PostContent strong {
-  font-weight: 600;
-}
-
-.PostContent a {
-  border-bottom: 1px #ff766a solid;
-  transition: color 50ms ease;
-}
-
-.PostContent a:hover {
-  color: #ff766a;
-  border-bottom: 1px #ff766a solid;
 }

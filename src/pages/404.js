@@ -1,12 +1,12 @@
 import React from 'react';
 
 const NotFoundPage = () => (
-  <div className="mw-700 mh-auto">
-    <h1>Not found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    <p>
-      <a href="/">Back home</a>
-    </p>
+  <div className="mw-700 mh-auto mt-5 ta-center">
+    <div className="PostContent">
+      <p>
+        Sorry, this page doesn't seem to exist. <a href="/">Return home?</a>
+      </p>
+    </div>
   </div>
 );
 
