@@ -19,7 +19,7 @@ const PostPage = props => {
   const date = new Date(post.fields.date);
 
   return (
-    <div className="mw-700 mh-auto mt-4">
+    <div className="mw-700 mh-auto mt-5">
       <Head>
         <title>{post.frontmatter.title}</title>
         <meta
@@ -44,9 +44,6 @@ const PostPage = props => {
         </header>
         <div>
           <PostContent html={post.html} />
-        </div>
-        <div>
-          <Link to="/blog">Back</Link>
         </div>
       </article>
     </div>

@@ -14,7 +14,10 @@ const BlogIndexPage = ({ data }) => {
       <Helmet title="Blog" />
       <header className="mb-4">
         <h1 className="fs-36 fw-semibold mb-2">Blog</h1>
-        <p>We like to write about important topics</p>
+        <p>
+          We love sharing our process of building a sustainable creative brand.
+          New here? Start with our list of popular posts.
+        </p>
       </header>
       {posts.map(({ node: post }) => (
         <Link to={post.fields.slug} key={post.id}>

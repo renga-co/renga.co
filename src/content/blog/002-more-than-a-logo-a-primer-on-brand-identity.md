@@ -8,7 +8,7 @@ tags: branding
 
 Here’s a quick test: if I were to ask you if you wanted to join a competitive hike on the Inca Trail next spring what would your response be? How about if I offered you tickets to the Walnut Valley Bluegrass Festival next year? Or what if told you I had a spot for you to attend the 2018 North American Beekeeping Conference and Tradeshow? Would you be in?
 
-> I think most of us have a pretty good idea of how we would respond to these questions - probably something like “I appreciate the offer; but it’s not really my thing.”
+I think most of us have a pretty good idea of how we would respond to these questions - probably something like “I appreciate the offer; but it’s not really my thing.”
 
 Yet, what’s fascinating is that there are people - and maybe you’re one of them - who wouldn’t even hesitate to accept one of those opportunities because it is **exactly who they are.**
 
