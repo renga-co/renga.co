@@ -3,8 +3,6 @@ import Link from 'gatsby-link';
 import Icon from '../components/icon';
 import TherapistIllustration from '../components/therapist-illustration';
 
-import rengaTherapistUrl from '../assets/brand-therapist.png';
-
 const IndexPage = () => (
   <div className="lh-1d5">
     <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mt-3 mb-6">
