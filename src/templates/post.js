@@ -2,9 +2,10 @@ import React from 'react';
 import Head from 'react-helmet';
 import Link from 'gatsby-link';
 
-import './post.css';
 import PostContent from '../components/post-content';
+import Title from '../components/type-title';
 import utils from '../utils';
+import './post.css';
 
 const authorMap = {
   jared: {
@@ -29,7 +30,7 @@ const PostPage = props => {
       </Head>
       <article className="Post">
         <header className="ta-center mt-4 mb-6">
-          <h1 className="fs-36 fw-semibold">{post.frontmatter.title}</h1>
+          <Title>{post.frontmatter.title}</Title>
           <div className="fs-18 mt-2 c-gray3">
             <span>{authorMap[post.frontmatter.author].name}</span>
             <span className="fs-14 o-50p ph-1 p-relative" style={{ top: -1 }}>

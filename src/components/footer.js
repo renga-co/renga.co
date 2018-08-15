@@ -14,19 +14,17 @@ const links = [
   { href: 'mailto:hello@renga.co', label: 'Contact Us' },
 ];
 
-function Footer(props) {
-  return (
-    <footer className="mt-4 ta-center">
-      <div className="fs-16 pv-4 c-gray3">
-        {links.map((link, i) => (
-          <Fragment>
-            <a href={link.href}>{link.label}</a>
-            {i < links.length - 1 && <Divider />}
-          </Fragment>
-        ))}
-      </div>
-    </footer>
-  );
-}
+const Footer = props => (
+  <footer className="mt-4 ta-center">
+    <div className="fs-16 pv-4 c-gray3">
+      {links.map((link, i) => (
+        <Fragment>
+          <a href={link.href}>{link.label}</a>
+          {i < links.length - 1 && <Divider />}
+        </Fragment>
+      ))}
+    </div>
+  </footer>
+);
 
 export default Footer;

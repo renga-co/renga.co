@@ -1,21 +1,21 @@
 import React from 'react';
+import Title from '../components/type-title';
 
 const CareersPage = () => (
   <div className="mw-700 mh-auto">
     <div className="PostContent">
+      <Title className="mb-2">Work with us.</Title>
       <p>
-        Unfortunately, we don't have any full-time opportunities at the moment.
-        However, we're always open to working with talented folks.
+        We’re always looking for talented designers, developers, writers and
+        media creators. We would love to see your portfolio and have a
+        conversation about what you’re up to.
       </p>
       <p>
-        If you'd like to get in touch about freelance opportunities, reach out
-        at:
+        Get in touch at{' '}
+        <a className="d-inlineBlock c-geraldine" href="mailto:careers@renga.co">
+          careers@renga.co &rarr;
+        </a>
       </p>
-      <a
-        className="d-inlineBlock mt-2 fs-30 c-geraldine"
-        href="mailto:careers@renga.co">
-        careers@renga.co &rarr;
-      </a>
     </div>
   </div>
 );

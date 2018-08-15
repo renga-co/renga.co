@@ -25,7 +25,10 @@ const Header = ({ siteTitle }) => (
           </g>
         </svg>
       </Link>
-      <nav className="fs-18 ml-3">
+      <nav className="d-none-m fs-18">
+        <span className="c-gray3">Menu</span>
+      </nav>
+      <nav className="d-none d-block-m fs-18 ml-3">
         <Link className="c-gray3 pa-1" activeClassName="c-gray6" to="/services">
           Services
         </Link>

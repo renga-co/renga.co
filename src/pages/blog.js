@@ -2,6 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
+import Title from '../components/type-title';
+import Content from '../components/content';
 import PostPreview from '../components/post-preview';
 import utils from '../utils';
 
@@ -12,9 +14,9 @@ const BlogIndexPage = ({ data }) => {
   return (
     <div className="mw-700 mh-auto">
       <Helmet title="Blog" />
-      <header className="mb-4">
-        <h1 className="fs-36 fw-semibold mb-2">Blog</h1>
-        <p>
+      <header className="ph-2 mt-4 mb-5 ta-center">
+        <Title className="mb-2">Our Blog</Title>
+        <p className="lh-1d5">
           We love sharing our process of building a sustainable creative brand.
           New here? Start with our list of popular posts.
         </p>

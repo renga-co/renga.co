@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
+
+import Content from '../components/content';
 import Icon from '../components/icon';
 import TherapistIllustration from '../components/therapist-illustration';
 
@@ -15,8 +17,7 @@ const IndexPage = () => (
         <a
           className="xi xa-center fs-16 fw-semibold c-gray3 ls-loose tt-uppercase"
           href="/about">
-          Learn more{' '}
-          <Icon className="ml-1" name="arrow-right" size={24} iconSize={24} />
+          What is brand therapy?
         </a>
       </div>
       <div className="w-50p-m">
@@ -24,7 +25,7 @@ const IndexPage = () => (
       </div>
     </div>
     <div className="mw-700 mh-auto">
-      <div className="PostContent">
+      <Content>
         <p>Enough about us, let's talk about why you’re here.</p>
         <p>
           <strong>
@@ -81,7 +82,7 @@ const IndexPage = () => (
           Whatever you might need, we're happy to help you figure it out.{' '}
           <a href="mailto:hello@renga.co">Get in touch.</a>
         </p>
-      </div>
+      </Content>
     </div>
   </div>
 );

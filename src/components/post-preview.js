@@ -4,7 +4,7 @@ import Image from 'gatsby-image';
 import utils from '../utils';
 import './post-preview.css';
 
-function PostPreview(props) {
+const PostPreview = props => {
   const { post } = props;
   const date = new Date(post.fields.date);
 
@@ -12,7 +12,7 @@ function PostPreview(props) {
     <div className="PostPreview x-m xa-center-m mb-3">
       <div>
         <time
-          className="PostPreview-timestamp fs-18 mb-2 c-gray3"
+          className="d-block PostPreview-timestamp fs-16 mb-1 c-gray3"
           dateTime={date.toISOString()}>
           {utils.formatPostTimestamp(date)}
         </time>
@@ -23,6 +23,6 @@ function PostPreview(props) {
       </div>
     </div>
   );
-}
+};
 
 export default PostPreview;
