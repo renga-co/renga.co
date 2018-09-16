@@ -25,8 +25,11 @@ const AboutPage = () => (
         This heart of messy collaboration captures our creative approach - which
         is why we’ve chose to adopt it as our name. Together, we build upon the
         work you have already done and then give you something to keep building
-        on top of that. Because every brand is unique, we treat each client as a
-        new collaborative possibility, working alongside you to make something
+        on top of that.
+      </p>
+      <p>
+        Because every brand is unique, we treat each client as a new
+        collaborative possibility, working alongside you to make something
         special.
       </p>
     </Content>

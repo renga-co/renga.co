@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import Header from '../components/header';
+import Navigation from '../components/navigation';
 import Footer from '../components/footer';
 import '@rosszurowski/vanilla/lib/vanilla.css';
 import './utilities.css';
@@ -19,7 +19,7 @@ const Layout = ({ children, data }) => {
         <meta name="twitter:description" content={meta.description} />
       </Helmet>
       <main className="ph-3 pb-4">
-        <Header siteTitle={meta.title} />
+        <Navigation siteTitle={meta.title} />
         {children()}
         <Footer />
       </main>

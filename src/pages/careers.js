@@ -1,15 +1,15 @@
 import React from 'react';
-import Title from '../components/type-title';
+import Header from '../components/header';
 
 const CareersPage = () => (
-  <div className="mw-700 mh-auto">
+  <div className="mw-700 ta-center mh-auto">
     <div className="PostContent">
-      <Title className="mb-2">Work with us.</Title>
-      <p>
-        We’re always looking for talented designers, developers, writers and
-        media creators. We would love to see your portfolio and have a
-        conversation about what you’re up to.
-      </p>
+      <Header
+        title="Work with us"
+        subtitle={`We’re always looking for talented designers, developers, writers and
+      media creators. We would love to see your portfolio and have a
+      conversation about what you’re up to.`}
+      />
       <p>
         Get in touch at{' '}
         <a className="d-inlineBlock c-geraldine" href="mailto:careers@renga.co">

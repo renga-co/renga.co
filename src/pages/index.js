@@ -6,22 +6,25 @@ import Content from '../components/content';
 import Icon from '../components/icon';
 import TherapistIllustration from '../components/therapist-illustration';
 
+import squiggleAUrl from '../assets/images/squiggle-a.svg';
+import squiggleBUrl from '../assets/images/squiggle-b.svg';
+
 const people = [
   {
     id: 'geoffrey',
     phrase: 'I’m having a hard time adapting to the current digital landscape.',
-    pictureUrl: require('../assets/people/geoffrey.png'),
+    pictureUrl: require('../assets/images/people/geoffrey.png'),
   },
   {
     id: 'francene',
     phrase: 'I don’t know where to begin with ecommerce.',
-    pictureUrl: require('../assets/people/francene.png'),
+    pictureUrl: require('../assets/images/people/francene.png'),
   },
   {
     id: 'gerald',
     phrase:
       'I need help getting my idea for a new business or product off the ground.',
-    pictureUrl: require('../assets/people/gerald.png'),
+    pictureUrl: require('../assets/images/people/gerald.png'),
   },
   {
     id: 'emily',
@@ -30,7 +33,7 @@ const people = [
         I’m looking to freshen up<br />my website and logo.
       </span>
     ),
-    pictureUrl: require('../assets/people/emily.png'),
+    pictureUrl: require('../assets/images/people/emily.png'),
   },
 ];
 
@@ -38,7 +41,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
   <div className="x xa-center mh-auto pv-2">
     <blockquote
       className={cx(
-        'x-1 xo-2 fs-24 pv-2 ph-4 mb-6 c-geraldine bgc-gray1 br-40',
+        'x-1 xo-2 fs-24 pv-2 ph-3 mb-6 ba-2 bgc-gentleGeraldine br-30',
         {
           'ta-right': !isRightAligned,
         },
@@ -65,8 +68,16 @@ const IndexPage = () => (
     <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mt-3 mb-6">
       <div className="mb-4 mb-0-m w-50p-m">
         <h1 className="fs-30 fs-36-m fw-semibold mb-2 mb-4-m lh-1d25">
-          Renga is a brand therapy group from{' '}
-          <span className="ws-noWrap">Toronto</span>.
+          Renga is a{' '}
+          <span
+            style={{
+              backgroundImage: `url('${squiggleBUrl}')`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'bottom center',
+            }}>
+            brand therapy
+          </span>{' '}
+          group from <span className="ws-noWrap">Toronto</span>.
         </h1>
         <div />
         <a
@@ -99,20 +110,23 @@ const IndexPage = () => (
         ))}
       </div>
 
-      <Content>
-        <p className="c-gray4 mb-6">
+      <Content className="c-gray4">
+        <p>
           We know that each of our clients have their own unique challenges as a
           growing business or brand, so we work alongside you to deliver a
           custom solution that fits. The first thing we like to do is{' '}
           <em>listen</em>, and learn about your problems.
         </p>
-        <p class="c-gray4 ta-center mb-6">
-          <div className="mb-2">
-            <strong>Sound interesting?</strong>
-          </div>
-          <a href="mailto:hello@renga.co">Schedule your first session</a> or<br />look
-          at <a href="/services">services we offer.</a>
-        </p>
+        <div className="mv-4 ta-center c-geraldine">
+          <img style={{ maxWidth: 200 }} src={squiggleAUrl} />
+        </div>
+        <div className="mb-2 mb-6 ta-center">
+          <h3 className="fw-semibold">Sound interesting?</h3>{' '}
+          <p>
+            <a href="mailto:hello@renga.co">Schedule your first session</a> or<br />look
+            at <a href="/services">services we offer.</a>
+          </p>
+        </div>
       </Content>
     </div>
   </div>

@@ -5,7 +5,7 @@ import Title from '../components/type-title';
 import Subtitle from '../components/type-subtitle';
 
 const Service = ({ title, description }) => (
-  <div className="ph-2 w-50p-m mb-4">
+  <div className="ph-2 mb-4">
     <img src="http://via.placeholder.com/500x250/777/777" alt={title} />
     <Subtitle className="mt-2 mb-2">{title}</Subtitle>
     {description}
@@ -19,7 +19,7 @@ const ServicesPage = () => (
         <Title>Services</Title>
       </header>
     </div>
-    <div className="mw-900 mh-auto">
+    <div className="mw-700 mh-auto">
       <Content className="x-m xw-wrap">
         <Service
           title="Brand Strategy"
