@@ -1,9 +1,64 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import cx from 'classnames';
 
 import Content from '../components/content';
 import Icon from '../components/icon';
 import TherapistIllustration from '../components/therapist-illustration';
+
+const people = [
+  {
+    id: 'geoffrey',
+    phrase: 'I’m having a hard time adapting to the current digital landscape.',
+    pictureUrl: require('../assets/people/geoffrey.png'),
+  },
+  {
+    id: 'francene',
+    phrase: 'I don’t know where to begin with ecommerce.',
+    pictureUrl: require('../assets/people/francene.png'),
+  },
+  {
+    id: 'gerald',
+    phrase:
+      'I need help getting my idea for a new business or product off the ground.',
+    pictureUrl: require('../assets/people/gerald.png'),
+  },
+  {
+    id: 'emily',
+    phrase: (
+      <span>
+        I’m looking to freshen up<br />my website and logo.
+      </span>
+    ),
+    pictureUrl: require('../assets/people/emily.png'),
+  },
+];
+
+const PersonQuote = ({ person, isRightAligned }) => (
+  <div className="x xa-center mh-auto pv-2">
+    <blockquote
+      className={cx(
+        'x-1 xo-2 fs-24 pv-2 ph-4 mb-6 c-geraldine bgc-gray1 br-40',
+        {
+          'ta-right': !isRightAligned,
+        },
+      )}
+      style={{
+        [isRightAligned
+          ? 'borderBottomLeftRadius'
+          : 'borderBottomRightRadius']: 0,
+      }}>
+      {person.phrase}
+    </blockquote>
+    <div
+      className={cx('d-inlineBlock', {
+        'xo-1 pr-3 mr-auto': isRightAligned,
+        'xo-3 pl-3 ml-auto': !isRightAligned,
+      })}>
+      <img src={person.pictureUrl} width={170} height={170} />
+    </div>
+  </div>
+);
 
 const IndexPage = () => (
   <div className="lh-1d5">
@@ -26,61 +81,37 @@ const IndexPage = () => (
     </div>
     <div className="mw-700 mh-auto">
       <Content>
+        <p>
+          Rather than a quick fix mentality, we want to work alongside your
+          startup, existing business, or new idea in order to help you build a
+          strong core identity and reach the right people.
+        </p>
         <p>Enough about us, let's talk about why you’re here.</p>
-        <p>
-          <strong>
-            Maybe you've successfully run a business for years, but you're
-            having a hard time adapting to the current digital landscape.
-          </strong>{' '}
-          <span className="c-gray4">
-            Growing your business in an ever-shifting world of digital marketing
-            can feel overwhelming. We’d love to help! We’ll work with you to
-            create a marketing strategy that focuses only on the channels that
-            will reach the customers most interested in your brand.
-          </span>
-        </p>
+      </Content>
 
-        <p>
-          <strong>
-            Maybe you want to sell online, but don’t know where to begin with
-            ecommerce.
-          </strong>{' '}
-          <span className="c-gray4">
-            Setting up an online store can be intimidating. Let us do the heavy
-            lifting for you. Our team can handle everything from setting up the
-            backend to getting high quality photos of your product.
-          </span>
-        </p>
+      <div className="pv-4">
+        {people.map((person, i) => (
+          <PersonQuote
+            key={person.id}
+            person={person}
+            isRightAligned={i % 2 === 0}
+          />
+        ))}
+      </div>
 
-        <p>
-          <strong>
-            Maybe you've got a great idea for a new business or product and need
-            some help getting it off the ground.
-          </strong>{' '}
-          <span className="c-gray4">
-            We’d be really interested in helping you map out brand strategy that
-            gets other people as excited about your idea as you are. We believe
-            that developing a brand is about more than fonts and colours; it’s
-            about identity.
-          </span>
+      <Content>
+        <p className="c-gray4 mb-6">
+          We know that each of our clients have their own unique challenges as a
+          growing business or brand, so we work alongside you to deliver a
+          custom solution that fits. The first thing we like to do is{' '}
+          <em>listen</em>, and learn about your problems.
         </p>
-
-        <p>
-          <strong>
-            Maybe your business is fine, but you just need a creative refresh of
-            your website or logo.
-          </strong>{' '}
-          <span className="c-gray4">
-            We work with trusted and talented designers and developers so that
-            you don’t have to go through the hassle of finding someone yourself.
-            Let us take your ideas and make them come alive in an end result
-            we’ll all be proud of.
-          </span>
-        </p>
-
-        <p>
-          Whatever you might need, we're happy to help you figure it out.{' '}
-          <a href="mailto:hello@renga.co">Get in touch.</a>
+        <p class="c-gray4 ta-center mb-6">
+          <div className="mb-2">
+            <strong>Sound interesting?</strong>
+          </div>
+          <a href="mailto:hello@renga.co">Schedule your first session</a> or<br />look
+          at <a href="/services">services we offer.</a>
         </p>
       </Content>
     </div>

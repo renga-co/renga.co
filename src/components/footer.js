@@ -18,7 +18,7 @@ const Footer = props => (
   <footer className="mt-4 ta-center">
     <div className="fs-16 pv-4 c-gray3">
       {links.map((link, i) => (
-        <Fragment>
+        <Fragment key={link.href}>
           <a href={link.href}>{link.label}</a>
           {i < links.length - 1 && <Divider />}
         </Fragment>
