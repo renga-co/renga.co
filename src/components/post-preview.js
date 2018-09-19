@@ -9,17 +9,17 @@ const PostPreview = props => {
   const date = new Date(post.fields.date);
 
   return (
-    <div className="PostPreview x-m xa-center-m mb-3">
+    <div className="PostPreview x-m xa-center-m mb-4">
       <div>
         <time
           className="d-block PostPreview-timestamp fs-16 mb-1 c-gray3"
           dateTime={date.toISOString()}>
           {utils.formatPostTimestamp(date)}
         </time>
-        <h3 className="PostPreview-title fs-24 fw-semibold">
+        <h3 className="PostPreview-title fs-24 fw-semibold mb-1">
           {post.frontmatter.title}
         </h3>
-        <p>{post.fields.excerpt}</p>
+        <p className="fs-18">{post.excerpt}</p>
       </div>
     </div>
   );

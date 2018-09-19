@@ -15,21 +15,23 @@ const BlogIndexPage = ({ data }) => {
   const { siteMetadata: meta } = data.site;
 
   return (
-    <div className="mw-700 mh-auto">
+    <div>
       <Helmet title="Blog" />
-      <Header
-        title="Our Blog"
-        subtitle={`
+      <div className="mw-700 mh-auto">
+        <Header
+          title="Our Blog"
+          subtitle={`
         We love sharing our process of building a sustainable creative brand.
         New here? Start with our list of popular posts.
       `}
-      />
-      {posts.map(({ node: post }) => (
-        <Link to={post.fields.slug} key={post.id}>
-          <PostPreview post={post} />
-        </Link>
-      ))}
-      <div className="mt-6">
+        />
+        {posts.map(({ node: post }) => (
+          <Link to={post.fields.slug} key={post.id}>
+            <PostPreview post={post} />
+          </Link>
+        ))}
+      </div>
+      <div className="mw-900 mh-auto mt-6">
         <img src={typewriterUrl} />
       </div>
     </div>
@@ -52,7 +54,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 105)
+          excerpt(pruneLength: 170)
           id
           fields {
             date

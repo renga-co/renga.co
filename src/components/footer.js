@@ -9,6 +9,7 @@ const Divider = () => (
 
 const links = [
   { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
   { href: '/blog', label: 'Blog' },
   { href: '/careers', label: 'Careers' },
   { href: 'mailto:hello@renga.co', label: 'Contact Us' },
