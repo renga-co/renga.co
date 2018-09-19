@@ -28,6 +28,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#___gatsby,
+#___gatsby > div {
+  height: 100%;
+}
+
 img,
 svg,
 video {
@@ -61,6 +68,10 @@ strong {
 
 .ws-noWrap {
   white-space: nowrap;
+}
+
+.h-100p {
+  height: 100%;
 }
 
 .w-33p {

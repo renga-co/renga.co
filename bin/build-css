@@ -48,6 +48,7 @@ const styles = {
   maxWidths: {
     '700': '700px',
     '900': '900px',
+    '1200': '1200px',
   },
   opacity: {
     '0%': 0.0,

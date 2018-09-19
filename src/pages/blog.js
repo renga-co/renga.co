@@ -8,6 +8,8 @@ import Content from '../components/content';
 import PostPreview from '../components/post-preview';
 import utils from '../utils';
 
+import typewriterUrl from '../assets/images/blog-typewriter.svg';
+
 const BlogIndexPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
   const { siteMetadata: meta } = data.site;
@@ -27,6 +29,9 @@ const BlogIndexPage = ({ data }) => {
           <PostPreview post={post} />
         </Link>
       ))}
+      <div className="mt-6">
+        <img src={typewriterUrl} />
+      </div>
     </div>
   );
 };

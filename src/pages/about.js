@@ -1,18 +1,20 @@
 import React from 'react';
 
 import Content from '../components/content';
-import Title from '../components/type-title';
+import Header from '../components/header';
 import Subtitle from '../components/type-subtitle';
 
 const AboutPage = () => (
-  <div className="mw-700 mh-auto mt-5">
+  <div className="mw-700 mh-auto">
+    <Header
+      title="What is brand therapy?"
+      subtitle="It's an approach to brand strategy that starts from a relational, collaborative place."
+    />
     <Content>
-      <Title className="mb-2 mt-4">What is brand therapy?</Title>
       <p>
-        It's an approach to brand strategy that starts from a relational,
-        collaborative place. Rather than a quick fix mentality, we want to work
-        alongside your startup, existing business, or new idea in order to help
-        you build a strong core identity and reach the right people.
+        Rather than a quick fix mentality, we want to work alongside your
+        startup, existing business, or new idea in order to help you build a
+        strong core identity and reach the right people.
       </p>
       <Subtitle className="mb-2 mt-4">Our philosophy</Subtitle>
       <p>

@@ -18,13 +18,13 @@ const people = [
       </span>
     ),
     pictureUrl: require('../assets/images/person-francene.svg'),
-    skew: '1deg',
+    transform: 'skew(1deg)',
   },
   {
     id: 'gerald',
     phrase: <span>I don’t know where to begin with&nbsp;ecommerce.</span>,
     pictureUrl: require('../assets/images/person-gerald.svg'),
-    skew: '2deg',
+    transform: 'skew(-4deg)',
   },
   {
     id: 'geoffrey',
@@ -35,7 +35,7 @@ const people = [
       </span>
     ),
     pictureUrl: require('../assets/images/person-geoffrey.svg'),
-    skew: '5deg',
+    transform: 'skew(5deg)',
   },
   {
     id: 'emily',
@@ -45,7 +45,7 @@ const people = [
       </span>
     ),
     pictureUrl: require('../assets/images/person-emily.svg'),
-    skew: '-1deg',
+    transform: 'skew(-1deg) rotate(-1deg)',
   },
 ];
 
@@ -67,7 +67,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
         className="p-absolute p-fill br-30"
         style={{
           backgroundColor: 'rgb(245, 241, 237)',
-          transform: `skew(${person.skew})`,
+          transform: person.transform,
         }}
       />
       <span className="p-relative z-2">{person.phrase}</span>
@@ -145,9 +145,9 @@ const IndexPage = () => (
           We <em>listen</em>, and <em>learn</em> then write together.
         </p>
         <div className="mv-6 ta-center c-geraldine pe-none us-none">
-          <img style={{ maxWidth: 280 }} src={squiggleAUrl} />
+          <img style={{ maxWidth: 300 }} src={squiggleAUrl} />
         </div>
-        <div className="mb-2 mb-6 ta-center">
+        <div className="mb-6 ta-center">
           <h3 className="fw-semibold">Sound interesting?</h3>{' '}
           <p>
             <a href="mailto:hello@renga.co">Schedule your first session</a> or<br />look

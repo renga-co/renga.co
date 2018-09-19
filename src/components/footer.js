@@ -15,15 +15,15 @@ const links = [
 ];
 
 const Footer = props => (
-  <footer className="mt-4 ta-center">
-    <div className="fs-16 pv-4 c-gray3">
-      {links.map((link, i) => (
-        <Fragment key={link.href}>
-          <a href={link.href}>{link.label}</a>
-          {i < links.length - 1 && <Divider />}
-        </Fragment>
-      ))}
-    </div>
+  <footer
+    className="fs-16 pt-6 pb-6 c-gray3 ta-center"
+    style={{ marginTop: 'auto' }}>
+    {links.map((link, i) => (
+      <Fragment key={link.href}>
+        <a href={link.href}>{link.label}</a>
+        {i < links.length - 1 && <Divider />}
+      </Fragment>
+    ))}
   </footer>
 );
 

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 
 import Content from '../components/content';
+import Header from '../components/header';
 import Title from '../components/type-title';
 import Subtitle from '../components/type-subtitle';
 
@@ -65,23 +66,22 @@ const services = [
 ];
 
 const Service = ({ title, description, imageUrl }) => (
-  <div className="w-50p-m ph-2 mb-4">
+  <div className="w-50p-m ph-3-m mb-4">
     <img src={imageUrl} width={500} height={250} alt={title} />
-    <div>
-      <Subtitle className="mt-2 mb-2">{title}</Subtitle>
-      {description}
-    </div>
+    <h2 className="fs-24 fw-semibold mt-2 mb-2">{title}</h2>
+    <div>{description}</div>
   </div>
 );
 
 const ServicesPage = () => (
   <Fragment>
     <div className="mw-700 mh-auto">
-      <header className="ta-center mt-4 mb-4">
-        <Title>Services</Title>
-      </header>
+      <Header
+        title="Services"
+        subtitle="Another set of lines about the services we offer."
+      />
     </div>
-    <div className="mw-900 mh-auto">
+    <div className="mw-1200 mh-auto mb-5">
       <Content className="x-m xw-wrap">
         {services.map(service => (
           <Service
@@ -92,6 +92,12 @@ const ServicesPage = () => (
         ))}
       </Content>
     </div>
+    <Content>
+      <footer className="mt-4 mb-6 ta-center">
+        <h3 className="fw-semibold">That's us.</h3>{' '}
+        <p>Think we can help? Get in touch!</p>
+      </footer>
+    </Content>
   </Fragment>
 );
 
