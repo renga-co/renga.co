@@ -11,20 +11,31 @@ import squiggleBUrl from '../assets/images/squiggle-b.svg';
 
 const people = [
   {
-    id: 'geoffrey',
-    phrase: 'I’m having a hard time adapting to the current digital landscape.',
-    pictureUrl: require('../assets/images/people/geoffrey.png'),
-  },
-  {
     id: 'francene',
-    phrase: 'I don’t know where to begin with ecommerce.',
-    pictureUrl: require('../assets/images/people/francene.png'),
+    phrase: (
+      <span>
+        I’m having a hard time adapting to the current digital landscape.
+      </span>
+    ),
+    pictureUrl: require('../assets/images/people/francene.svg'),
+    skew: '1deg',
   },
   {
     id: 'gerald',
-    phrase:
-      'I need help getting my idea for a new business or product off the ground.',
-    pictureUrl: require('../assets/images/people/gerald.png'),
+    phrase: <span>I don’t know where to begin with&nbsp;ecommerce.</span>,
+    pictureUrl: require('../assets/images/people/gerald.svg'),
+    skew: '2deg',
+  },
+  {
+    id: 'geoffrey',
+    phrase: (
+      <span>
+        I need help getting my idea for a new business or product off the
+        ground.
+      </span>
+    ),
+    pictureUrl: require('../assets/images/people/geoffrey.svg'),
+    skew: '5deg',
   },
   {
     id: 'emily',
@@ -33,32 +44,46 @@ const people = [
         I’m looking to freshen up<br />my website and logo.
       </span>
     ),
-    pictureUrl: require('../assets/images/people/emily.png'),
+    pictureUrl: require('../assets/images/people/emily.svg'),
+    skew: '-1deg',
   },
 ];
 
 const PersonQuote = ({ person, isRightAligned }) => (
-  <div className="x xa-center mh-auto pv-2">
+  <div
+    className={cx('x-m xa-center xj-center pv-2', {
+      'ta-left ta-center-m': isRightAligned,
+      'ta-right ta-center-m': !isRightAligned,
+    })}>
     <blockquote
       className={cx(
-        'x-1 xo-2 fs-24 pv-2 ph-3 mb-6 ba-2 bgc-gentleGeraldine br-30',
-        {
-          'ta-right': !isRightAligned,
-        },
+        'p-relative d-inlineBlock xo-2 fs-24 fw-semibold pa-3 br-30 ta-center',
       )}
       style={{
-        [isRightAligned
-          ? 'borderBottomLeftRadius'
-          : 'borderBottomRightRadius']: 0,
+        top: '-0.5em',
+        flex: '1 0 50%',
       }}>
-      {person.phrase}
+      <div
+        className="p-absolute p-fill br-30"
+        style={{
+          backgroundColor: 'rgb(245, 241, 237)',
+          transform: `skew(${person.skew})`,
+        }}
+      />
+      <span className="p-relative z-2">{person.phrase}</span>
     </blockquote>
     <div
       className={cx('d-inlineBlock', {
-        'xo-1 pr-3 mr-auto': isRightAligned,
-        'xo-3 pl-3 ml-auto': !isRightAligned,
-      })}>
-      <img src={person.pictureUrl} width={170} height={170} />
+        'xo-1 pr-3': isRightAligned,
+        'xo-3 pl-3': !isRightAligned,
+      })}
+      style={{ flex: '1 0 auto' }}>
+      <img
+        src={person.pictureUrl}
+        className="pe-none us-none"
+        width={170}
+        height={170}
+      />
     </div>
   </div>
 );
@@ -90,7 +115,7 @@ const IndexPage = () => (
         <TherapistIllustration />
       </div>
     </div>
-    <div className="mw-700 mh-auto">
+    <div className="mw-700 mh-auto ta-center">
       <Content>
         <p>
           Rather than a quick fix mentality, we want to work alongside your
@@ -114,11 +139,13 @@ const IndexPage = () => (
         <p>
           We know that each of our clients have their own unique challenges as a
           growing business or brand, so we work alongside you to deliver a
-          custom solution that fits. The first thing we like to do is{' '}
-          <em>listen</em>, and learn about your problems.
+          custom solution that fits.
         </p>
-        <div className="mv-4 ta-center c-geraldine">
-          <img style={{ maxWidth: 200 }} src={squiggleAUrl} />
+        <p>
+          We <em>listen</em>, and <em>learn</em> then write together.
+        </p>
+        <div className="mv-6 ta-center c-geraldine pe-none us-none">
+          <img style={{ maxWidth: 280 }} src={squiggleAUrl} />
         </div>
         <div className="mb-2 mb-6 ta-center">
           <h3 className="fw-semibold">Sound interesting?</h3>{' '}

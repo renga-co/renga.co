@@ -7,6 +7,13 @@
 
 @font-face {
   font-family: 'Adelle Sans';
+  src: url('../assets/AdelleSans-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Adelle Sans';
   src: url('../assets/AdelleSans-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;

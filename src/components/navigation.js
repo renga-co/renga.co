@@ -29,6 +29,10 @@ class Menu extends Component {
     this.setState({ isMenuOpen: !this.state.isMenuOpen });
   };
 
+  handleLinkClick = e => {
+    this.setState({ isMenuOpen: false });
+  };
+
   handleMenuClose = e => {
     e.preventDefault();
     this.setState({ isMenuOpen: false });
@@ -46,16 +50,21 @@ class Menu extends Component {
               <Link
                 className="c-gray3 pa-1"
                 activeClassName="c-gray6"
-                to="/services">
+                to="/services"
+                onClick={this.handleLinkClick}>
                 Services
               </Link>
               <Link
                 className="c-gray3 pa-1 ml-2"
                 activeClassName="c-gray6"
-                to="/blog">
+                to="/blog"
+                onClick={this.handleLinkClick}>
                 Blog
               </Link>
-              <a href="mailto:hello@renga.co" className="c-gray3 pa-1 ml-2">
+              <a
+                href="mailto:hello@renga.co"
+                className="c-gray3 pa-1 ml-2"
+                onClick={this.handleLinkClick}>
                 Contact{' '}
                 <span className="p-relative" style={{ top: 2, left: 1 }}>
                   <Icon name="arrow-right" size={16} iconSize={18} />

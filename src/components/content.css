@@ -22,13 +22,13 @@
 }
 
 .Content a {
-  border-bottom: 1px #ff766a solid;
+  border-bottom: 2px #ff766a solid;
   transition: color 50ms ease;
 }
 
 .Content a:hover {
   color: #ff766a;
-  border-bottom: 1px #ff766a solid;
+  border-color: #fbb6b0;
 }
 
 .Content blockquote {

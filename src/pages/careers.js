@@ -7,8 +7,7 @@ const CareersPage = () => (
       <Header
         title="Work with us"
         subtitle={`We’re always looking for talented designers, developers, writers and
-      media creators. We would love to see your portfolio and have a
-      conversation about what you’re up to.`}
+      media creators. We’d love to see your portfolio and chat.`}
       />
       <p>
         Get in touch at{' '}
