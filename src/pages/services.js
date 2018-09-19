@@ -4,11 +4,73 @@ import Content from '../components/content';
 import Title from '../components/type-title';
 import Subtitle from '../components/type-subtitle';
 
-const Service = ({ title, description }) => (
-  <div className="ph-2 mb-4">
-    <img src="http://via.placeholder.com/500x250/777/777" alt={title} />
-    <Subtitle className="mt-2 mb-2">{title}</Subtitle>
-    {description}
+const services = [
+  {
+    title: 'Brand Strategy',
+    description: (
+      <p>
+        Your brand has many touchpoints today and it can sometime take on
+        different forms depending on the medium, writer or designer. It’s
+        important to have clear brand guidelines established that accurately
+        represents your intention as a business. Your brand is what your
+        customer perceives not what you perceive. We help you match those two
+        and develop interesting ways to share what you care about the most.
+      </p>
+    ),
+    imageUrl: require('../assets/images/service-brand-strategy.svg'),
+  },
+  {
+    title: 'Ecommerce',
+    description: (
+      <p>
+        As Shopify Partners and former ecommerce entrepreneurs we can help you
+        navigate the best way to set up your ecommerce store. Whether you’re
+        starting from scratch, looking for a refresh, or taking it to the next
+        level we can help.
+      </p>
+    ),
+    imageUrl: require('../assets/images/service-ecommerce.svg'),
+  },
+  {
+    title: 'Digital Marketing & Advertising',
+    description: (
+      <p>
+        You’ve got a marketing budget but you aren’t sure about the best way to
+        spend it. Facebook, Instagram or Google ads seem like the right way to
+        go but you’re intimidated and default into your traditional channels
+        even though you know they are more expensive and not as effective.
+      </p>
+    ),
+    imageUrl: require('../assets/images/service-digital-marketing.svg'),
+  },
+  {
+    title: 'Website Design / Development',
+    description: (
+      <Fragment>
+        <p>
+          If you’re just looking for a fresh design or a website that doesn’t
+          look like it was launched at the dawn of the internet, we can help
+          with that too!
+        </p>
+        <p>
+          We work with trusted and talented designers and developers so that you
+          don’t have to go through the hassle of finding someone yourself. Let
+          us take your ideas and help them make them come alive in an end result
+          that we’ll all be proud of.
+        </p>
+      </Fragment>
+    ),
+    imageUrl: require('../assets/images/service-web-development.svg'),
+  },
+];
+
+const Service = ({ title, description, imageUrl }) => (
+  <div className="w-50p-m ph-2 mb-4">
+    <img src={imageUrl} width={500} height={250} alt={title} />
+    <div>
+      <Subtitle className="mt-2 mb-2">{title}</Subtitle>
+      {description}
+    </div>
   </div>
 );
 
@@ -19,45 +81,15 @@ const ServicesPage = () => (
         <Title>Services</Title>
       </header>
     </div>
-    <div className="mw-700 mh-auto">
+    <div className="mw-900 mh-auto">
       <Content className="x-m xw-wrap">
-        <Service
-          title="Brand Strategy"
-          description={
-            <p>
-              Your brand has many touchpoints today and it can sometime take on
-              different forms depending on the medium, writer or designer. It’s
-              important to have clear brand guidelines established that
-              accurately represents your intention as a business. Your brand is
-              what your customer perceives not what you perceive. We help you
-              match those two and develop interesting ways to share what you
-              care about the most.
-            </p>
-          }
-        />
-        <Service
-          title="Ecommerce"
-          description={
-            <p>
-              As Shopify Partners and former ecommerce entrepreneurs we can help
-              you navigate the best way to set up your ecommerce store. Whether
-              you’re starting from scratch, looking for a refresh, or taking it
-              to the next level we can help.
-            </p>
-          }
-        />
-        <Service
-          title="Digital Marketing & Advertising"
-          description={
-            <p>
-              You’ve got a marketing budget but you aren’t sure about the best
-              way to spend it. Facebook, Instagram or Google ads seem like the
-              right way to go but you’re intimidated and default into your
-              traditional channels even though you know they are more expensive
-              and not as effective.
-            </p>
-          }
-        />
+        {services.map(service => (
+          <Service
+            title={service.title}
+            description={service.description}
+            imageUrl={service.imageUrl}
+          />
+        ))}
       </Content>
     </div>
   </Fragment>

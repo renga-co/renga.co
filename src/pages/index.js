@@ -17,13 +17,13 @@ const people = [
         I’m having a hard time adapting to the current digital landscape.
       </span>
     ),
-    pictureUrl: require('../assets/images/people/francene.svg'),
+    pictureUrl: require('../assets/images/person-francene.svg'),
     skew: '1deg',
   },
   {
     id: 'gerald',
     phrase: <span>I don’t know where to begin with&nbsp;ecommerce.</span>,
-    pictureUrl: require('../assets/images/people/gerald.svg'),
+    pictureUrl: require('../assets/images/person-gerald.svg'),
     skew: '2deg',
   },
   {
@@ -34,7 +34,7 @@ const people = [
         ground.
       </span>
     ),
-    pictureUrl: require('../assets/images/people/geoffrey.svg'),
+    pictureUrl: require('../assets/images/person-geoffrey.svg'),
     skew: '5deg',
   },
   {
@@ -44,7 +44,7 @@ const people = [
         I’m looking to freshen up<br />my website and logo.
       </span>
     ),
-    pictureUrl: require('../assets/images/people/emily.svg'),
+    pictureUrl: require('../assets/images/person-emily.svg'),
     skew: '-1deg',
   },
 ];

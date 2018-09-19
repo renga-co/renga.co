@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import fitvids from 'fitvids';
 import Content from './content';
 
-const PostContent = props => (
-  <Content
-    className="PostContent c-gray4"
-    dangerouslySetInnerHTML={{ __html: props.html }}
-  />
-);
+export default class PostContent extends Component {
+  componentDidMount() {
+    fitvids();
+  }
 
-export default PostContent;
+  render() {
+    return (
+      <Content
+        className="PostContent c-gray4"
+        dangerouslySetInnerHTML={{ __html: this.props.html }}
+      />
+    );
+  }
+}

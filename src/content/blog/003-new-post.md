@@ -12,9 +12,11 @@ You know the kind I mean, a never-ending series of repetitive clicks created by 
 
 Here’s what this can look like: You are drawn in by a snippet of an intriguing post by a brand you follow on Facebook, you click it and are taken to the long form article on their blog which you read - and really enjoy. Then as you finish this compelling piece of writing it ends with a strong invitation to follow the brand… on Facebook.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/u1QF-LWNUdY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 [face, meet palm]
 
-What, may I ask, was the purpose of this journey? What was the intended destination? For that matter, where was the intended beginning?
+> What, may I ask, was the purpose of this journey? What was the intended destination? For that matter, where was the intended beginning?
 
 Too often brands who are capable of creating some really amazing content, fail simply because they don’t know what to do with it. So instead they throw it out into the digital ether in hopes that the consumer will figure it out. It’s an unfortunate waste of creative energy.
 
