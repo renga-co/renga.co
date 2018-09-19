@@ -46,16 +46,16 @@ class Menu extends Component {
             Menu
           </a>
           {this.state.isMenuOpen && (
-            <div className="p-absolute p-fill bgc-offwhite">
+            <div className="x xd-column p-absolute p-fill bgc-offwhite ta-center">
               <Link
-                className="c-gray3 pa-1"
+                className="d-block c-gray3 pa-3"
                 activeClassName="c-gray6"
                 to="/services"
                 onClick={this.handleLinkClick}>
                 Services
               </Link>
               <Link
-                className="c-gray3 pa-1 ml-2"
+                className="d-block c-gray3 pa-3"
                 activeClassName="c-gray6"
                 to="/blog"
                 onClick={this.handleLinkClick}>
@@ -63,14 +63,14 @@ class Menu extends Component {
               </Link>
               <a
                 href="mailto:hello@renga.co"
-                className="c-gray3 pa-1 ml-2"
+                className="d-block c-gray3 pa-3"
                 onClick={this.handleLinkClick}>
-                Contact{' '}
-                <span className="p-relative" style={{ top: 2, left: 1 }}>
-                  <Icon name="arrow-right" size={16} iconSize={18} />
-                </span>
+                Contact
               </a>
-              <a href="#" onClick={this.handleMenuClose}>
+              <a
+                href="#"
+                onClick={this.handleMenuClose}
+                className="p-absolute t-0 r-0">
                 Close
               </a>
             </div>

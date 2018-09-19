@@ -85,6 +85,7 @@ const ServicesPage = () => (
       <Content className="x-m xw-wrap">
         {services.map(service => (
           <Service
+            key={service.title}
             title={service.title}
             description={service.description}
             imageUrl={service.imageUrl}
