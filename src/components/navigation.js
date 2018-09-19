@@ -42,7 +42,7 @@ class Menu extends Component {
     return (
       <Fragment>
         <nav className="d-none-m fs-18">
-          <a href="#" className="c-gray3" onClick={this.handleMenuToggle}>
+          <a href="/" className="c-gray3" onClick={this.handleMenuToggle}>
             Menu
           </a>
           {this.state.isMenuOpen && (
@@ -68,7 +68,7 @@ class Menu extends Component {
                 Contact
               </a>
               <a
-                href="#"
+                href="/"
                 onClick={this.handleMenuClose}
                 className="p-absolute t-0 r-0">
                 Close

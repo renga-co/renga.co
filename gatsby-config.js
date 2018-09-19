@@ -6,7 +6,6 @@ module.exports = {
     url: 'https://renga.co',
   },
   plugins: [
-    'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {
@@ -45,6 +44,5 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-netlify',
-    'gatsby-plugin-netlify-cache',
   ],
 };

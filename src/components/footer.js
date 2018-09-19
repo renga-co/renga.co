@@ -15,7 +15,7 @@ const links = [
   { href: 'mailto:hello@renga.co', label: 'Contact Us' },
 ];
 
-const Footer = props => (
+const Footer = () => (
   <footer
     className="fs-16 pv-6 ph-3 c-gray3 ta-center lh-1d7"
     style={{ marginTop: 'auto' }}>

@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
-
+import Layout from '../components/layout';
 import Content from '../components/content';
 import Header from '../components/header';
-import Title from '../components/type-title';
-import Subtitle from '../components/type-subtitle';
 
 const services = [
   {
@@ -74,7 +72,7 @@ const Service = ({ title, description, imageUrl }) => (
 );
 
 const ServicesPage = () => (
-  <Fragment>
+  <Layout>
     <div className="mw-700 mh-auto">
       <Header
         title="Services"
@@ -99,7 +97,7 @@ const ServicesPage = () => (
         <p>Think we can help? Get in touch!</p>
       </footer>
     </Content>
-  </Fragment>
+  </Layout>
 );
 
 export default ServicesPage;

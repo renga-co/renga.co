@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'gatsby-image';
 
 import utils from '../utils';
 import './post-preview.css';

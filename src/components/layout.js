@@ -1,11 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-
+import { StaticQuery, graphql } from 'gatsby';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
 import '@rosszurowski/vanilla/lib/vanilla.css';
-import './utilities.css';
-import './index.css';
+import '../assets/utilities.css';
+import './layout.css';
 
 const Layout = ({ children, data }) => {
   const { siteMetadata: meta } = data.site;
@@ -20,23 +20,26 @@ const Layout = ({ children, data }) => {
       </Helmet>
       <main className="ph-3 x xd-column h-100p">
         <Navigation siteTitle={meta.title} />
-        {children()}
+        {children}
         <Footer />
       </main>
     </div>
   );
 };
 
-export default Layout;
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-        titleTemplate
-        description
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+            titleTemplate
+            description
+          }
+        }
       }
-    }
-  }
-`;
+    `}
+    render={data => <Layout data={data} {...props} />}
+  />
+);

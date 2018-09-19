@@ -1,11 +1,8 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import cx from 'classnames';
-
+import Layout from '../components/layout';
 import Content from '../components/content';
-import Icon from '../components/icon';
 import TherapistIllustration from '../components/therapist-illustration';
-
 import squiggleAUrl from '../assets/images/squiggle-a.svg';
 import squiggleBUrl from '../assets/images/squiggle-b.svg';
 
@@ -80,6 +77,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
       style={{ flex: '1 0 auto' }}>
       <img
         src={person.pictureUrl}
+        alt=""
         className="pe-none us-none"
         width={170}
         height={170}
@@ -89,74 +87,76 @@ const PersonQuote = ({ person, isRightAligned }) => (
 );
 
 const IndexPage = () => (
-  <div className="lh-1d5">
-    <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mt-3 mb-6">
-      <div className="mb-4 mb-0-m w-50p-m">
-        <h1 className="fs-30 fs-36-m fw-semibold mb-2 mb-4-m lh-1d25">
-          Renga is a{' '}
-          <span
-            style={{
-              backgroundImage: `url('${squiggleBUrl}')`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'bottom center',
-            }}>
-            brand therapy
-          </span>{' '}
-          group from <span className="ws-noWrap">Toronto</span>.
-        </h1>
-        <div />
-        <a
-          className="xi xa-center fs-16 fw-semibold c-gray3 ls-loose tt-uppercase"
-          href="/about">
-          What is brand therapy?
-        </a>
-      </div>
-      <div className="w-50p-m">
-        <TherapistIllustration />
-      </div>
-    </div>
-    <div className="mw-700 mh-auto ta-center">
-      <Content>
-        <p>
-          Rather than a quick fix mentality, we want to work alongside your
-          startup, existing business, or new idea in order to help you build a
-          strong core identity and reach the right people.
-        </p>
-        <p>Enough about us, let's talk about why you’re here.</p>
-      </Content>
-
-      <div className="pv-4">
-        {people.map((person, i) => (
-          <PersonQuote
-            key={person.id}
-            person={person}
-            isRightAligned={i % 2 === 0}
-          />
-        ))}
-      </div>
-
-      <Content className="c-gray4">
-        <p>
-          We know that each of our clients have their own unique challenges as a
-          growing business or brand, so we work alongside you to deliver a
-          custom solution that fits.
-        </p>
-        <p>
-          We <em>listen</em>, and <em>learn</em> then write together.
-        </p>
-        <div className="mv-6 ta-center c-geraldine pe-none us-none">
-          <img style={{ maxWidth: 300 }} src={squiggleAUrl} />
+  <Layout>
+    <div className="lh-1d5">
+      <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mt-3 mb-6">
+        <div className="mb-4 mb-0-m w-50p-m">
+          <h1 className="fs-30 fs-36-m fw-semibold mb-2 mb-4-m lh-1d25">
+            Renga is a{' '}
+            <span
+              style={{
+                backgroundImage: `url('${squiggleBUrl}')`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'bottom center',
+              }}>
+              brand therapy
+            </span>{' '}
+            group from <span className="ws-noWrap">Toronto</span>.
+          </h1>
+          <div />
+          <a
+            className="xi xa-center fs-16 fw-semibold c-gray3 ls-loose tt-uppercase"
+            href="/about">
+            What is brand therapy?
+          </a>
         </div>
-        <div className="mb-6 ta-center">
-          <h3 className="fw-semibold">Sound interesting?</h3>{' '}
+        <div className="w-50p-m">
+          <TherapistIllustration />
+        </div>
+      </div>
+      <div className="mw-700 mh-auto ta-center">
+        <Content>
           <p>
-            <a href="mailto:hello@renga.co">Schedule your first session</a> or<br />look
-            at <a href="/services">services we offer.</a>
+            Rather than a quick fix mentality, we want to work alongside your
+            startup, existing business, or new idea in order to help you build a
+            strong core identity and reach the right people.
           </p>
+          <p>Enough about us, let's talk about why you’re here.</p>
+        </Content>
+
+        <div className="pv-4">
+          {people.map((person, i) => (
+            <PersonQuote
+              key={person.id}
+              person={person}
+              isRightAligned={i % 2 === 0}
+            />
+          ))}
         </div>
-      </Content>
+
+        <Content className="c-gray4">
+          <p>
+            We know that each of our clients have their own unique challenges as
+            a growing business or brand, so we work alongside you to deliver a
+            custom solution that fits.
+          </p>
+          <p>
+            We <em>listen</em>, and <em>learn</em> then write together.
+          </p>
+          <div className="mv-6 ta-center c-geraldine pe-none us-none">
+            <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
+          </div>
+          <div className="mb-6 ta-center">
+            <h3 className="fw-semibold">Sound interesting?</h3>{' '}
+            <p>
+              <a href="mailto:hello@renga.co">Schedule your first session</a> or<br />look
+              at <a href="/services">services we offer.</a>
+            </p>
+          </div>
+        </Content>
+      </div>
     </div>
-  </div>
+  </Layout>
 );
 
 export default IndexPage;
