@@ -19,7 +19,7 @@ const BlogIndexPage = ({ data }) => {
           title="Our Blog"
           subtitle={`
         We love sharing our process of building a sustainable creative brand.
-        New here? Start with our list of popular posts.
+        Maybe one more line?
       `}
         />
         {posts.map(({ node: post }) => (
