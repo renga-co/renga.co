@@ -82,7 +82,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
       <img
         src={person.pictureUrl}
         alt=""
-        className="pe-none us-none mw-100 mw-170-m"
+        className="pe-none us-none mw-120 mw-170-m"
       />
     </div>
   </div>
