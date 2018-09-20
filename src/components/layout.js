@@ -3,9 +3,6 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
-import '@rosszurowski/vanilla/lib/vanilla.css';
-import '../assets/utilities.css';
-import './layout.css';
 
 const Layout = ({ children, data }) => {
   const { siteMetadata: meta } = data.site;

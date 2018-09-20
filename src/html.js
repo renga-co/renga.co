@@ -1,8 +1,6 @@
 import React from 'react';
 import favicon from './assets/favicon.png';
 
-const TYPEKIT_ID = 'acj0jhy';
-
 const MAILCHIMP_SCRIPT = `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/116eb673d498b75ebfe2310ab/a66dcc20d09ef70fd87c48ed8.js");`;
 const DRIFT_SCRIPT =
   process.env.NODE_ENV === 'production'
@@ -33,26 +31,7 @@ drift.SNIPPET_VERSION = '0.3.1';
 drift.load('6t8pw9tsh6zt');`
     : '';
 
-let stylesStr;
-if (process.env.NODE_ENV === `production`) {
-  try {
-    stylesStr = require(`!raw-loader!../public/styles.css`);
-  } catch (e) {
-    console.error(e);
-  }
-}
-
 export default function Html(props) {
-  let css;
-  if (process.env.NODE_ENV === 'production') {
-    css = (
-      <style
-        id="gatsby-inlined-css"
-        dangerouslySetInnerHTML={{ __html: stylesStr }}
-      />
-    );
-  }
-
   return (
     <html lang="en">
       <head>
@@ -60,15 +39,7 @@ export default function Html(props) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href={favicon} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          (function(d) {var config = { kitId: '${TYPEKIT_ID}', scriptTimeout: 3000, async: true }, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\\bwf-loading\\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s) })(document);
-        `,
-          }}
-        />
         {props.headComponents}
-        {css}
       </head>
       <body>
         {props.preBodyComponents}
