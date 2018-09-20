@@ -70,7 +70,7 @@ const Service = ({ title, description, imageUrl }) => (
     <div className="ta-center">
       <img src={imageUrl} width={500} height={250} alt={title} />
     </div>
-    <h2 className="fs-24 fw-semibold mt-2 mb-2">{title}</h2>
+    <h3 className="fs-24 fw-semibold mt-2 mb-2">{title}</h3>
     <div>{description}</div>
   </div>
 );

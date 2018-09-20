@@ -12,7 +12,7 @@ const Divider = ({ className, ...props }) => (
 
 const Footer = () => (
   <footer
-    className="fs-16 pv-6 ph-3 c-gray3 ta-center lh-1d7"
+    className="pv-6 ph-3 c-gray3 ta-center fs-16 lh-2d0"
     style={{ marginTop: 'auto' }}>
     <Link to="/about">About</Link>
     <Divider />

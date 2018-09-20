@@ -5,6 +5,7 @@ import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
 import Content from '../components/content';
 import Layout from '../components/layout';
+import Title from '../components/type-title';
 import TherapistIllustration from '../components/therapist-illustration';
 import squiggleAUrl from '../assets/images/squiggle-a.svg';
 import squiggleBUrl from '../assets/images/squiggle-b.svg';
@@ -22,7 +23,7 @@ const people = [
   },
   {
     id: 'gerald',
-    phrase: <span>“I don’t know where to begin with&nbsp;ecommerce.”</span>,
+    phrase: <span>“I don’t know where to begin&nbsp;with ecommerce.”</span>,
     pictureUrl: require('../assets/images/person-gerald.svg'),
     transform: 'skew(-4deg)',
   },
@@ -39,13 +40,7 @@ const people = [
   },
   {
     id: 'emily',
-    phrase: (
-      <span>
-        “I’m looking to freshen up
-        <br />
-        my website and logo.”
-      </span>
-    ),
+    phrase: <span>“I’m looking to freshen up my website and&nbsp;logo.”</span>,
     pictureUrl: require('../assets/images/person-emily.svg'),
     transform: 'skew(-1deg) rotate(-1deg)',
   },
@@ -59,7 +54,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
     })}>
     <blockquote
       className={cx(
-        'p-relative d-inlineBlock xo-2 fs-18 fs-24-m fw-semibold pa-3 br-30 ta-center t--0d5-m',
+        'p-relative d-inlineBlock xo-2 fs-16 fs-24-m fw-semibold pa-3 br-30 ta-center t--0d5-m',
       )}
       style={{
         flex: '1 0 50%',
@@ -93,7 +88,7 @@ const IndexPage = () => (
     <div className="lh-1d5">
       <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mt-3 mb-6">
         <div className="mb-4 mb-0-m w-50p-m">
-          <h1 className="fs-30 fs-36-m fw-semibold mb-2 mb-4-m lh-1d25">
+          <Title className="mb-2 mb-4-m lh-1d25">
             Renga is a{' '}
             <span
               style={{
@@ -104,7 +99,7 @@ const IndexPage = () => (
               brand therapy
             </span>{' '}
             group from <span className="ws-noWrap">Toronto</span>.
-          </h1>
+          </Title>
           <div />
           <CalloutLink className="fs-16">
             <a href="mailto:hello@renga.co">Book a session &rarr;</a>
@@ -150,13 +145,13 @@ const IndexPage = () => (
           title="Ready to take the first steps?"
           body={
             <p>
-              We'd love to spend some time hearing your story
+              We'd love to spend some time hearing
               <br />
-              and working through your brand.
+              your story and working through your brand.
             </p>
           }
           links={
-            <div className="x xd-column xd-row-m xa-center xj-center fs-16 lh-1d7">
+            <div className="x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
               <CalloutLink>
                 <a href="mailto:hello@renga.co">Book a session</a>
               </CalloutLink>

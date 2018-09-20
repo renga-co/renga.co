@@ -7,6 +7,7 @@ import Layout from '../components/layout';
 import PostContent from '../components/post-content';
 import Title from '../components/type-title';
 import utils from '../utils';
+import squiggleUrl from '../assets/images/squiggle-c.svg';
 import './post.css';
 
 const authorMap = {
@@ -39,7 +40,9 @@ const PostPage = props => {
             <Title>{post.frontmatter.title}</Title>
             <div className="fs-18 mt-2 c-gray3">
               <span>{authorMap[post.frontmatter.author].name}</span>
-              <span className="fs-14 o-50p ph-1 p-relative" style={{ top: -1 }}>
+              <span
+                className="o-50p ph-1 p-relative"
+                style={{ fontSize: 10, top: -2 }}>
                 &bull;
               </span>
               <time dateTime={date.toISOString()}>
@@ -51,18 +54,16 @@ const PostPage = props => {
           <div>
             <PostContent html={post.html} />
           </div>
+          <div className="mv-6 ta-center c-geraldine pe-none us-none">
+            <img alt="" style={{ maxWidth: 300 }} src={squiggleUrl} />
+          </div>
           <Callout
-            className="bgc-gray1 br-30 pv-4 ph-5 mt-5"
+            className="br-30 pt-2 pb-4 mt-5"
             title="Need help building trust with customers?"
-            body={
-              <span>
-                At Renga, we specialize in helping you discover your brand
-                identity.
-              </span>
-            }
+            body="At Renga, we specialize in helping you discover your brand identity."
             links={
               <CalloutLink className="fs-16">
-                <a href="mailto:hello@rengao.co">Reach out! &rarr;</a>
+                <a href="mailto:hello@rengao.co">Get in touch &rarr;</a>
               </CalloutLink>
             }
           />
