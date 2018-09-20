@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import Icon from '../components/icon';
-import './navigation.css';
+import './menu.css';
 
 export default class Menu extends Component {
   state = {
