@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
+import favicon from '../assets/favicon.png';
 
 const Layout = ({ children, data }) => {
   const { siteMetadata: meta } = data.site;
@@ -10,6 +11,10 @@ const Layout = ({ children, data }) => {
   return (
     <div>
       <Helmet defaultTitle={meta.title} titleTemplate={meta.titleTemplate}>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href={favicon} />
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
         <meta name="twitter:title" content={meta.title} />

@@ -4567,6 +4567,12 @@ gatsby-plugin-catch-links@^2.0.2:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-drift@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-drift/-/gatsby-plugin-drift-1.0.0.tgz#2c26ac9f588908c888d3782f694d3e23cd06950f"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-feed@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.5.tgz#f0171f608bfd9754bb6e2a28f15b279ec006e1ac"
