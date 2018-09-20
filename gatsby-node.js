@@ -14,8 +14,8 @@ const getSlug = (node, filePath) => {
   return toSlug(filePath);
 };
 
-exports.onCreateNode = ({ boundActionCreators, getNode, node }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ actions, getNode, node }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === 'MarkdownRemark') {
     const filePath = createFilePath({
@@ -39,8 +39,8 @@ exports.onCreateNode = ({ boundActionCreators, getNode, node }) => {
   }
 };
 
-exports.createPages = async ({ boundActionCreators, graphql }) => {
-  const { createPage, createRedirect } = boundActionCreators;
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage, createRedirect } = actions;
 
   const template = resolve('src/templates/post.js');
   const result = await graphql(`
