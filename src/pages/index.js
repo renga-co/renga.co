@@ -38,7 +38,9 @@ const people = [
     id: 'emily',
     phrase: (
       <span>
-        I’m looking to freshen up<br />my website and logo.
+        I’m looking to freshen up
+        <br />
+        my website and logo.
       </span>
     ),
     pictureUrl: require('../assets/images/person-emily.svg'),
@@ -110,7 +112,7 @@ const IndexPage = () => (
             What is brand therapy?
           </a>
         </div>
-        <div className="w-50p-m">
+        <div className="w-50p-m mw-450 mh-auto">
           <TherapistIllustration />
         </div>
       </div>
@@ -149,8 +151,9 @@ const IndexPage = () => (
           <div className="mb-6 ta-center">
             <h3 className="fw-semibold">Sound interesting?</h3>{' '}
             <p>
-              <a href="mailto:hello@renga.co">Schedule your first session</a> or<br />look
-              at <a href="/services">services we offer.</a>
+              <a href="mailto:hello@renga.co">Schedule your first session</a> or
+              <br />
+              look at <a href="/services">services we offer.</a>
             </p>
           </div>
         </Content>

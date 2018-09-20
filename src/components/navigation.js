@@ -103,7 +103,7 @@ class Menu extends Component {
 
 const Navigation = ({ siteTitle }) => (
   <div className="ph-3-m">
-    <div className="x xa-center xj-spaceBetween pv-4">
+    <div className="x xa-center xj-spaceBetween pt-3 pb-4 pv-4-m">
       <Link className="d-block x xa-center" to="/">
         <svg
           height="56"

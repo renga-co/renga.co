@@ -46,6 +46,7 @@ const styles = {
     normal: '0px',
   },
   maxWidths: {
+    '450': '450px',
     '700': '700px',
     '900': '900px',
     '1200': '1200px',
