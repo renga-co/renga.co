@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import Layout from '../components/layout';
 import Content from '../components/content';
 import Header from '../components/header';
+import Callout from '../components/callout';
+import CalloutLink from '../components/type-callout-link';
 
 const services = [
   {
@@ -91,12 +93,16 @@ const ServicesPage = () => (
         ))}
       </Content>
     </div>
-    <Content>
-      <footer className="mt-4 mb-6 ta-center">
-        <h3 className="fw-semibold">That's us.</h3>{' '}
-        <p>Think we can help? Get in touch!</p>
-      </footer>
-    </Content>
+    <Callout
+      className="mt-4 mb-6"
+      title="Sound like a fit?"
+      body="We'd love to spend some time hearing your story and working through your brand."
+      links={
+        <CalloutLink className="fs-16">
+          <a href="mailto:hello@renga.co">Get in touch &rarr;</a>
+        </CalloutLink>
+      }
+    />
   </Layout>
 );
 

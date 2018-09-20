@@ -28,8 +28,8 @@ const BlogIndexPage = ({ data }) => {
           </Link>
         ))}
       </div>
-      <div className="mw-900 mh-auto mt-6">
-        <img src={typewriterUrl} alt="" />
+      <div className="mw-700 mh-auto mt-3 mt-5-m">
+        <img src={typewriterUrl} alt="" className="pe-none us-none" />
       </div>
     </Layout>
   );

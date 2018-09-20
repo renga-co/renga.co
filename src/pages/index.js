@@ -1,9 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 import { Link } from 'gatsby';
-import Layout from '../components/layout';
-import Content from '../components/content';
+import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
+import Content from '../components/content';
+import Layout from '../components/layout';
 import TherapistIllustration from '../components/therapist-illustration';
 import squiggleAUrl from '../assets/images/squiggle-a.svg';
 import squiggleBUrl from '../assets/images/squiggle-b.svg';
@@ -52,7 +53,7 @@ const people = [
 
 const PersonQuote = ({ person, isRightAligned }) => (
   <div
-    className={cx('x xa-center xj-center pv-2', {
+    className={cx('x xa-center xj-center pv-3 pv-4-m', {
       'ta-left ta-center-m': isRightAligned,
       'ta-right ta-center-m': !isRightAligned,
     })}>
@@ -117,11 +118,11 @@ const IndexPage = () => (
         <Content>
           <h3 className="fs-24 mb-3 fw-semibold">What is brand therapy?</h3>
           <p>
-            Rather than a quick fix mentality, we want to work alongside your
-            startup, existing business, or new idea in order to help you build a
+            It's an approach to branding that starts from a relational,
+            collaborative place. We work alongside you to help you build a
             strong core identity and reach the right people.
           </p>
-          <p>Let's talk about why you’re here.</p>
+          <p>Now, let's talk about why you’re here.</p>
         </Content>
 
         <div className="pv-4">
@@ -141,28 +142,35 @@ const IndexPage = () => (
             custom solution that fits.
           </p>
         </Content>
-        <div className="mv-6 ta-center c-geraldine pe-none us-none">
+        <div className="mv-5 ta-center c-geraldine pe-none us-none">
           <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
         </div>
-        <div className="mb-6 ta-center">
-          <Content className="c-gray4 mb-4">
-            <h3 className="fw-semibold">Sound interesting?</h3>{' '}
-            <p>We'd love to work with you to help your business.</p>
-          </Content>
-          <div className="x xd-column xd-row-m xa-center xj-center fs-16 lh-1d7">
-            <CalloutLink>
-              <a href="mailto:hello@renga.co">Book a session</a>
-            </CalloutLink>
-            <span
-              className="p-relative pv-2 pv-0-m ph-2-m fs-14 o-50p"
-              style={{ top: -1 }}>
-              or
-            </span>
-            <CalloutLink>
-              <Link to="/services">See our services &rarr;</Link>
-            </CalloutLink>
-          </div>
-        </div>
+        <Callout
+          className="mb-6"
+          title="Ready to take the first steps?"
+          body={
+            <p>
+              We'd love to spend some time hearing your story
+              <br />
+              and working through your brand.
+            </p>
+          }
+          links={
+            <div className="x xd-column xd-row-m xa-center xj-center fs-16 lh-1d7">
+              <CalloutLink>
+                <a href="mailto:hello@renga.co">Book a session</a>
+              </CalloutLink>
+              <span
+                className="p-relative pv-2 pv-0-m ph-2-m fs-14 o-50p"
+                style={{ top: -1 }}>
+                or
+              </span>
+              <CalloutLink>
+                <Link to="/services">See our services &rarr;</Link>
+              </CalloutLink>
+            </div>
+          }
+        />
       </div>
     </div>
   </Layout>
