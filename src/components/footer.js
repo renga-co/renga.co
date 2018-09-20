@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 
 const Divider = ({ className, ...props }) => (
   <span
-    className={cx('p-relative ph-2 c-gray2', className)}
+    className={cx('p-relative ph-2 c-gray2 us-none', className)}
     style={{ fontSize: 10, top: -2 }}>
     &bull;
   </span>

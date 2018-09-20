@@ -1,7 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
+import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import Content from '../components/content';
+import CalloutLink from '../components/type-callout-link';
 import TherapistIllustration from '../components/therapist-illustration';
 import squiggleAUrl from '../assets/images/squiggle-a.svg';
 import squiggleBUrl from '../assets/images/squiggle-b.svg';
@@ -11,7 +13,7 @@ const people = [
     id: 'francene',
     phrase: (
       <span>
-        I’m having a hard time adapting to the current digital landscape.
+        “I’m having a hard time adapting to the current digital landscape.”
       </span>
     ),
     pictureUrl: require('../assets/images/person-francene.svg'),
@@ -19,7 +21,7 @@ const people = [
   },
   {
     id: 'gerald',
-    phrase: <span>I don’t know where to begin with&nbsp;ecommerce.</span>,
+    phrase: <span>“I don’t know where to begin with&nbsp;ecommerce.”</span>,
     pictureUrl: require('../assets/images/person-gerald.svg'),
     transform: 'skew(-4deg)',
   },
@@ -27,8 +29,8 @@ const people = [
     id: 'geoffrey',
     phrase: (
       <span>
-        I need help getting my idea for a new business or product off the
-        ground.
+        “I need help getting my idea for a new business or product off the
+        ground.”
       </span>
     ),
     pictureUrl: require('../assets/images/person-geoffrey.svg'),
@@ -38,9 +40,9 @@ const people = [
     id: 'emily',
     phrase: (
       <span>
-        I’m looking to freshen up
+        “I’m looking to freshen up
         <br />
-        my website and logo.
+        my website and logo.”
       </span>
     ),
     pictureUrl: require('../assets/images/person-emily.svg'),
@@ -106,11 +108,9 @@ const IndexPage = () => (
             group from <span className="ws-noWrap">Toronto</span>.
           </h1>
           <div />
-          <a
-            className="xi xa-center fs-16 fw-semibold c-gray3 ls-loose tt-uppercase"
-            href="/about">
-            What is brand therapy?
-          </a>
+          <CalloutLink className="fs-16">
+            <a href="mailto:hello@renga.co">Book a session</a>
+          </CalloutLink>
         </div>
         <div className="w-50p-m mw-450 mh-auto">
           <TherapistIllustration />
@@ -118,12 +118,13 @@ const IndexPage = () => (
       </div>
       <div className="mw-700 mh-auto ta-center">
         <Content>
+          <h3 className="fs-24 mb-3 fw-semibold">What is brand therapy?</h3>
           <p>
             Rather than a quick fix mentality, we want to work alongside your
             startup, existing business, or new idea in order to help you build a
             strong core identity and reach the right people.
           </p>
-          <p>Enough about us, let's talk about why you’re here.</p>
+          <p>Let's talk about why you’re here.</p>
         </Content>
 
         <div className="pv-4">
@@ -142,21 +143,27 @@ const IndexPage = () => (
             a growing business or brand, so we work alongside you to deliver a
             custom solution that fits.
           </p>
-          <p>
-            We <em>listen</em>, and <em>learn</em> then write together.
-          </p>
-          <div className="mv-6 ta-center c-geraldine pe-none us-none">
-            <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
-          </div>
-          <div className="mb-6 ta-center">
-            <h3 className="fw-semibold">Sound interesting?</h3>{' '}
-            <p>
-              <a href="mailto:hello@renga.co">Schedule your first session</a> or
-              <br />
-              look at <a href="/services">services we offer.</a>
-            </p>
-          </div>
         </Content>
+        <div className="mv-6 ta-center c-geraldine pe-none us-none">
+          <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
+        </div>
+        <div className="mb-6 ta-center">
+          <Content className="c-gray4 mb-4">
+            <h3 className="fw-semibold">Sound interesting?</h3>{' '}
+            <p>We'd love to work with you to help your business.</p>
+          </Content>
+          <div className="x xa-center xj-center fs-18 lh-1d7">
+            <CalloutLink>
+              <a href="mailto:hello@renga.co">Book a session</a>
+            </CalloutLink>
+            <span className="p-relative ph-2 fs-16 o-50p" style={{ top: -2 }}>
+              or
+            </span>
+            <CalloutLink>
+              <Link to="/services">See our services &rarr;</Link>
+            </CalloutLink>
+          </div>
+        </div>
       </div>
     </div>
   </Layout>
