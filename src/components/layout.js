@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import Navigation from '../components/navigation';
+import Menu from '../components/menu';
 import Footer from '../components/footer';
 import favicon from '../assets/favicon.png';
 
@@ -21,7 +21,7 @@ const Layout = ({ children, data }) => {
         <meta name="twitter:description" content={meta.description} />
       </Helmet>
       <main className="ph-3 x xd-column h-100p">
-        <Navigation siteTitle={meta.title} />
+        <Menu />
         {children}
         <Footer />
       </main>
