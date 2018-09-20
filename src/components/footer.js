@@ -23,7 +23,7 @@ const Footer = () => (
     <Divider className="d-none d-inlineBlock-m" />
     <Link to="/careers">Careers</Link>
     <Divider />
-    <Link to="mailto:hello@renga.co">Contact Us</Link>
+    <a href="mailto:hello@renga.co">Contact Us</a>
   </footer>
 );
 

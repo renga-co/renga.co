@@ -52,16 +52,15 @@ const people = [
 
 const PersonQuote = ({ person, isRightAligned }) => (
   <div
-    className={cx('x-m xa-center xj-center pv-2', {
+    className={cx('x xa-center xj-center pv-2', {
       'ta-left ta-center-m': isRightAligned,
       'ta-right ta-center-m': !isRightAligned,
     })}>
     <blockquote
       className={cx(
-        'p-relative d-inlineBlock xo-2 fs-24 fw-semibold pa-3 br-30 ta-center',
+        'p-relative d-inlineBlock xo-2 fs-18 fs-24-m fw-semibold pa-3 br-30 ta-center t--0d5-m',
       )}
       style={{
-        top: '-0.5em',
         flex: '1 0 50%',
       }}>
       <div
@@ -74,7 +73,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
       <span className="p-relative z-2">{person.phrase}</span>
     </blockquote>
     <div
-      className={cx('d-inlineBlock', {
+      className={cx('d-inlineBlock ta-center', {
         'xo-1 pr-3': isRightAligned,
         'xo-3 pl-3': !isRightAligned,
       })}
@@ -82,9 +81,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
       <img
         src={person.pictureUrl}
         alt=""
-        className="pe-none us-none"
-        width={170}
-        height={170}
+        className="pe-none us-none mw-100 mw-170-m"
       />
     </div>
   </div>
@@ -109,7 +106,7 @@ const IndexPage = () => (
           </h1>
           <div />
           <CalloutLink className="fs-16">
-            <a href="mailto:hello@renga.co">Book a session</a>
+            <a href="mailto:hello@renga.co">Book a session &rarr;</a>
           </CalloutLink>
         </div>
         <div className="w-50p-m mw-450 mh-auto">
@@ -152,11 +149,13 @@ const IndexPage = () => (
             <h3 className="fw-semibold">Sound interesting?</h3>{' '}
             <p>We'd love to work with you to help your business.</p>
           </Content>
-          <div className="x xa-center xj-center fs-18 lh-1d7">
+          <div className="x xd-column xd-row-m xa-center xj-center fs-16 lh-1d7">
             <CalloutLink>
               <a href="mailto:hello@renga.co">Book a session</a>
             </CalloutLink>
-            <span className="p-relative ph-2 fs-16 o-50p" style={{ top: -2 }}>
+            <span
+              className="p-relative pv-2 pv-0-m ph-2-m fs-14 o-50p"
+              style={{ top: -1 }}>
               or
             </span>
             <CalloutLink>

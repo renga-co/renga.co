@@ -87,9 +87,29 @@ strong {
   width: 50%;
 }
 
+.mw-100 {
+  max-width: 120px;
+}
+
+.mw-170 {
+  max-width: 170px;
+}
+
 @media only screen and (min-width: 767px) {
   .w-50p-m {
     width: 50%;
+  }
+
+  .mw-100-m {
+    max-width: 120px;
+  }
+
+  .mw-170-m {
+    max-width: 170px;
+  }
+
+  .t--0d5-m {
+    top: -0.5em;
   }
 }
 
