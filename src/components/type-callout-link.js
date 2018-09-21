@@ -3,7 +3,10 @@ import cx from 'classnames';
 
 const CalloutLink = ({ className, ...props }) => (
   <span
-    className={cx('fw-semibold o-75p ls-loose tt-uppercase', className)}
+    className={cx(
+      'd-inlineBlock fw-semibold c-gray3 h-black ls-loose tt-uppercase',
+      className,
+    )}
     {...props}
   />
 );

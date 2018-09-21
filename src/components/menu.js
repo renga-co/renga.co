@@ -43,7 +43,7 @@ export default class Menu extends Component {
     return (
       <div className="ph-3-m pb-3">
         <div className="x xa-center xj-spaceBetween pv-3 pv-4-m">
-          <Link className="d-block x xa-center" to="/">
+          <Link className="d-block x xa-center h-fade" to="/">
             <svg
               height="56"
               viewBox="0 0 70 70"
@@ -73,18 +73,18 @@ export default class Menu extends Component {
           </nav>
           <nav className="d-none d-block-m fs-18 ml-3">
             <Link
-              className="c-gray3 pa-1"
+              className="c-gray3 h-black pa-1"
               activeClassName="c-gray6"
               to="/services">
               Services
             </Link>
             <Link
-              className="c-gray3 pa-1 ml-2"
+              className="c-gray3 h-black pa-1 ml-2"
               activeClassName="c-gray6"
               to="/blog">
               Blog
             </Link>
-            <ContactLink className="c-gray3 pa-1 ml-2" withArrowIcon>
+            <ContactLink className="c-gray3 h-black pa-1 ml-2" withArrowIcon>
               Let’s chat
             </ContactLink>
           </nav>

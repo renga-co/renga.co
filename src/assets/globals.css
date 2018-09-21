@@ -107,6 +107,30 @@ strong {
   vertical-align: middle;
 }
 
+.h {
+  transition: opacity 200ms ease;
+}
+
+.h:hover {
+  opacity: 1;
+}
+
+.h-fade {
+  transition: opacity 200ms ease;
+}
+
+.h-fade:hover {
+  opacity: 0.75;
+}
+
+.h-black {
+  transition: color 200ms ease;
+}
+
+.h-black:hover {
+  color: black;
+}
+
 @media only screen and (min-width: 767px) {
   body {
     font-size: 1.3125rem;

@@ -10,16 +10,20 @@ const Divider = ({ className, ...props }) => (
   </span>
 );
 
+const FooterLink = ({ className, ...props }) => (
+  <Link className={cx(className, 'h-black')} {...props} />
+);
+
 const Footer = () => (
   <footer
     className="pv-6 ph-3 c-gray3 ta-center fs-16 lh-2d0"
     style={{ marginTop: 'auto' }}>
-    <Link to="/services">Services</Link>
+    <FooterLink to="/services">Services</FooterLink>
     <Divider />
-    <Link to="/blog">Blog</Link>
+    <FooterLink to="/blog">Blog</FooterLink>
     <br className="d-none-m" />
     <Divider className="d-none d-inlineBlock-m" />
-    <Link to="/careers">Careers</Link>
+    <FooterLink to="/careers">Careers</FooterLink>
   </footer>
 );
 
