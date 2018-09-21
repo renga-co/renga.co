@@ -88,7 +88,7 @@ export default class Menu extends Component {
               Blog
             </Link>
             <ContactLink className="c-gray3 pa-1 ml-2">
-              Let’s Chat{' '}
+              Let’s chat{' '}
               <span className="p-relative" style={{ top: 2, left: 1 }}>
                 <Icon name="arrow-right" size={16} iconSize={18} />
               </span>
@@ -114,7 +114,7 @@ export default class Menu extends Component {
             <ContactLink
               className="Navigation-mobileMenuLink c-gray3 pa-3"
               onClick={this.handleMobileLinkClick}>
-              Let’s Chat
+              Let’s chat
             </ContactLink>
           </div>
         )}

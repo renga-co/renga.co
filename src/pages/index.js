@@ -138,12 +138,9 @@ const IndexPage = () => (
             custom solution that fits.
           </p>
         </Content>
-        <div className="mv-5 ta-center c-geraldine pe-none us-none">
-          <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
-        </div>
-        <div className="mb-6 x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
+        <div className="mt-5 x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
           <CalloutLink>
-            <ContactLink>Let’s Chat</ContactLink>
+            <ContactLink>Let’s chat</ContactLink>
           </CalloutLink>
           <span
             className="p-relative pv-2 pv-0-m ph-2-m fs-14 o-50p"
@@ -151,8 +148,13 @@ const IndexPage = () => (
             or
           </span>
           <CalloutLink>
-            <Link to="/services">See our services &rarr;</Link>
+            <Link to="/services">
+              See our services <Icon name="arrow-right" iconSize={18} />
+            </Link>
           </CalloutLink>
+        </div>
+        <div className="mv-6 ta-center c-geraldine pe-none us-none">
+          <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
         </div>
       </div>
     </div>

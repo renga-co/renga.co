@@ -21,8 +21,6 @@ const Footer = () => (
     <br className="d-none-m" />
     <Divider className="d-none d-inlineBlock-m" />
     <Link to="/careers">Careers</Link>
-    <Divider />
-    <ContactLink>Let’s Chat</ContactLink>
   </footer>
 );
 
