@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import Icon from '../components/icon';
 import ContactLink from '../components/contact-link';
 import './menu.css';
 
@@ -87,11 +86,8 @@ export default class Menu extends Component {
               to="/blog">
               Blog
             </Link>
-            <ContactLink className="c-gray3 pa-1 ml-2">
-              Let’s chat{' '}
-              <span className="p-relative" style={{ top: 2, left: 1 }}>
-                <Icon name="arrow-right" size={16} iconSize={18} />
-              </span>
+            <ContactLink className="c-gray3 pa-1 ml-2" withArrowIcon>
+              Let’s chat
             </ContactLink>
           </nav>
         </div>

@@ -102,7 +102,7 @@ const ServicesPage = () => (
       body="We'd love to spend some time hearing your story and working through your brand."
       links={
         <CalloutLink className="fs-16">
-          <ContactLink>Let’s chat &rarr;</ContactLink>
+          <ContactLink withArrowIcon>Let’s chat</ContactLink>
         </CalloutLink>
       }
     />

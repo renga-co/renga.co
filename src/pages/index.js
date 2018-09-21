@@ -149,7 +149,14 @@ const IndexPage = () => (
           </span>
           <CalloutLink>
             <Link to="/services">
-              See our services <Icon name="arrow-right" iconSize={18} />
+              See our services{' '}
+              <Icon
+                name="arrow-right"
+                className="p-relative"
+                style={{ top: 2 }}
+                iconSize={18}
+                size={18}
+              />
             </Link>
           </CalloutLink>
         </div>

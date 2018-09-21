@@ -3,8 +3,8 @@ import Head from 'react-helmet';
 import { graphql } from 'gatsby';
 import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
+import ContactLink from '../components/contact-link';
 import Layout from '../components/layout';
-import Icon from '../components/icon';
 import PostContent from '../components/post-content';
 import Title from '../components/type-title';
 import utils from '../utils';
@@ -64,9 +64,7 @@ const PostPage = props => {
             body="At Renga, we specialize in helping you discover your brand identity."
             links={
               <CalloutLink className="fs-16">
-                <ContactLink>
-                  Let’s chat <Icon name="arrow-right" iconSize={18} />
-                </ContactLink>
+                <ContactLink withArrowIcon>Let’s chat </ContactLink>
               </CalloutLink>
             }
           />

@@ -1,7 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 import { Link } from 'gatsby';
-import ContactLink from '../components/contact-link';
 
 const Divider = ({ className, ...props }) => (
   <span

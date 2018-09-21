@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Icon from '../components/icon';
 
 class ContactLink extends Component {
   handleClick = e => {
@@ -13,15 +14,30 @@ class ContactLink extends Component {
   };
 
   render() {
+    const { children, withArrowIcon, ...rest } = this.props;
+
     return (
       // eslint-disable-next-line jsx-a11y/anchor-has-content
       <a
-        {...this.props}
+        {...rest}
         href="mailto:hello@renga.co"
         rel="noopener noreferrer"
         target="_blank"
-        onClick={this.handleClick}
-      />
+        onClick={this.handleClick}>
+        {children}
+        {withArrowIcon && (
+          <Fragment>
+            {' '}
+            <Icon
+              name="arrow-right"
+              className="p-relative"
+              style={{ top: 3 }}
+              iconSize={18}
+              size={18}
+            />
+          </Fragment>
+        )}
+      </a>
     );
   }
 }

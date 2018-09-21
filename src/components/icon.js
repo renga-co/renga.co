@@ -42,7 +42,7 @@ export default class Icon extends PureComponent {
   };
 
   render() {
-    const { name, iconSize, size, ...rest } = this.props;
+    const { name, iconSize, size, style, ...rest } = this.props;
     const Component = icons[name];
 
     if (typeof Component !== 'function') {
@@ -52,6 +52,7 @@ export default class Icon extends PureComponent {
     return (
       <span
         style={{
+          ...style,
           display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
