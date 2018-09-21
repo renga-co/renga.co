@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
 import Layout from '../components/layout';
+import Icon from '../components/icon';
 import PostContent from '../components/post-content';
 import Title from '../components/type-title';
 import utils from '../utils';
@@ -63,7 +64,9 @@ const PostPage = props => {
             body="At Renga, we specialize in helping you discover your brand identity."
             links={
               <CalloutLink className="fs-16">
-                <a href="mailto:hello@rengao.co">Get in touch &rarr;</a>
+                <ContactLink>
+                  Let’s chat <Icon name="arrow-right" iconSize={18} />
+                </ContactLink>
               </CalloutLink>
             }
           />
