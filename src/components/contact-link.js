@@ -7,7 +7,7 @@ class ContactLink extends Component {
       this.props.onClick(e);
     }
 
-    if (window.drift) {
+    if (window.drift && window.drift.api) {
       e.preventDefault();
       window.drift.api.sidebar.open();
     }
