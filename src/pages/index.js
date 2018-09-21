@@ -1,9 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 import { Link } from 'gatsby';
-import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
+import ContactLink from '../components/contact-link';
 import Content from '../components/content';
+import Icon from '../components/icon';
 import Layout from '../components/layout';
 import Title from '../components/type-title';
 import TherapistIllustration from '../components/therapist-illustration';
@@ -102,7 +103,9 @@ const IndexPage = () => (
           </Title>
           <div />
           <CalloutLink className="fs-16">
-            <a href="mailto:hello@renga.co">Book a session &rarr;</a>
+            <ContactLink className="x xa-center xj-center">
+              Let’s chat <Icon name="arrow-right" iconSize={18} />
+            </ContactLink>
           </CalloutLink>
         </div>
         <div className="w-50p-m mw-450 mh-auto">
@@ -119,7 +122,6 @@ const IndexPage = () => (
           </p>
           <p>Now, let's talk about why you’re here.</p>
         </Content>
-
         <div className="pv-4">
           {people.map((person, i) => (
             <PersonQuote
@@ -129,7 +131,6 @@ const IndexPage = () => (
             />
           ))}
         </div>
-
         <Content className="c-gray4">
           <p>
             We know that each of our clients have their own unique challenges as
@@ -140,32 +141,19 @@ const IndexPage = () => (
         <div className="mv-5 ta-center c-geraldine pe-none us-none">
           <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
         </div>
-        <Callout
-          className="mb-6"
-          title="Ready to take the first steps?"
-          body={
-            <p>
-              We'd love to spend some time hearing
-              <br />
-              your story and working through your brand.
-            </p>
-          }
-          links={
-            <div className="x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
-              <CalloutLink>
-                <a href="mailto:hello@renga.co">Book a session</a>
-              </CalloutLink>
-              <span
-                className="p-relative pv-2 pv-0-m ph-2-m fs-14 o-50p"
-                style={{ top: -1 }}>
-                or
-              </span>
-              <CalloutLink>
-                <Link to="/services">See our services &rarr;</Link>
-              </CalloutLink>
-            </div>
-          }
-        />
+        <div className="mb-6 x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
+          <CalloutLink>
+            <ContactLink>Let’s Chat</ContactLink>
+          </CalloutLink>
+          <span
+            className="p-relative pv-2 pv-0-m ph-2-m fs-14 o-50p"
+            style={{ top: -1 }}>
+            or
+          </span>
+          <CalloutLink>
+            <Link to="/services">See our services &rarr;</Link>
+          </CalloutLink>
+        </div>
       </div>
     </div>
   </Layout>

@@ -1,5 +1,5 @@
 ---
-title: "More Than A Logo: A Primer on Brand Identity"
+title: 'More Than A Logo: A Primer on Brand Identity'
 date: 2017-11-14
 cover: './media/brand identity.jpg'
 author: jared
@@ -28,4 +28,4 @@ This is why worrying about your brand over your brand identity can often be a co
 
 Oscar Wilde once said, _“be yourself; everyone else is already taken.”_
 
-A dedicated conversation around discovering your brand’s identity is what will help separate you from others who may have a sweet new slogan and website, but no guiding sense of the why behind their brand. Here at Renga, we specialize in helping you discover your brand identity so that you can build trust with your customers without losing them over costly, avoidable mistakes.
+A dedicated conversation around discovering your brand’s identity is what will help separate you from others who may have a sweet new slogan and website, but no guiding sense of the why behind their brand.

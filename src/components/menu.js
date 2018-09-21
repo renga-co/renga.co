@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import Icon from '../components/icon';
+import ContactLink from '../components/contact-link';
 import './menu.css';
 
 export default class Menu extends Component {
@@ -86,12 +87,12 @@ export default class Menu extends Component {
               to="/blog">
               Blog
             </Link>
-            <a href="mailto:hello@renga.co" className="c-gray3 pa-1 ml-2">
+            <ContactLink className="c-gray3 pa-1 ml-2">
               Contact{' '}
               <span className="p-relative" style={{ top: 2, left: 1 }}>
                 <Icon name="arrow-right" size={16} iconSize={18} />
               </span>
-            </a>
+            </ContactLink>
           </nav>
         </div>
         {this.state.isMenuOpen && (
@@ -110,12 +111,11 @@ export default class Menu extends Component {
               onClick={this.handleMobileLinkClick}>
               Blog
             </Link>
-            <a
-              href="mailto:hello@renga.co"
+            <ContactLink
               className="Navigation-mobileMenuLink c-gray3 pa-3"
               onClick={this.handleMobileLinkClick}>
               Contact
-            </a>
+            </ContactLink>
           </div>
         )}
       </div>

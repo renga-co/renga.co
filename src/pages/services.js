@@ -4,6 +4,7 @@ import Content from '../components/content';
 import Header from '../components/header';
 import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
+import ContactLink from '../components/contact-link';
 
 const services = [
   {
@@ -101,7 +102,7 @@ const ServicesPage = () => (
       body="We'd love to spend some time hearing your story and working through your brand."
       links={
         <CalloutLink className="fs-16">
-          <a href="mailto:hello@renga.co">Get in touch &rarr;</a>
+          <ContactLink>Get in touch &rarr;</ContactLink>
         </CalloutLink>
       }
     />

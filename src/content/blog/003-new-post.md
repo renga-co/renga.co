@@ -1,5 +1,5 @@
 ---
-title: "The Best Beginning is the End"
+title: 'The Best Beginning is the End'
 date: 2018-07-12
 cover: './media/austris-augusts-140145-unsplash.jpg'
 author: jared
@@ -27,5 +27,3 @@ Content exists in order to take a potential customer on a journey with a clear a
 An easy question to ask yourself when crafting any piece of content is: what do you want people to do with with this interaction? Do you want them to sign up for a mailing list? Like a page? Attend an event? Buy your product? Each piece of content becomes a unique opportunity to help potential customers move towards the end goal of your content strategy by providing them with a single, clear, call to action.
 
 It turns out that knowing where you want to end is often the best place to start when it comes to content strategy.
-
-Here at Renga, we specialize in helping small to mid sized businesses develop this sort of strategic content delivery system by better understanding their own brand identity. We want to help you thrive in this ever-changing digital marketing landscape because you are operating from a healthy place of brand awareness. Would you be interested in sitting down for a content strategy consult? Let’s book a time to talk.

@@ -31,7 +31,3 @@ If you’re a local pottery store hoping to reach more potential customers in yo
 Or, if you’re a business that sells primarily to other businesses, building out a consistent and resourceful e-blast might be more effective than running Facebook ads.
 
 The point is that building a fan base from the bottom up with the people you’re trying to reach is far more effective than wildly and inconsistently posting mediocre content across multiple social media platforms.
-
-We at Renga specialize in helping brands better understand who they are and taking steps into that identity in order to thrive in the digital world. We would love to book a consultation with you to think through a social media strategy that reaches the people you are trying to reach rather than wasting time and resources on a myth.
-
-Interested? [Let's chat](mailto:hello@renga.co)
