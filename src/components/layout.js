@@ -29,7 +29,7 @@ const Layout = ({ children, data }) => {
   );
 };
 
-export default props => (
+const WrappedLayout = props => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -42,6 +42,8 @@ export default props => (
         }
       }
     `}
-    render={data => <Layout data={data} {...props} />}
+    render={data => <Layout {...props} data={data} />}
   />
 );
+
+export default WrappedLayout;
