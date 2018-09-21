@@ -61,9 +61,8 @@ const PersonQuote = ({ person, isRightAligned }) => (
         flex: '1 0 50%',
       }}>
       <div
-        className="p-absolute p-fill br-30"
+        className="p-absolute p-fill br-30 bgc-brown"
         style={{
-          backgroundColor: 'rgb(245, 241, 237)',
           transform: person.transform,
         }}
       />
@@ -90,15 +89,7 @@ const IndexPage = () => (
       <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mt-3 mb-6">
         <div className="mb-4 mb-0-m w-50p-m">
           <Title className="mb-2 mb-4-m lh-1d25">
-            Renga is a{' '}
-            <span
-              style={{
-                backgroundImage: `url('${squiggleBUrl}')`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'bottom center',
-              }}>
-              brand therapy
-            </span>{' '}
+            Renga is a <span className="intro-squiggle">brand therapy</span>{' '}
             group from <span className="ws-noWrap">Toronto</span>.
           </Title>
           <div />
@@ -131,7 +122,7 @@ const IndexPage = () => (
             />
           ))}
         </div>
-        <Content className="c-gray4">
+        <Content>
           <p>
             We know that each of our clients have their own unique challenges as
             a growing business or brand, so we work alongside you to deliver a

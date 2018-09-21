@@ -99,8 +99,10 @@ strong {
   max-width: 170px;
 }
 
-.ix {
-  display: inline-flex;
+.intro-squiggle {
+  background-image: url('./images/squiggle-b.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 .va-middle {

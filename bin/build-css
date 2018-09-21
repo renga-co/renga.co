@@ -8,6 +8,7 @@ const styles = {
   colors: {
     white: '#fff',
     offwhite: '#fffefc',
+    brown: '#f5f1ec',
     geraldine: '#ff766a',
     gentleGeraldine: '#eef9ff',
     gray1: '#f2f2f2',
