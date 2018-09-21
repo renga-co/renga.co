@@ -22,7 +22,7 @@ const Footer = () => (
     <Divider className="d-none d-inlineBlock-m" />
     <Link to="/careers">Careers</Link>
     <Divider />
-    <ContactLink>Contact Us</ContactLink>
+    <ContactLink>Let’s Chat</ContactLink>
   </footer>
 );
 
