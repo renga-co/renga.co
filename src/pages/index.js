@@ -9,7 +9,6 @@ import Layout from '../components/layout';
 import Title from '../components/type-title';
 import TherapistIllustration from '../components/therapist-illustration';
 import squiggleAUrl from '../assets/images/squiggle-a.svg';
-import squiggleBUrl from '../assets/images/squiggle-b.svg';
 
 const people = [
   {
