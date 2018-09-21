@@ -62,9 +62,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
       }}>
       <div
         className="p-absolute p-fill br-30 bgc-brown"
-        style={{
-          transform: person.transform,
-        }}
+        style={{ transform: person.transform }}
       />
       <span className="p-relative z-2">{person.phrase}</span>
     </blockquote>
