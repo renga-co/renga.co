@@ -3,7 +3,7 @@ module.exports = {
     title: 'Renga',
     titleTemplate: '%s – Renga',
     description: 'Brand therapy group based in Toronto, Canada.',
-    url: 'https://renga.co',
+    siteUrl: 'https://renga.co',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -48,6 +48,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-feed',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-netlify',
