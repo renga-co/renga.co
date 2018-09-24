@@ -37,7 +37,7 @@ export default BlogIndexPage;
 export const query = graphql`
   query BlogIndexQuery {
     allMarkdownRemark(
-      sort: { fields: [fields___date], order: DESC }
+      sort: { fields: [fields___date], order: ASC }
       filter: {
         fields: { type: { eq: "blog" } }
         frontmatter: { published: { ne: false } }
