@@ -1,6 +1,6 @@
 ---
 title: The Best Beginning is the End
-date: 2018-07-12
+date: '2018-07-12'
 author: jared
 ---
 

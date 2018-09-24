@@ -1,26 +1,28 @@
 prose:
   rooturl: src/content/blog
-  siteurl: 'https://renga.co/'
   media: src/content/blog/media
   metadata:
-    - name: title
-      field:
-        element: text
-        label: Title
-        type: text
-    - name: date
-      field:
-        element: text
-        label: Published On
-        type: date
-    - name: author
-      field:
-        element: select
-        label: Author
-        value: jared
-        options:
-          - name: Jared Henriques
-            value: jared
-          - name: Ben Bartosik
-            value: ben
-        alterable: false
+    src/content/blog:
+      - name: title
+        field:
+          element: text
+          label: Title
+          type: text
+      - name: date
+        field:
+          element: text
+          label: 'Published On'
+          help: 'Write the date in YYYY-MM-DD format. Time is not used.'
+          value: '2018-01-01'
+          type: text
+      - name: author
+        field:
+          element: select
+          label: Author
+          value: jared
+          options:
+            - name: Jared Henriques
+              value: jared
+            - name: Ben Bartosik
+              value: ben
+          alterable: false

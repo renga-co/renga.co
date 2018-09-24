@@ -1,6 +1,6 @@
 ---
 title: 'More Than A Logo: A Primer on Brand Identity'
-date: 2017-11-14
+date: '2017-11-14'
 author: jared
 ---
 
