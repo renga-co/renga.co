@@ -1,9 +1,7 @@
 ---
-title: 'The Best Beginning is the End'
+title: The Best Beginning is the End
 date: 2018-07-12
-cover: './media/austris-augusts-140145-unsplash.jpg'
 author: jared
-tags: branding
 ---
 
 Have you ever been caught in an infinite consumer loop?

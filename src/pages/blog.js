@@ -50,14 +50,6 @@ export const query = graphql`
           }
           frontmatter {
             title
-            cover {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 1200) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
         }
       }
