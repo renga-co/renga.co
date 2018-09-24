@@ -1,24 +1,26 @@
-rooturl: src/content/blog
-media: src/content/blog/media
-metadata:
-  - name: title
-    field:
-      element: text
-      label: Title
-      type: text
-  - name: date
-    field:
-      element: text
-      label: Published On
-      type: date
-  - name: author
-    field:
-      element: select
-      label: Author
-      value: jared
-      options:
-        - name: Jared Henriques
-          value: jared
-        - name: Ben Bartosik
-          value: ben
-      alterable: false
+prose:
+  rooturl: src/content/blog
+  siteurl: 'https://renga.co/'
+  media: src/content/blog/media
+  metadata:
+    - name: title
+      field:
+        element: text
+        label: Title
+        type: text
+    - name: date
+      field:
+        element: text
+        label: Published On
+        type: date
+    - name: author
+      field:
+        element: select
+        label: Author
+        value: jared
+        options:
+          - name: Jared Henriques
+            value: jared
+          - name: Ben Bartosik
+            value: ben
+        alterable: false
