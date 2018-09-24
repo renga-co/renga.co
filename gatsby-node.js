@@ -61,8 +61,9 @@ exports.createPages = async ({ actions, graphql }) => {
     throw result.errors;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(edge => {
-    const path = edge.node.fields.slug;
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const path = node.fields.slug;
+
     createPage({
       path,
       component: template,

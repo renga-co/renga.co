@@ -38,7 +38,10 @@ export const query = graphql`
   query BlogIndexQuery {
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
-      filter: { fields: { type: { eq: "blog" } } }
+      filter: {
+        fields: { type: { eq: "blog" } }
+        frontmatter: { published: { ne: false } }
+      }
     ) {
       edges {
         node {

@@ -26,3 +26,9 @@ prose:
             - name: Ben Bartosik
               value: ben
           alterable: false
+      - name: published
+        field:
+          element: checkbox
+          label: Published
+          help: 'Unpublished posts will not appear on the final site.'
+          value: true
