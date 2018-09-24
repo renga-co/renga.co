@@ -17,10 +17,7 @@ const BlogIndexPage = ({ data }) => {
       <div className="mw-700 mh-auto">
         <Header
           title="Our Blog"
-          subtitle={`
-        We love sharing our process of building a sustainable creative brand.
-        Maybe one more line?
-      `}
+          subtitle="We love sharing our process of building a sustainable creative brand."
         />
         {posts.map(({ node: post }) => (
           <Link to={post.fields.slug} key={post.id}>

@@ -60,7 +60,7 @@ const PostPage = props => {
           </div>
           <Callout
             className="br-30 pt-2 pb-4 mt-5"
-            title="Need help building trust with customers?"
+            title="Want to talk more about this?"
             body="At Renga, we specialize in helping you discover your brand identity."
             links={
               <CalloutLink className="fs-16">

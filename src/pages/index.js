@@ -104,9 +104,9 @@ const IndexPage = () => (
         <Content>
           <h3 className="fs-24 mb-3 fw-semibold">What is brand therapy?</h3>
           <p>
-            It's an approach to branding that starts from a relational,
-            collaborative place. We work alongside you to help you build a
-            strong core identity and reach the right people.
+            Rather than a quick fix, it’s a method that listens, collaborates,
+            and empowers your brand to reach the right people by establishing
+            a&nbsp;strong&nbsp;core identity.
           </p>
           <p>Now, let's talk about why you’re here.</p>
         </Content>

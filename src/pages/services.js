@@ -81,7 +81,7 @@ const ServicesPage = () => (
     <div className="mw-700 mh-auto">
       <Header
         title="Services"
-        subtitle="Another set of lines about the services we offer."
+        subtitle="We can help your business reach the right people by establishing a strong core identity. Here are some ways we can help."
       />
     </div>
     <div className="mw-1200 mh-auto mb-5">
@@ -98,8 +98,8 @@ const ServicesPage = () => (
     </div>
     <Callout
       className="mt-4 mb-6"
-      title="Sound like a fit?"
-      body="We'd love to spend some time hearing your story and working through your brand."
+      title="Ready to start?"
+      body="We'd love to spend some time hearing your story."
       links={
         <CalloutLink className="fs-16">
           <ContactLink withArrowIcon>Let’s chat</ContactLink>
