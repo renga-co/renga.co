@@ -54,7 +54,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
     })}>
     <blockquote
       className={cx(
-        'p-relative d-inlineBlock xo-2 fs-16 fs-24-m fw-semibold pa-3 br-30 ta-center t--0d5-m',
+        'p-relative d-inlineBlock xo-2 fs-16 fs-24-m fw-semibold pa-2 pa-3-m br-30 ta-center t--0d5-m',
       )}
       style={{
         flex: '1 0 50%',

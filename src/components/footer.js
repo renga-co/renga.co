@@ -21,7 +21,7 @@ const Footer = () => (
     <FooterLink to="/services">Services</FooterLink>
     <Divider />
     <FooterLink to="/blog">Blog</FooterLink>
-    <Divider className="d-none d-inlineBlock-m" />
+    <Divider />
     <FooterLink to="/careers">Careers</FooterLink>
   </footer>
 );

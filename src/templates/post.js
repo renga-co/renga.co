@@ -56,7 +56,7 @@ const PostPage = props => {
             <PostContent html={post.html} />
           </div>
           <div className="mv-6 ta-center c-geraldine pe-none us-none">
-            <img alt="" style={{ maxWidth: 300 }} src={squiggleUrl} />
+            <img alt="" style={{ maxWidth: 288 }} src={squiggleUrl} />
           </div>
           <Callout
             className="br-30 pt-2 pb-4 mt-5"
