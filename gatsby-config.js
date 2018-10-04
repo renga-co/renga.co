@@ -22,12 +22,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        trackingId: 'UA-97836317-1',
-        head: false,
-        anonymize: true,
-        respectDNT: true,
+        id: 'GTM-MXJ4Q46',
+        includeInDevelopment: false,
       },
     },
     {
