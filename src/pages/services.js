@@ -11,12 +11,12 @@ const services = [
     title: 'Brand Strategy',
     description: (
       <p>
-        Your brand has many touchpoints today and it can sometime take on
-        different forms depending on the medium, writer or designer. It’s
-        important to have clear brand guidelines established that accurately
-        represents your intention as a business. Your brand is what your
-        customer perceives not what you perceive. We help you match those two
-        and develop interesting ways to share what you care about the most.
+        We realize that your brand has multiple touchpoints across a variety of
+        mediums and channels; and that each of those touchpoints represents a
+        potential onramp for a new customer. This is why having clear,
+        consistent, and fully developed brand guidelines is an integral part to
+        growing as a business in the digital era. Let’s make sure you’re
+        reaching the right people with the right message.
       </p>
     ),
     imageUrl: require('../assets/images/service-brand-strategy.svg'),
@@ -24,43 +24,50 @@ const services = [
   {
     title: 'Ecommerce',
     description: (
-      <p>
-        As Shopify Partners and former ecommerce entrepreneurs we can help you
-        navigate the best way to set up your ecommerce store. Whether you’re
-        starting from scratch, looking for a refresh, or taking it to the next
-        level we can help.
-      </p>
+      <Fragment>
+        <p>
+          Setting up an online store can be intimidating; we totally get it. So
+          let us do the heavy lifting for you. Our team can handle everything
+          from setting up the backend to getting high quality photos of your
+          product.
+        </p>
+        <p>
+          As a Shopify Partner and former ecommerce entrepreneurs we can help
+          you navigate the best way to set up your online store. Whether you’re
+          starting from scratch, looking for a refresh, or taking it to the next
+          level, we can help.
+        </p>
+      </Fragment>
     ),
     imageUrl: require('../assets/images/service-ecommerce.svg'),
   },
   {
     title: 'Digital Marketing & Advertising',
     description: (
-      <p>
-        You’ve got a marketing budget but you aren’t sure about the best way to
-        spend it. Facebook, Instagram or Google ads seem like the right way to
-        go but you’re intimidated and default into your traditional channels
-        even though you know they are more expensive and not as effective.
-      </p>
+      <Fragment>
+        <p>
+          Facebook, Instagram, or Google ads seem like the right way to go with
+          your new marketing budget, but you’re not sure where to start?
+        </p>
+        <p>
+          Why not let us launch your digital ad campaign for you? We’ll work
+          closely with you to ensure brand consistency, getting the results you
+          want. We can take care of everything from strategy, implementation,
+          creative, and reporting.
+        </p>
+      </Fragment>
     ),
     imageUrl: require('../assets/images/service-digital-marketing.svg'),
   },
   {
     title: 'Website Design / Development',
     description: (
-      <Fragment>
-        <p>
-          If you’re just looking for a fresh design or a website that doesn’t
-          look like it was launched at the dawn of the internet, we can help
-          with that too!
-        </p>
-        <p>
-          We work with trusted and talented designers and developers so that you
-          don’t have to go through the hassle of finding someone yourself. Let
-          us take your ideas and help them make them come alive in an end result
-          that we’ll all be proud of.
-        </p>
-      </Fragment>
+      <p>
+        If you’re just looking for a fresh design or a website that doesn’t look
+        like it was launched at the dawn of the internet; or if you're trying to
+        create a website that looks and works great on any device &mdash; we can
+        help with that too!
+      </p>
     ),
     imageUrl: require('../assets/images/service-web-development.svg'),
   },
@@ -81,7 +88,7 @@ const ServicesPage = () => (
     <div className="mw-700 mh-auto">
       <Header
         title="Services"
-        subtitle="We can help your business reach the right people by establishing a strong core identity. Here are some ways we can help."
+        subtitle="Growing a business these days can be an elusive, multifaceted challenge. Why not let us help you with..."
       />
     </div>
     <div className="mw-1200 mh-auto mb-5">
@@ -97,13 +104,18 @@ const ServicesPage = () => (
       </Content>
     </div>
     <Callout
-      className="mt-4 mb-6"
+      className="mt-4 mb-6 mw-450"
       title="Ready to start?"
-      body="We'd love to spend some time hearing your story."
       links={
-        <CalloutLink className="fs-16">
-          <ContactLink withArrowIcon>Let’s chat</ContactLink>
-        </CalloutLink>
+        <Fragment>
+          <CalloutLink className="fs-16">
+            <ContactLink withArrowIcon>Let's chat</ContactLink>
+          </CalloutLink>
+          <p className="fs-14 mw-450 mt-2 c-gray4 lh-1d5">
+            If there’s something you’re looking for that you don’t see, reach
+            out and maybe we can help!
+          </p>
+        </Fragment>
       }
     />
   </Layout>
