@@ -2,7 +2,7 @@
 date: '2018-11-15'
 author: jared
 published: true
-title: 2018-11-15-know-your-reach
+title: Know Your Reach
 ---
 Who are you trying to reach? 
 
