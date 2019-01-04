@@ -32,6 +32,8 @@ exports.onCreateNode = ({ actions, getNode, node }) => {
       createNodeField({ node, name: 'date', value: date });
       type = 'blog';
       slug = '/blog' + slug;
+    } else {
+      type = 'custom-page';
     }
 
     createNodeField({ node, name: 'slug', value: slug });
@@ -42,7 +44,9 @@ exports.onCreateNode = ({ actions, getNode, node }) => {
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage, createRedirect } = actions;
 
-  const template = resolve('src/templates/post.js');
+  const postTemplate = resolve('./src/templates/post.js');
+  const pageTemplate = resolve('./src/templates/page.js');
+
   const result = await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -50,6 +54,7 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             fields {
               slug
+              type
             }
           }
         }
@@ -61,12 +66,28 @@ exports.createPages = async ({ actions, graphql }) => {
     throw result.errors;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const nodes = result.data.allMarkdownRemark.edges.map(m => m.node);
+  const postNodes = nodes.filter(node => node.fields.type === 'blog');
+  const pageNodes = nodes.filter(node => node.fields.type === 'custom-page');
+
+  postNodes.forEach(node => {
     const path = node.fields.slug;
 
     createPage({
       path,
-      component: template,
+      component: postTemplate,
+      context: {
+        slug: path,
+      },
+    });
+  });
+
+  pageNodes.forEach(node => {
+    const path = node.fields.slug;
+
+    createPage({
+      path,
+      component: pageTemplate,
       context: {
         slug: path,
       },
