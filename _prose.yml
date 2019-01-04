@@ -1,7 +1,13 @@
 prose:
-  rooturl: src/content/blog
+  rooturl: src/content
   media: src/content/blog/media
   metadata:
+    src/content:
+      - name: title
+        field:
+          element: text
+          label: Title
+          type: text
     src/content/blog:
       - name: title
         field:
