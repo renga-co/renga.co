@@ -64,6 +64,17 @@ strong {
   font-weight: 600;
 }
 
+button {
+  cursor: pointer;
+  display: inherit;
+  border: none;
+  background: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: inherit;
+}
+
 .p-fill {
   top: 0;
   left: 0;

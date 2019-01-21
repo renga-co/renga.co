@@ -1,0 +1,11 @@
+.CareerPosting {
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.CareerPosting:not(.CareerPostingList--isOpen):hover {
+  background-color: #f7f3ef;
+}
+
+.CareerPosting--isOpen {
+  transform: scale(1.02);
+}

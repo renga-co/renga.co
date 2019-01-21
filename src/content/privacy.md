@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+template: page
 ---
 
 Renga Inc. Privacy Policy

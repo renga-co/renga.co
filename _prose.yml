@@ -8,6 +8,12 @@ prose:
           element: text
           label: Title
           type: text
+    src/content/careers:
+      - name: title
+        field:
+          element: text
+          label: Posting Title
+          type: text
     src/content/blog:
       - name: date
         field:

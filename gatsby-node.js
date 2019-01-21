@@ -14,6 +14,11 @@ const getSlug = (node, filePath) => {
   return toSlug(filePath);
 };
 
+const templates = {
+  post: resolve('./src/templates/post.js'),
+  page: resolve('./src/templates/page.js'),
+};
+
 exports.onCreateNode = ({ actions, getNode, node }) => {
   const { createNodeField } = actions;
 
@@ -26,26 +31,38 @@ exports.onCreateNode = ({ actions, getNode, node }) => {
 
     let type = 'unknown';
     let slug = '/' + getSlug(node, filePath);
+    let templateName = null;
 
     if (filePath.includes('blog')) {
       const date = new Date(node.frontmatter.date);
       createNodeField({ node, name: 'date', value: date });
       type = 'blog';
       slug = '/blog' + slug;
+      templateName = 'post';
+    } else if (filePath.includes('careers')) {
+      slug = null;
+      type = 'career';
     } else {
       type = 'custom-page';
+      templateName = node.frontmatter.template || 'page';
     }
 
-    createNodeField({ node, name: 'slug', value: slug });
+    const templatePath = templates[templateName];
+
     createNodeField({ node, name: 'type', value: type });
+
+    if (slug) {
+      createNodeField({ node, name: 'slug', value: slug });
+    }
+
+    if (templatePath) {
+      createNodeField({ node, name: 'template', value: templatePath });
+    }
   }
 };
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage, createRedirect } = actions;
-
-  const postTemplate = resolve('./src/templates/post.js');
-  const pageTemplate = resolve('./src/templates/page.js');
 
   const result = await graphql(`
     {
@@ -55,6 +72,7 @@ exports.createPages = async ({ actions, graphql }) => {
             fields {
               slug
               type
+              template
             }
           }
         }
@@ -75,7 +93,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
     createPage({
       path,
-      component: postTemplate,
+      component: node.fields.template,
       context: {
         slug: path,
       },
@@ -87,7 +105,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
     createPage({
       path,
-      component: pageTemplate,
+      component: node.fields.template,
       context: {
         slug: path,
       },
