@@ -1,9 +1,11 @@
+const canonicalUrl = 'https://renga.co';
+
 module.exports = {
   siteMetadata: {
     title: 'Renga',
     description:
       'Renga, a brand therapy group from Toronto. Brand therapy is a method that listens, collaborates, and empowers your brand to reach the right people by establishing a strong core identity.',
-    siteUrl: 'https://renga.co',
+    siteUrl: canonicalUrl,
     image: '/images/social.png',
   },
   plugins: [
@@ -51,6 +53,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-feed',
       options: {
+        setup: ({ query: { site: { siteMetadata }, ...rest }}) => {
+          return {
+            ...siteMetadata,
+            ...rest,
+            image_url: `${canonicalUrl}/favicon.png`,
+          }
+        },
         feeds: [
           {
             title: 'Renga Blog Feed',
