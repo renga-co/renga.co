@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: 'Renga',
-    titleTemplate: '%s – Renga',
-    description: 'Brand therapy group based in Toronto, Canada.',
+    description:
+      'Renga, a brand therapy group from Toronto. Brand therapy is a method that listens, collaborates, and empowers your brand to reach the right people by establishing a strong core identity.',
     siteUrl: 'https://renga.co',
+    image: '/images/social.png',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {
@@ -46,7 +48,41 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-feed',
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        feeds: [
+          {
+            title: 'Renga Blog Feed',
+            output: '/rss.xml',
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { fields: [fields___date], order: DESC }
+                  filter: {
+                    fields: { type: { eq: "blog" } }
+                    frontmatter: { published: { ne: false } }
+                  }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          },
+        ],
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-netlify',

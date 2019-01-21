@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Layout from '../components/layout';
+import MetaTags from '../components/meta-tags';
 import Content from '../components/content';
 import Header from '../components/header';
 import Callout from '../components/callout';
@@ -85,6 +86,10 @@ const Service = ({ title, description, imageUrl }) => (
 
 const ServicesPage = () => (
   <Layout>
+    <MetaTags
+      title="Services"
+      description="Renga is a digital agency done differently. Our services range from web development, e-commerce, digital marketing/advertising and creative direction; however, our bread and butter is our branding strategy and development. We work with small to medium sized business to help them solve branding and marketing challenges."
+    />
     <div className="mw-700 mh-auto">
       <Header
         title="Services"

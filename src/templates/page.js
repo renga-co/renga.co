@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import MetaTags from '../components/meta-tags';
 import Content from '../components/content';
 
 const CustomPage = props => {
@@ -11,13 +11,10 @@ const CustomPage = props => {
   return (
     <Layout>
       <div className="mw-700 mh-auto mt-5">
-        <Head>
-          <title>{page.frontmatter.title}</title>
-          <meta
-            name="description"
-            content={page.frontmatter.description || page.excerpt}
-          />
-        </Head>
+        <MetaTags
+          title={page.frontmatter.title}
+          description={page.frontmatter.description || page.excerpt}
+        />
         <div>
           <Content dangerouslySetInnerHTML={{ __html: page.html }} />
         </div>

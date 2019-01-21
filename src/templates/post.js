@@ -1,10 +1,10 @@
 import React from 'react';
-import Head from 'react-helmet';
 import { graphql } from 'gatsby';
 import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
 import ContactLink from '../components/contact-link';
 import Layout from '../components/layout';
+import MetaTags from '../components/meta-tags';
 import PostContent from '../components/post-content';
 import Title from '../components/type-title';
 import utils from '../utils';
@@ -24,18 +24,19 @@ const PostPage = props => {
   const { data } = props;
   const { markdownRemark: post } = data;
 
+  const seoTitle = post.frontmatter.title;
+  const seoDescription =
+    post.frontmatter.seoDescription || post.frontmatter.excerpt || post.excerpt;
   const date = new Date(post.fields.date);
 
   return (
     <Layout>
       <div className="mw-700 mh-auto mt-5">
-        <Head>
-          <title>{post.frontmatter.title}</title>
-          <meta
-            name="description"
-            content={post.frontmatter.description || post.excerpt}
-          />
-        </Head>
+        <MetaTags
+          title={seoTitle}
+          description={seoDescription}
+          isBlogPost
+        />
         <article className="Post">
           <header className="ta-center mv-4">
             <Title>{post.frontmatter.title}</Title>
@@ -87,6 +88,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        seoDescription
+        excerpt
         author
       }
     }

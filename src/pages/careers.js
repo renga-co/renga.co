@@ -1,10 +1,15 @@
 import React from 'react';
 import Layout from '../components/layout';
+import MetaTags from '../components/meta-tags';
 import Header from '../components/header';
 import Content from '../components/content';
 
+const description =
+  'Renga was built on the idea of curiosity, integrity and collaboration. We invest into our people and joining the team means you’ll be wearing multiple hats. We push you to learn, grow and satisfy that entrepreneurial itch.';
+
 const CareersPage = () => (
   <Layout>
+    <MetaTags title="Careers" description={description} />
     <div className="mw-700 ta-center mh-auto">
       <Header
         title="Work with us"

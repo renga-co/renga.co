@@ -9,11 +9,6 @@ prose:
           label: Title
           type: text
     src/content/blog:
-      - name: title
-        field:
-          element: text
-          label: Title
-          type: text
       - name: date
         field:
           element: text
@@ -21,6 +16,22 @@ prose:
           help: 'Write the date in YYYY-MM-DD format. Time is not used.'
           value: '2018-01-01'
           type: text
+      - name: title
+        field:
+          element: text
+          label: Title
+          type: text
+      - name: excerpt
+        field:
+          element: textarea
+          label: Excerpt (optional)
+          help: >
+            Short excerpt from the article to appear on renga.co/blog. If not set, falls back to the first ~150 characters of the post.
+      - name: seoDescription
+        field:
+          element: textarea
+          label: SEO Description (optional)
+          help: Appears on search engines as the description. If not set, falls back the excerpt.
       - name: author
         field:
           element: select

@@ -2,6 +2,10 @@
 title: Challenging The Myth of Social Media
 date: '2018-03-17'
 author: jared
+seoDescription: >
+  It’s 2018 and your business isn’t on Facebook?! You’re doomed. There is a common belief that to compete in the digital age, a business needs to be active on the various social media platforms.
+excerpt: >
+  It’s 2018 and your business isn’t on Facebook?! You’re doomed. There is a common belief that to compete in the digital age, a business needs to be active on the various social media platforms.
 published: true
 ---
 

@@ -1,24 +1,24 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import MetaTags from '../components/meta-tags';
 import Header from '../components/header';
 import PostPreview from '../components/post-preview';
 
 import typewriterUrl from '../assets/images/blog-typewriter.svg';
+
+const description =
+  'We love sharing our process of building a sustainable creative brand.';
 
 const BlogIndexPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
     <Layout>
-      <Helmet title="Blog" />
+      <MetaTags title="Blog" description={description} />
       <div className="mw-700 mh-auto">
-        <Header
-          title="Our Blog"
-          subtitle="We love sharing our process of building a sustainable creative brand."
-        />
+        <Header title="Our Blog" subtitle={description} />
         {posts.map(({ node: post }) => (
           <Link to={post.fields.slug} key={post.id}>
             <PostPreview post={post} />
@@ -53,6 +53,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            excerpt
           }
         }
       }
