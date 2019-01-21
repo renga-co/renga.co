@@ -48,8 +48,8 @@ const CareerPosting = ({ posting, email, isOpen, onClick }) => {
     <div
       key={posting.id}
       id={posting.id}
-      className={cx('CareerPosting mb-3 br-12 ta-left', {
-        'CareerPosting--isOpen bgc-brown': isOpen,
+      className={cx('CareerPosting mb-1 br-12 ta-left', {
+        'CareerPosting--isOpen bgc-brown mv-2': isOpen,
       })}>
       <a
         href={'#' + posting.id}
@@ -116,7 +116,7 @@ export default class CareerPostingList extends Component {
 
   closePosting = () => {
     this.setState({ activePostingId: null });
-    window.history.pushState({}, '', '/careers');
+    window.history.pushState({}, '', '/careers/');
   }
 
   openPosting = id => {

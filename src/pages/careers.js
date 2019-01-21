@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import MetaTags from '../components/meta-tags';
@@ -19,8 +19,23 @@ const CareersPage = ({ data }) => {
       <div className="mw-700 ta-center mh-auto">
         <Header
           title="Work with us"
-          subtitle={`We’re always looking for talented designers, developers, writers and
-      media creators. We’d love to see your portfolio and chat.`}
+          subtitle={
+            <Fragment>
+              <p className="mt-4 mb-2">
+                Renga was built on the idea of curiosity, integrity and
+                collaboration. We invest into our people and joining the team
+                means you’ll be wearing multiple hats. We push you to learn,
+                grow and satisfy that entrepreneurial itch.
+              </p>
+              <p>
+                In the spirit of collaboration we are always looking to meet
+                like minded people, wherever they are. We thrive off of a
+                flexible work environment, allowing you to do your best work in
+                the way that you need. Whether you’re looking for freelance,
+                part-time or full-time work, we’d love to hear from you!
+              </p>
+            </Fragment>
+          }
         />
         <div className="mb-6">
           <CareerPostingList email={siteMetadata.email} postings={postings} />
