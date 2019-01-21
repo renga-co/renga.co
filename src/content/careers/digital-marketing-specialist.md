@@ -19,5 +19,3 @@ title: Digital Marketing Specialist
 - Deep understanding of ad trafficking
 - Expert knowledge of native platforms: Campaign Manager, AdWords, Facebook Power Editor, Ads Manager etc.
 - Bonus points for any prior agency experience
-
-Test
