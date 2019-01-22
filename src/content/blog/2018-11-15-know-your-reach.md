@@ -2,7 +2,11 @@
 date: '2018-11-15'
 author: jared
 published: true
-title: Know Your Reach
+title: Know Your Reach | First Step of a Digital Content Strategy
+excerpt: >-
+  The first step of a digital content strategy is knowing who you are speaking
+  to. As the potential for reach has grown wider and wider, focusing on the who
+  was ignored for the possibility of more.
 ---
 
 Who are you trying to reach?
