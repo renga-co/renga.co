@@ -7,6 +7,7 @@ module.exports = {
       'Renga, a brand therapy group from Toronto. Brand therapy is a method that listens, collaborates, and empowers your brand to reach the right people by establishing a strong core identity.',
     siteUrl: canonicalUrl,
     email: 'hello@renga.co',
+    emailCareers: 'careers@renga.co',
     image: '/images/social.png',
   },
   plugins: [

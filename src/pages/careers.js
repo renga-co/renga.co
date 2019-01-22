@@ -38,13 +38,13 @@ const CareersPage = ({ data }) => {
           }
         />
         <div className="mb-6">
-          <CareerPostingList email={siteMetadata.email} postings={postings} />
+          <CareerPostingList email={siteMetadata.emailCareers} postings={postings} />
         </div>
         <Content>
           <h3>Nothing catch your eye?</h3>
           <p>
             If you are excited to work for Renga but don't see a position that
-            fits your profile, don't hesitate to shoot us an email and tell us
+            fits your profile, don't hesitate to <a href={`mailto:${siteMetadata.emailCareers}`} target="_blank" rel="noopener noreferrer">shoot us an email</a> and tell us
             what you can bring to the table.
           </p>
         </Content>
@@ -59,7 +59,7 @@ export const query = graphql`
   query CareersQuery {
     site {
       siteMetadata {
-        email
+        emailCareers
       }
     }
     allMarkdownRemark(

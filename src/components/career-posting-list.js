@@ -68,7 +68,6 @@ const CareerPosting = ({ posting, email, isOpen, onClick }) => {
                 email={email}
                 title={posting.frontmatter.title}
               />
-              .
             </p>
           </Content>
         </div>
