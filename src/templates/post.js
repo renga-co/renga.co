@@ -11,15 +11,6 @@ import utils from '../utils';
 import squiggleUrl from '../assets/images/squiggle-c.svg';
 import './post.css';
 
-const authorMap = {
-  jared: {
-    name: 'Jared Henriques',
-  },
-  ben: {
-    name: 'Ben Bartosik',
-  },
-};
-
 const PostPage = props => {
   const { data } = props;
   const { markdownRemark: post } = data;
@@ -41,7 +32,7 @@ const PostPage = props => {
           <header className="ta-center mv-4">
             <Title>{post.frontmatter.title}</Title>
             <div className="fs-18 mt-2 c-gray3">
-              <span>{authorMap[post.frontmatter.author].name}</span>
+              <span>{post.frontmatter.author.name}</span>
               <span
                 className="o-50p ph-1 p-relative"
                 style={{ fontSize: 10, top: -2 }}>
@@ -65,7 +56,7 @@ const PostPage = props => {
             body="At Renga, we specialize in helping you discover your brand identity."
             links={
               <CalloutLink className="fs-16">
-                <ContactLink withArrowIcon>Let’s chat </ContactLink>
+                <ContactLink withArrowIcon>Get in touch</ContactLink>
               </CalloutLink>
             }
           />
@@ -90,7 +81,9 @@ export const pageQuery = graphql`
         title
         seoDescription
         excerpt
-        author
+        author {
+          name
+        }
       }
     }
   }

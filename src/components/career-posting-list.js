@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
-import scrollTo from 'animated-scroll-to';
+import scrollTo from '../scroll-to';
 import Content from '../components/content';
 import './career-posting-list.css';
 
@@ -53,7 +53,10 @@ const CareerPosting = ({ posting, email, isOpen, onClick }) => {
       })}>
       <a
         href={'#' + posting.id}
-        className={cx('x xj-spaceBetween', { 'ph-3 pt-3': isOpen, 'pa-3': !isOpen })}
+        className={cx('x xj-spaceBetween', {
+          'ph-3 pt-3': isOpen,
+          'pa-3': !isOpen,
+        })}
         onClick={onClick}>
         <h2 className="fs-21 fw-semibold">{posting.frontmatter.title}</h2>
         <div className="us-none">{isOpen ? <IconUp /> : <IconDown />}</div>
@@ -96,11 +99,11 @@ export default class CareerPostingList extends Component {
     window.removeEventListener('keydown', this.handleKeyDown);
   }
 
-  handleKeyDown = (e) => {
+  handleKeyDown = e => {
     if (e.which === 27) {
       this.closePosting();
     }
-  }
+  };
 
   handlePostingClick = id => e => {
     e.preventDefault();
@@ -116,12 +119,12 @@ export default class CareerPostingList extends Component {
   closePosting = () => {
     this.setState({ activePostingId: null });
     window.history.pushState({}, '', '/careers/');
-  }
+  };
 
   openPosting = id => {
     this.setState({ activePostingId: id }, () => {
-      const el = document.getElementById(id);
       window.history.pushState({}, '', '#' + id);
+      const el = document.getElementById(id);
       scrollTo(el, { offset: -50 });
     });
   };

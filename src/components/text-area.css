@@ -1,0 +1,14 @@
+.TextArea {
+  appearance: none;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  outline: none;
+  color: #444;
+  background-color: #f5f1ec;
+  resize: none;
+}
+
+.TextArea:focus {
+  box-shadow: 0 0 0 3px rgba(38, 73, 131, 0.25);
+}

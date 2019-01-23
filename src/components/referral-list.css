@@ -1,0 +1,16 @@
+.ReferralList {
+  columns: 1;
+
+}
+
+.ReferralList-item {
+  break-inside: avoid;
+  text-align: left;
+}
+
+@media only screen and (min-width: 767px) {
+  .ReferralList {
+    columns: 2;
+    column-gap: 1.5rem;
+  }
+}

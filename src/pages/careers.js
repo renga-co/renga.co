@@ -5,6 +5,7 @@ import MetaTags from '../components/meta-tags';
 import Header from '../components/header';
 import CareerPostingList from '../components/career-posting-list';
 import Content from '../components/content';
+import Subtitle from '../components/type-subtitle';
 
 const description =
   'Renga was built on the idea of curiosity, integrity and collaboration. We invest into our people and joining the team means you’ll be wearing multiple hats. We push you to learn, grow and satisfy that entrepreneurial itch.';
@@ -41,7 +42,7 @@ const CareersPage = ({ data }) => {
           <CareerPostingList email={siteMetadata.emailCareers} postings={postings} />
         </div>
         <Content>
-          <h3>Nothing catch your eye?</h3>
+          <Subtitle>Nothing catch your eye?</Subtitle>
           <p>
             If you are excited to work for Renga but don't see a position that
             fits your profile, don't hesitate to <a href={`mailto:${siteMetadata.emailCareers}`} target="_blank" rel="noopener noreferrer">shoot us an email</a> and tell us

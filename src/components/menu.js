@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import Logo from '../components/logo';
-import ContactLink from '../components/contact-link';
 import './menu.css';
 
 export default class Menu extends Component {
@@ -56,6 +55,12 @@ export default class Menu extends Component {
             <Link
               className="c-gray3 h-black pa-1"
               activeClassName="c-gray6"
+              to="/about">
+              About
+            </Link>
+            <Link
+              className="c-gray3 h-black pa-1 ml-2"
+              activeClassName="c-gray6"
               to="/services">
               Services
             </Link>
@@ -65,13 +70,23 @@ export default class Menu extends Component {
               to="/blog">
               Blog
             </Link>
-            <ContactLink className="c-gray3 h-black pa-1 ml-2" withArrowIcon>
-              Let’s chat
-            </ContactLink>
+            <Link
+              className="c-gray3 h-black pa-1 ml-2"
+              activeClassName="c-gray6"
+              to="/contact">
+              Contact
+            </Link>
           </nav>
         </div>
         {this.state.isMenuOpen && (
           <div className="d-none-m x xd-column mb-5 ta-center">
+            <Link
+              className="Navigation-mobileMenuLink c-gray3 pa-3"
+              activeClassName="c-gray6"
+              to="/about"
+              onClick={this.handleMobileLinkClick}>
+              About
+            </Link>
             <Link
               className="Navigation-mobileMenuLink c-gray3 pa-3"
               activeClassName="c-gray6"
@@ -86,11 +101,13 @@ export default class Menu extends Component {
               onClick={this.handleMobileLinkClick}>
               Blog
             </Link>
-            <ContactLink
+            <Link
               className="Navigation-mobileMenuLink c-gray3 pa-3"
+              activeClassName="c-gray6"
+              to="/contact"
               onClick={this.handleMobileLinkClick}>
-              Let’s chat
-            </ContactLink>
+              Contact
+            </Link>
           </div>
         )}
       </div>

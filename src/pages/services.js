@@ -21,6 +21,7 @@ const services = [
       </p>
     ),
     imageUrl: require('../assets/images/service-brand-strategy.svg'),
+    imageAltText: "Arrows and X's resembling a gameplan depict how Renga can help guide your brand to success."
   },
   {
     title: 'Ecommerce',
@@ -41,6 +42,7 @@ const services = [
       </Fragment>
     ),
     imageUrl: require('../assets/images/service-ecommerce.svg'),
+    imageAltText: "A t-shirt shown in a web browser, with a coin beside it, depict how Renga can help your business set up an e-commerce site."
   },
   {
     title: 'Digital Marketing & Advertising',
@@ -59,6 +61,7 @@ const services = [
       </Fragment>
     ),
     imageUrl: require('../assets/images/service-digital-marketing.svg'),
+    imageAltText: "Search, chat, and improving metrics, visualizing the ways Renga can help you meet you digital marketing goals."
   },
   {
     title: 'Website Design / Development',
@@ -71,13 +74,14 @@ const services = [
       </p>
     ),
     imageUrl: require('../assets/images/service-web-development.svg'),
+    imageAltText: "A browser and a phone showing a website with a nice big squiggle. Renga can help you build beautiful, responsive sites."
   },
 ];
 
-const Service = ({ title, description, imageUrl }) => (
+const Service = ({ title, description, imageUrl, imageAltText }) => (
   <div className="w-50p-m ph-3-m mb-4">
     <div className="ta-center">
-      <img src={imageUrl} width={500} height={250} alt={title} />
+      <img src={imageUrl} width={500} height={250} alt={imageAltText} />
     </div>
     <h3 className="fs-24 fw-semibold mt-2 mb-2">{title}</h3>
     <div>{description}</div>
@@ -114,10 +118,10 @@ const ServicesPage = () => (
       links={
         <Fragment>
           <CalloutLink className="fs-16">
-            <ContactLink withArrowIcon>Let's chat</ContactLink>
+            <ContactLink withArrowIcon>Get in touch</ContactLink>
           </CalloutLink>
           <p className="fs-14 mw-450 mt-2 c-gray4 lh-1d5">
-            If there’s something you’re looking for that you don’t see, reach
+            If there’s something you’re looking for that you don’t see,<br />reach
             out and maybe we can help!
           </p>
         </Fragment>

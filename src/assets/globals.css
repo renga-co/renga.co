@@ -61,7 +61,15 @@ h6 {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 button {
@@ -73,6 +81,10 @@ button {
   outline: none;
   width: 100%;
   font-size: inherit;
+}
+
+cite {
+  font-style: normal;
 }
 
 .p-fill {
@@ -100,6 +112,10 @@ button {
 
 .w-50p {
   width: 50%;
+}
+
+.w-100p {
+  width: 100%;
 }
 
 .mw-120 {
@@ -147,6 +163,18 @@ button {
 @media only screen and (min-width: 767px) {
   body {
     font-size: 1.3125rem;
+  }
+
+  .xo-0-m {
+    order: 0;
+  }
+
+  .xo-1-m {
+    order: 1;
+  }
+
+  .xo-2-m {
+    order: 2;
   }
 
   .w-50p-m {

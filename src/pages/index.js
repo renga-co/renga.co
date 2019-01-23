@@ -6,6 +6,7 @@ import ContactLink from '../components/contact-link';
 import Content from '../components/content';
 import Icon from '../components/icon';
 import Layout from '../components/layout';
+import Button from '../components/button';
 import Title from '../components/type-title';
 import TherapistIllustration from '../components/therapist-illustration';
 import squiggleAUrl from '../assets/images/squiggle-a.svg';
@@ -19,12 +20,14 @@ const people = [
       </span>
     ),
     pictureUrl: require('../assets/images/person-francene.svg'),
+    pictureAltText: "Francene, a small business owner, looking confused.",
     transform: 'skew(1deg)',
   },
   {
     id: 'gerald',
     phrase: <span>“I don’t know where to begin&nbsp;with ecommerce.”</span>,
     pictureUrl: require('../assets/images/person-gerald.svg'),
+    pictureAltText: "Gerald, a long-time businessman looks disheveled.",
     transform: 'skew(-4deg)',
   },
   {
@@ -36,12 +39,14 @@ const people = [
       </span>
     ),
     pictureUrl: require('../assets/images/person-geoffrey.svg'),
+    pictureAltText: "Geoffrey, owner of a new start-up looks smug, but in need of help.",
     transform: 'skew(5deg)',
   },
   {
     id: 'emily',
     phrase: <span>“I’m looking to freshen up my website and&nbsp;logo.”</span>,
     pictureUrl: require('../assets/images/person-emily.svg'),
+    pictureAltText: "Emily, the energetic bakery owner, is excited to bring her business online.",
     transform: 'skew(-1deg) rotate(-1deg)',
   },
 ];
@@ -73,7 +78,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
       style={{ flex: '1 0 auto' }}>
       <img
         src={person.pictureUrl}
-        alt=""
+        alt={person.pictureAltText}
         className="pe-none us-none mw-120 mw-170-m"
       />
     </div>
@@ -83,7 +88,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
 const IndexPage = () => (
   <Layout>
     <div className="lh-1d5">
-      <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mt-3 mb-6">
+      <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mb-6">
         <div className="mb-4 mb-0-m w-50p-m">
           <Title className="mb-2 mb-4-m lh-1d25">
             Renga is a <span className="intro-squiggle">brand therapy</span>{' '}
@@ -91,16 +96,28 @@ const IndexPage = () => (
           </Title>
           <div />
           <CalloutLink className="fs-16">
-            <ContactLink className="x xa-center xj-center">
-              Let’s chat <Icon name="arrow-right" iconSize={18} />
-            </ContactLink>
+            <Link to="/contact" className="x xa-center xj-center">
+              Get in touch <Icon name="arrow-right" iconSize={18} />
+            </Link>
           </CalloutLink>
         </div>
         <div className="w-50p-m mw-450 mh-auto">
           <TherapistIllustration />
         </div>
       </div>
-      <div className="mw-700 mh-auto ta-center">
+      <div className="ta-center pa-3">
+        <div className="xi xd-column xd-row-m ta-left-m xa-center xj-spaceBetween fs-18 bgc-brown pv-2 pv-1-m pa-1 br-12">
+          <span className="x xa-center d-block d-inline-m ph-1 c-gray4 p-relative" style={{ transform: 'translateY(3px) rotate(-5deg)' }}><Icon name="gift" iconSize={20} /></span>
+          <p className="pt-2 pv-0-m pr-4-m mb-3 mb-0-m c-gray4">We’re offering a <strong>free branding workshop</strong> for a limited time</p>
+          <Link to="/brand-workshop">
+            <Button small inline>
+              <span className="ph-1">Learn more</span>
+              <Icon name="arrow-right" iconSize={18} />
+            </Button>
+          </Link>
+        </div>
+      </div>
+      <div className="mw-700 mh-auto ta-center pv-4">
         <Content>
           <h3 className="fs-24 mb-3 fw-semibold">What is brand therapy?</h3>
           <p>
@@ -128,7 +145,7 @@ const IndexPage = () => (
         </Content>
         <div className="mt-5 x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
           <CalloutLink>
-            <ContactLink>Let’s chat</ContactLink>
+            <ContactLink>Get in touch</ContactLink>
           </CalloutLink>
           <span
             className="p-relative pv-2 pv-0-m ph-2-m fs-14 o-50p"
@@ -148,7 +165,7 @@ const IndexPage = () => (
             </Link>
           </CalloutLink>
         </div>
-        <div className="mv-6 ta-center c-geraldine pe-none us-none">
+        <div className="mt-6 ta-center c-geraldine pe-none us-none">
           <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
         </div>
       </div>

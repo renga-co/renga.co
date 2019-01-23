@@ -14,11 +14,6 @@ const getSlug = (node, filePath) => {
   return toSlug(filePath);
 };
 
-const templates = {
-  post: resolve('./src/templates/post.js'),
-  page: resolve('./src/templates/page.js'),
-};
-
 exports.onCreateNode = ({ actions, getNode, node }) => {
   const { createNodeField } = actions;
 
@@ -47,15 +42,14 @@ exports.onCreateNode = ({ actions, getNode, node }) => {
       templateName = node.frontmatter.template || 'page';
     }
 
-    const templatePath = templates[templateName];
-
     createNodeField({ node, name: 'type', value: type });
 
     if (slug) {
       createNodeField({ node, name: 'slug', value: slug });
     }
 
-    if (templatePath) {
+    if (templateName) {
+      const templatePath = resolve(`./src/templates/${templateName}.js`);
       createNodeField({ node, name: 'template', value: templatePath });
     }
   }

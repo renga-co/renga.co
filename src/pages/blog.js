@@ -19,14 +19,16 @@ const BlogIndexPage = ({ data }) => {
       <MetaTags title="Blog" description={description} />
       <div className="mw-700 mh-auto">
         <Header title="Our Blog" subtitle={description} />
+        <div className="pv-3">
         {posts.map(({ node: post }) => (
           <Link to={post.fields.slug} key={post.id}>
             <PostPreview post={post} />
           </Link>
         ))}
+        </div>
       </div>
-      <div className="mw-700 mh-auto mt-3 mt-5-m">
-        <img src={typewriterUrl} alt="" className="pe-none us-none" />
+      <div className="mw-700 mh-auto mt-5-m">
+        <img src={typewriterUrl} alt="A typewriter overflowing with pages shows the (not so quick) rate at which we like to share our knowledge." className="pe-none us-none" />
       </div>
     </Layout>
   );

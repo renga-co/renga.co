@@ -10,21 +10,22 @@ module.exports = {
     emailCareers: 'careers@renga.co',
     image: '/images/social.png',
   },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': 'PeopleYaml'
+  },
   plugins: [
+    'gatsby-plugin-flow',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
+    'gatsby-transformer-yaml',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/content`,
         name: 'data',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-drift`,
-      options: {
-        appId: '6t8pw9tsh6zt',
       },
     },
     {
@@ -55,12 +56,17 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-feed',
       options: {
-        setup: ({ query: { site: { siteMetadata }, ...rest }}) => {
+        setup: ({
+          query: {
+            site: { siteMetadata },
+            ...rest
+          },
+        }) => {
           return {
             ...siteMetadata,
             ...rest,
             image_url: `${canonicalUrl}/favicon.png`,
-          }
+          };
         },
         feeds: [
           {
@@ -94,8 +100,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-netlify',
   ],
 };

@@ -18,11 +18,19 @@ const Footer = () => (
   <footer
     className="pv-6 ph-3 c-gray3 ta-center fs-16 lh-2d0"
     style={{ marginTop: 'auto' }}>
+    <FooterLink to="/about">About</FooterLink>
+    <Divider />
     <FooterLink to="/services">Services</FooterLink>
     <Divider />
     <FooterLink to="/blog">Blog</FooterLink>
-    <Divider />
-    <FooterLink to="/careers">Careers</FooterLink>
+    <div className="d-block d-inline-m">
+      <Divider className="d-none d-inline-m" />
+      <FooterLink to="/careers">Careers</FooterLink>
+      <Divider />
+      <a className="h-black" href="https://renga.us9.list-manage.com/subscribe/post?u=116eb673d498b75ebfe2310ab&amp;id=1d0c69997b">Newsletter</a>
+      <Divider />
+      <FooterLink to="/contact">Contact</FooterLink>
+    </div>
   </footer>
 );
 
