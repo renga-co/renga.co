@@ -1,5 +1,7 @@
-# Map of short name to more information. `name` will be used but if you don't
-# want to use your real name, just use whatever.
+---
+title: ''
+published: false
+---
 - id: jared
   name: Jared Henriques
   portrait: './about/jared.svg'
