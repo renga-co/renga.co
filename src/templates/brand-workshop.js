@@ -117,8 +117,7 @@ const BrandWorkshopPage = props => {
           <h3 className="fs-24 mb-3 fw-semibold">Sign Up Now</h3>
           <Content>
             <p>
-              Fill out this form and we'll get in touch to organize the
-              workshop.
+              Fill out this form and we'll get in touch to organize a time for us to do a one-on-one workshop.
             </p>
           </Content>
         </div>

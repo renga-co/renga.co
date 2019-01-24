@@ -32,7 +32,7 @@ const AboutPage = props => {
         />
         <Header
           title="About Us"
-          subtitle="Renga is a digital marketing agency from Toronto."
+          subtitle="Renga is a brand therapy group from Toronto."
         />
         <Content>
           <p>
