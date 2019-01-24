@@ -11,13 +11,17 @@ module.exports = {
     image: '/images/social.png',
   },
   mapping: {
-    'MarkdownRemark.frontmatter.author': 'PeopleYaml'
+    'MarkdownRemark.frontmatter.author': 'PeopleYaml',
   },
   plugins: [
     'gatsby-plugin-flow',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: { siteUrl: canonicalUrl },
+    },
     'gatsby-transformer-yaml',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
