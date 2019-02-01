@@ -4,14 +4,14 @@ author: jared
 published: true
 title: Super Bowl Commercials | Advertising From Your Brand Identity
 excerpt: >-
-  Let’s face it, the Superbowl is bigger than just football. Over the last 40
+  Let’s face it, the Super Bowl is bigger than just football. Over the last 40
   years it has become synonymous with chicken wings, half time shows, and most
   importantly - the commercials. We touch on examples of brand's who take the
   oppourtunity to affirm and build their brand.
 ---
 <iframe width="90%" height="90%" src="https://www.youtube.com/embed/9sYElEbRzKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Let’s face it, the Superbowl is bigger than just football. Over the last 40 years it has become synonymous with chicken wings, half time shows, and most importantly - the commercials. It’s an advertiser’s dream to have that many eyeballs watching your brand at one time. That being said, not all brands seem to rise to the occasion. With only 30-60 seconds to make a mark, companies feel as though they have to make the biggest impact to get their money’s worth. Although most of them tend to try and use either humour or shock, this doesn’t always leave a positive impact. I want to spend a couple minutes right now and look back at some companies that created a great commercial and left a lasting impression because they stayed true to who their brand was. 
+Let’s face it, the Super Bowl is bigger than just football. Over the last 40 years it has become synonymous with chicken wings, half time shows, and most importantly - the commercials. It’s an advertiser’s dream to have that many eyeballs watching your brand at one time. That being said, not all brands seem to rise to the occasion. With only 30-60 seconds to make a mark, companies feel as though they have to make the biggest impact to get their money’s worth. Although most of them tend to try and use either humour or shock, this doesn’t always leave a positive impact. I want to spend a couple minutes right now and look back at some companies that created a great commercial and left a lasting impression because they stayed true to who their brand was. 
 
 
 ## E-trade
@@ -23,7 +23,7 @@ When you think of E-trade, you think about how simple it is to buy, invest, and 
 
 ## Amazon
 
-Amazon is arguably the biggest company in the world right now. What started as an online bookstore went on to be the gold standard in online commerce in every other industry as well. Amazon offers services that have become so engrained with our culture that they’ve become the expectation for all other companies to keep up with. Obviously, one of the hottest industries going right now is smart home voice technology and Amazon’s Alexa is leading the charge. Their Superbowl commercial in 2018 was a perfect way of showing us what a world without Alexa would be like. While our favourite celebrities added the laughs, where Amazon really succeeded was in driving home the point that Alexa is an integral part of our everyday life. 
+Amazon is arguably the biggest company in the world right now. What started as an online bookstore went on to be the gold standard in online commerce in every other industry as well. Amazon offers services that have become so engrained with our culture that they’ve become the expectation for all other companies to keep up with. Obviously, one of the hottest industries going right now is smart home voice technology and Amazon’s Alexa is leading the charge. Their Super Bowl commercial in 2018 was a perfect way of showing us what a world without Alexa would be like. While our favourite celebrities added the laughs, where Amazon really succeeded was in driving home the point that Alexa is an integral part of our everyday life. 
 
 <iframe width="90%" height="90%" src="https://www.youtube.com/embed/sDBvvH12kgE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
