@@ -44,6 +44,8 @@ prose:
           label: Author
           value: jared
           options:
+            - name: Matthew Im
+              value: matt
             - name: Jared Henriques
               value: jared
             - name: Ben Bartosik
