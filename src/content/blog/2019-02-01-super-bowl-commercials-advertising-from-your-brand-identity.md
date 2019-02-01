@@ -56,4 +56,4 @@ There is no recipe to building a winning advertisement, which is why all of the 
 
 <iframe width="100%" src="https://www.youtube.com/embed/R13cME67RJw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" src="https://www.youtube.com/embed/9sMHPM2bT-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9sMHPM2bT-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
