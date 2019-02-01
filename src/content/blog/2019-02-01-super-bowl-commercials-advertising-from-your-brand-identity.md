@@ -1,6 +1,6 @@
 ---
 date: '2019-02-01'
-author: jared
+author: matt
 published: true
 title: Super Bowl Commercials | Advertising From Your Brand Identity
 excerpt: >-
