@@ -44,7 +44,7 @@ This may not be a very popular choice compared to other lists but it resonated a
 
 ###Bridgestone
 
-Bridgestone’s reputation has always been excellent. Everything from their products to their corporate notoriety sets a great example. Their motto is “Serving society with superior quality;” and in this commercial we’re getting just that: a quality tire that can handle any situation, and a driver with the confidence in a great product. They also get bonus points for having screaming animals.  
+Bridgestone’s reputation has always been excellent. Everything from their products to their corporate notoriety sets a great example. Their motto is _“Serving society with superior quality;”_ and in this commercial we’re getting just that: a quality tire that can handle any situation, and a driver with the confidence in a great product. They also get bonus points for having screaming animals.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SkvI4NoUX6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
