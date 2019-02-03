@@ -1,5 +1,5 @@
 ---
-title: Challenging The Myth of Social Media Marketing
+title: Challenging The Myth of Social Media
 date: '2018-03-17'
 author: jared
 seoDescription: >-
