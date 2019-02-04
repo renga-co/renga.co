@@ -7,3 +7,6 @@
 - id: ben
   name: Ben Bartosik
   portrait: './about/ben.svg'
+- id: landon
+  named: Landon Wideman
+  portrait: '.about/landon.svg'
