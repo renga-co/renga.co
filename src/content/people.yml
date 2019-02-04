@@ -1,3 +1,7 @@
+---
+title: ''
+published: false
+---
 - id: jared
   name: Jared Henriques
   portrait: './about/jared.svg'
@@ -7,6 +11,3 @@
 - id: ben
   name: Ben Bartosik
   portrait: './about/ben.svg'
-- id: landon
-  named: Landon Wideman
-  portrait: '.about/landon.svg'
