@@ -2,9 +2,19 @@
   line-height: 1.7;
 }
 
+.Content h1,
+.Content h2,
 .Content h3 {
   font-weight: 600;
   margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Content h4,
+.Content h5,
+.Content h6 {
+  font-weight: 600;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
