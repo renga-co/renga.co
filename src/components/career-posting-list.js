@@ -58,19 +58,20 @@ const CareerPosting = ({ posting, email, isOpen, onClick }) => {
           'pa-3': !isOpen,
         })}
         onClick={onClick}>
-        <h2 className="fs-21 fw-semibold">{posting.frontmatter.title}</h2>
+        <h2 className="fs-21 fw-semibold">{posting.title}</h2>
         <div className="us-none">{isOpen ? <IconUp /> : <IconDown />}</div>
       </a>
       {isOpen && (
         <div className="ph-3 fs-18">
-          <Content dangerouslySetInnerHTML={{ __html: posting.html }} />
+          <Content
+            dangerouslySetInnerHTML={{
+              __html: posting.content.childMarkdownRemark.html,
+            }}
+          />
           <Content>
             <p className="ta-center pa-3 pb-4 ">
               To apply, please send your resume to{' '}
-              <PostingContactLink
-                email={email}
-                title={posting.frontmatter.title}
-              />
+              <PostingContactLink email={email} title={posting.title} />
             </p>
           </Content>
         </div>

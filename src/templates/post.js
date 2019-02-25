@@ -13,26 +13,33 @@ import './post.css';
 
 const PostPage = props => {
   const { data } = props;
-  const { markdownRemark: post } = data;
+  const { contentfulBlogPost: post } = data;
 
-  const seoTitle = post.frontmatter.title;
-  const seoDescription =
-    post.frontmatter.seoDescription || post.frontmatter.excerpt || post.excerpt;
-  const date = new Date(post.fields.date);
+  const metaTitle = post.title;
+  const metaDescription = post.metaDescription
+    ? post.metaDescription.metaDescription
+    : post.excerpt
+    ? post.excerpt.excerpt
+    : post.content.childMarkdownRemark.excerpt;
+  const metaImage = post.metaImage
+    ? 'https:' + post.metaImage.file.url
+    : undefined;
+  const date = new Date(post.date);
 
   return (
     <Layout>
       <div className="mw-700 mh-auto mt-5">
         <MetaTags
-          title={seoTitle}
-          description={seoDescription}
+          title={metaTitle}
+          description={metaDescription}
+          imageUrl={metaImage}
           isBlogPost
         />
         <article className="Post">
           <header className="ta-center mv-4">
-            <Title>{post.frontmatter.title}</Title>
+            <Title>{post.title}</Title>
             <div className="fs-18 mt-2 c-gray3">
-              <span>{post.frontmatter.author.name}</span>
+              <span>{post.author.name}</span>
               <span
                 className="o-50p ph-1 p-relative"
                 style={{ fontSize: 10, top: -2 }}>
@@ -45,7 +52,7 @@ const PostPage = props => {
             <div className="Post-headerDivider bgc-gray2 o-50p mh-auto mv-5" />
           </header>
           <div>
-            <PostContent html={post.html} />
+            <PostContent html={post.content.childMarkdownRemark.html} />
           </div>
           <div className="mv-6 ta-center c-geraldine pe-none us-none">
             <img alt="" style={{ maxWidth: 288 }} src={squiggleUrl} />
@@ -70,19 +77,29 @@ export default PostPage;
 
 export const pageQuery = graphql`
   query BlogPostByPath($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      excerpt
-      fields {
-        date
-        slug
-      }
-      frontmatter {
-        title
-        seoDescription
+    contentfulBlogPost(slug: { eq: $slug }) {
+      id
+      slug
+      title
+      date
+      excerpt {
         excerpt
-        author {
-          name
+      }
+      metaDescription {
+        metaDescription
+      }
+      metaImage {
+        file {
+          url
+        }
+      }
+      author {
+        name
+      }
+      content {
+        childMarkdownRemark {
+          html
+          excerpt(pruneLength: 170)
         }
       }
     }

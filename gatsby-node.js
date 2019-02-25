@@ -1,110 +1,73 @@
 const { resolve } = require('path');
-const { createFilePath } = require(`gatsby-source-filesystem`);
 const slugify = require('slug');
 
-const toSlug = str => slugify(str).toLowerCase();
-
-const getSlug = (node, filePath) => {
-  if (node.frontmatter.slug) {
-    return toSlug(node.frontmatter.slug);
-  }
-  if (node.frontmatter.title) {
-    return toSlug(node.frontmatter.title);
-  }
-  return toSlug(filePath);
+const templates = {
+  blogPost: resolve('./src/templates/post.js'),
+  default: resolve('./src/templates/page.js'),
+  about: resolve('./src/templates/about.js'),
+  brandWorkshop: resolve('./src/templates/brand-workshop.js'),
 };
 
-exports.onCreateNode = ({ actions, getNode, node }) => {
-  const { createNodeField } = actions;
-
-  if (node.internal.type === 'MarkdownRemark') {
-    const filePath = createFilePath({
-      node,
-      getNode,
-      basePath: 'content',
-    });
-
-    let type = 'unknown';
-    let slug = '/' + getSlug(node, filePath);
-    let templateName = null;
-
-    if (filePath.includes('blog')) {
-      const date = new Date(node.frontmatter.date);
-      createNodeField({ node, name: 'date', value: date });
-      type = 'blog';
-      slug = '/blog' + slug;
-      templateName = 'post';
-    } else if (filePath.includes('careers')) {
-      slug = null;
-      type = 'career';
-    } else {
-      type = 'custom-page';
-      templateName = node.frontmatter.template || 'page';
-    }
-
-    createNodeField({ node, name: 'type', value: type });
-
-    if (slug) {
-      createNodeField({ node, name: 'slug', value: slug });
-    }
-
-    if (templateName) {
-      const templatePath = resolve(`./src/templates/${templateName}.js`);
-      createNodeField({ node, name: 'template', value: templatePath });
-    }
-  }
-};
+const toCamelCase = str =>
+  str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage, createRedirect } = actions;
 
-  const result = await graphql(`
+  const query = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      pages: allContentfulPage(limit: 1000) {
         edges {
           node {
-            fields {
-              slug
-              type
-              template
-            }
+            id
+            slug
+            templateName
+          }
+        }
+      }
+
+      blogPosts: allContentfulBlogPost(limit: 1000) {
+        edges {
+          node {
+            id
+            slug
           }
         }
       }
     }
   `);
 
-  if (result.errors) {
-    throw result.errors;
+  if (query.errors) {
+    throw query.errors;
   }
 
-  const nodes = result.data.allMarkdownRemark.edges.map(m => m.node);
-  const postNodes = nodes.filter(node => node.fields.type === 'blog');
-  const pageNodes = nodes.filter(node => node.fields.type === 'custom-page');
-
-  postNodes.forEach(node => {
-    const path = node.fields.slug;
+  query.data.blogPosts.edges.forEach(({ node }) => {
+    const path = `blog/${node.slug}`;
 
     createPage({
       path,
-      component: node.fields.template,
+      component: templates.blogPost,
       context: {
-        slug: path,
+        slug: node.slug,
       },
     });
   });
 
-  pageNodes.forEach(node => {
-    const path = node.fields.slug;
+  query.data.pages.edges.forEach(({ node }) => {
+    const path = node.slug;
+    const templateName = toCamelCase(node.templateName);
+    const template = templates[templateName];
+
+    if (!template) {
+      throw new Error(`No template at ${node.templateName}.`);
+    }
 
     createPage({
       path,
-      component: node.fields.template,
+      component: template,
       context: {
-        slug: path,
+        slug: node.slug,
       },
     });
   });
-
-  return result;
 };

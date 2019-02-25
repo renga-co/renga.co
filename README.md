@@ -7,3 +7,4 @@ Website source for [Renga](https://renga.co), a branding and digital marketing s
 - [Gatsby](https://www.gatsbyjs.org/)
 - [Netlify](https://www.netlify.com/)
 - [Hibiscss](https://github.com/rosszurowski/hibiscss)
+- [Contentful](https://www.contentful.com/)

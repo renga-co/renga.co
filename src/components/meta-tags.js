@@ -8,7 +8,7 @@ const defaultTitle = `${defaultShortTitle} | Brand therapy, understand your bran
 const MetaTags = ({
   description: rawDescription,
   title: rawTitle,
-  postImage,
+  imageUrl,
   isBlogPost,
 }) => (
   <StaticQuery
@@ -29,9 +29,7 @@ const MetaTags = ({
       const title = rawTitle ? `${rawTitle} | ${defaultTitle}` : defaultTitle;
       const description = rawDescription ? rawDescription : meta.description;
 
-      const image = postImage
-        ? `${meta.siteUrl}${postImage}`
-        : `${meta.siteUrl}${meta.image}`;
+      const image = imageUrl ? imageUrl : `${meta.siteUrl}${meta.image}`;
 
       return (
         <Head>

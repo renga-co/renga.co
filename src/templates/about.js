@@ -18,17 +18,18 @@ const SubtitleBlock = ({ children }) => (
 );
 
 const AboutPage = props => {
-  const { markdownRemark: page, allPeopleYaml } = props.data;
-  const { edges: people } = allPeopleYaml;
+  const { page, teamMembers } = props.data;
+  const { edges: people } = teamMembers;
+  const { html } = page.content.childMarkdownRemark;
 
-  const [history, philosophy] = page.html.split('<hr>');
+  const [history, philosophy] = html.split('<hr>');
 
   return (
     <Layout>
       <section className="mw-700 mh-auto mb-4-m">
         <MetaTags
-          title={page.frontmatter.title}
-          description={page.frontmatter.seoDescription || page.excerpt}
+          title={page.title}
+          description={page.seoDescription || page.excerpt}
         />
         <Header
           title="About Us"
@@ -55,11 +56,10 @@ const AboutPage = props => {
             <Subtitle className="mb-3">Our Story</Subtitle>
             <Content dangerouslySetInnerHTML={{ __html: history }} />
           </div>
-          <div className="x-1 xo-1 xo-2-m ml-4-m mb-3 mb-0-m" style={{ maxWidth: 400 }}>
-            <img
-              alt=""
-              src={aboutHistoryUrl}
-            />
+          <div
+            className="x-1 xo-1 xo-2-m ml-4-m mb-3 mb-0-m"
+            style={{ maxWidth: 400 }}>
+            <img alt="" src={aboutHistoryUrl} />
           </div>
         </div>
       </section>
@@ -81,9 +81,12 @@ const AboutPage = props => {
         <SubtitleBlock>Our Team</SubtitleBlock>
         <div className="x-m">
           {people.map(({ node: person }) => (
-            <div key={person.id} className="mb-4 mb-0-m c-gray4 ta-center" style={{ maxWidth: 300 }}>
+            <div
+              key={person.id}
+              className="mb-4 mb-0-m c-gray4 ta-center"
+              style={{ maxWidth: 300 }}>
               <div className="mb-2">
-                <img src={person.portrait.publicURL} alt={person.name} />
+                <img src={person.portrait.file.url} alt={person.name} />
               </div>
               <h3>{person.name}</h3>
             </div>
@@ -118,23 +121,28 @@ export default AboutPage;
 
 export const pageQuery = graphql`
   query AboutPageByPath($slug: String!) {
-    allPeopleYaml {
+    teamMembers: allContentfulTeamMembers(
+      sort: { fields: [createdAt], order: ASC }
+    ) {
       edges {
         node {
           id
           name
           portrait {
-            publicURL
+            file {
+              url
+            }
           }
         }
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      excerpt
-      frontmatter {
-        title
-        seoDescription
+    page: contentfulPage(slug: { eq: $slug }) {
+      id
+      title
+      content {
+        childMarkdownRemark {
+          html
+        }
       }
     }
   }

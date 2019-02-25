@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const canonicalUrl = 'https://renga.co';
 
 module.exports = {
@@ -9,9 +11,6 @@ module.exports = {
     email: 'hello@renga.co',
     emailCareers: 'careers@renga.co',
     image: '/images/social.png',
-  },
-  mapping: {
-    'MarkdownRemark.frontmatter.author': 'PeopleYaml',
   },
   plugins: [
     'gatsby-plugin-flow',
@@ -26,10 +25,11 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-source-contentful',
       options: {
-        path: `${__dirname}/src/content`,
-        name: 'data',
+        spaceId: 'mmc7quk7n7ah',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
       },
     },
     {
@@ -76,24 +76,36 @@ module.exports = {
           {
             title: 'Renga Blog Feed',
             output: '/rss.xml',
+            serialize: ({ query: { site, allContentfulBlogPost } }) =>
+              allContentfulBlogPost.edges.map(({ node }) => {
+                const url = `${site.siteMetadata.siteUrl}/blog/${node.slug}`;
+                const markdown = node.content.childMarkdownRemark;
+
+                return {
+                  title: node.title,
+                  description: markdown.excerpt,
+                  date: node.date,
+                  url,
+                  guid: url,
+                  custom_elements: [{ 'content:encoded': markdown.html }],
+                };
+              }),
             query: `
               {
-                allMarkdownRemark(
+                allContentfulBlogPost(
                   limit: 1000,
-                  sort: { fields: [fields___date], order: DESC }
-                  filter: {
-                    fields: { type: { eq: "blog" } }
-                    frontmatter: { published: { ne: false } }
-                  }
+                  sort: { fields: [date], order: DESC }
                 ) {
                   edges {
                     node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
+                      title
+                      slug
+                      date
+                      content {
+                        childMarkdownRemark {
+                          html
+                          excerpt
+                        }
                       }
                     }
                   }

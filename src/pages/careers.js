@@ -10,9 +10,10 @@ import Subtitle from '../components/type-subtitle';
 const description =
   'Renga was built on the idea of curiosity, integrity and collaboration. We invest into our people and joining the team means you’ll be wearing multiple hats. We push you to learn, grow and satisfy that entrepreneurial itch.';
 
-const CareersPage = ({ data }) => {
-  const { siteMetadata } = data.site;
-  const { edges: postings } = data.allMarkdownRemark;
+const CareersPage = props => {
+  const { site, allContentfulJobPostings } = props.data;
+  const { siteMetadata } = site;
+  const { edges: postings } = allContentfulJobPostings;
 
   return (
     <Layout>
@@ -39,14 +40,23 @@ const CareersPage = ({ data }) => {
           }
         />
         <div className="mb-6">
-          <CareerPostingList email={siteMetadata.emailCareers} postings={postings} />
+          <CareerPostingList
+            email={siteMetadata.emailCareers}
+            postings={postings}
+          />
         </div>
         <Content>
           <Subtitle>Nothing catch your eye?</Subtitle>
           <p>
             If you are excited to work for Renga but don't see a position that
-            fits your profile, don't hesitate to <a href={`mailto:${siteMetadata.emailCareers}`} target="_blank" rel="noopener noreferrer">shoot us an email</a> and tell us
-            what you can bring to the table.
+            fits your profile, don't hesitate to{' '}
+            <a
+              href={`mailto:${siteMetadata.emailCareers}`}
+              target="_blank"
+              rel="noopener noreferrer">
+              shoot us an email
+            </a>{' '}
+            and tell us what you can bring to the table.
           </p>
         </Content>
       </div>
@@ -63,18 +73,15 @@ export const query = graphql`
         emailCareers
       }
     }
-    allMarkdownRemark(
-      filter: {
-        fields: { type: { eq: "career" } }
-        frontmatter: { published: { ne: false } }
-      }
-    ) {
+    allContentfulJobPostings(sort: { fields: [title], order: ASC }) {
       edges {
         node {
           id
-          html
-          frontmatter {
-            title
+          title
+          content {
+            childMarkdownRemark {
+              html
+            }
           }
         }
       }

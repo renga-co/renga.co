@@ -5,8 +5,11 @@ import './post-preview.css';
 
 const PostPreview = props => {
   const { post } = props;
-  const date = new Date(post.fields.date);
-  const excerpt = post.frontmatter.excerpt || post.excerpt;
+
+  const date = new Date(post.date);
+  const excerpt = post.excerpt
+    ? post.excerpt.excerpt
+    : post.content.childMarkdownRemark.excerpt;
 
   return (
     <div className="PostPreview x-m xa-center-m mb-4">
@@ -17,7 +20,7 @@ const PostPreview = props => {
           {utils.formatPostTimestamp(date)}
         </time>
         <h3 className="PostPreview-title fs-24 fw-semibold mb-1">
-          {post.frontmatter.title}
+          {post.title}
         </h3>
         <p className="fs-18">{excerpt}</p>
       </div>
