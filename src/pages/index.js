@@ -20,14 +20,14 @@ const people = [
       </span>
     ),
     pictureUrl: require('../assets/images/person-francene.svg'),
-    pictureAltText: "Francene, a small business owner, looking confused.",
+    pictureAltText: 'Francene, a small business owner, looking confused.',
     transform: 'skew(1deg)',
   },
   {
     id: 'gerald',
     phrase: <span>“I don’t know where to begin&nbsp;with ecommerce.”</span>,
     pictureUrl: require('../assets/images/person-gerald.svg'),
-    pictureAltText: "Gerald, a long-time businessman looks disheveled.",
+    pictureAltText: 'Gerald, a long-time businessman looks disheveled.',
     transform: 'skew(-4deg)',
   },
   {
@@ -39,14 +39,16 @@ const people = [
       </span>
     ),
     pictureUrl: require('../assets/images/person-geoffrey.svg'),
-    pictureAltText: "Geoffrey, owner of a new start-up looks smug, but in need of help.",
+    pictureAltText:
+      'Geoffrey, owner of a new start-up looks smug, but in need of help.',
     transform: 'skew(5deg)',
   },
   {
     id: 'emily',
     phrase: <span>“I’m looking to freshen up my website and&nbsp;logo.”</span>,
     pictureUrl: require('../assets/images/person-emily.svg'),
-    pictureAltText: "Emily, the energetic bakery owner, is excited to bring her business online.",
+    pictureAltText:
+      'Emily, the energetic bakery owner, is excited to bring her business online.',
     transform: 'skew(-1deg) rotate(-1deg)',
   },
 ];
@@ -107,8 +109,15 @@ const IndexPage = () => (
       </div>
       <div className="ta-center pa-3">
         <div className="xi xd-column xd-row-m ta-left-m xa-center xj-spaceBetween fs-18 bgc-brown pv-2 pv-1-m pa-1 br-12">
-          <span className="x xa-center d-block d-inline-m ph-1 c-gray4 p-relative" style={{ transform: 'translateY(3px) rotate(-5deg)' }}><Icon name="gift" iconSize={20} /></span>
-          <p className="pt-2 pv-0-m pr-4-m mb-3 mb-0-m c-gray4">We’re offering a <strong>free branding workshop</strong> for a limited time</p>
+          <span
+            className="x xa-center d-block d-inline-m ph-1 c-gray4 p-relative"
+            style={{ transform: 'translateY(3px) rotate(-5deg)' }}>
+            <Icon name="gift" iconSize={20} />
+          </span>
+          <p className="pt-2 pv-0-m pr-4-m mb-3 mb-0-m c-gray4">
+            We’re offering a <strong>free branding workshop</strong> for a
+            limited time
+          </p>
           <Link to="/brand-workshop">
             <Button small inline>
               <span className="ph-1">Learn more</span>
@@ -143,7 +152,7 @@ const IndexPage = () => (
             custom solution that fits.
           </p>
         </Content>
-        <div className="mt-5 x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
+        <div className="mt-4 x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
           <CalloutLink>
             <ContactLink>Get in touch</ContactLink>
           </CalloutLink>
