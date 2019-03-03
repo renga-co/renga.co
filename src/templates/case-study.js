@@ -24,9 +24,11 @@ const CaseStudyPage = props => {
     : markdown.excerpt;
   const metaImage = page.metaImage
     ? 'https:' + page.metaImage.file.url
-    : 'https:' + page.coverImage.file.url;
+    : 'https:' + page.coverImage.fluid.src;
   const date = new Date(page.date);
 
+  const showOtherCaseStudies =
+    otherCaseStudies && otherCaseStudies.edges.length > 0;
   const headerImageMargin = `mb-3 mb-4-m`;
 
   return (
@@ -43,7 +45,7 @@ const CaseStudyPage = props => {
           <div className="fs-14 c-gray4 mb-2">
             <span>Case Study</span>
             <span className="ph-1">&middot;</span>
-            <time datetime={date.toISOString()}>
+            <time dateTime={date.toISOString()}>
               {formatCaseStudyDate(date)}
             </time>
           </div>
@@ -53,7 +55,11 @@ const CaseStudyPage = props => {
           </h2>
         </header>
         <div className={cx('p-relative mw-1200 mh-auto', headerImageMargin)}>
-          <img src={page.coverImage.file.url} alt={page.title} />
+          <img
+            src={page.coverImage.fluid.src}
+            srcSet={page.coverImage.fluid.srcSet}
+            alt={page.title}
+          />
         </div>
         <div className="CaseStudy-metaContainer p-relative mw-1200 mh-auto w-100p">
           <aside className="CaseStudy-meta p-absolute-m l-0 t-0 fs-14 lh-1d5">
@@ -79,17 +85,47 @@ const CaseStudyPage = props => {
           isCaseStudy
           dangerouslySetInnerHTML={{ __html: markdown.html }}
         />
-        {otherCaseStudies ? (
-          <footer>
-            {otherCaseStudies.edges.map(({ node }) => (
-              <div>{node.title}</div>
-            ))}
+        {showOtherCaseStudies && (
+          <footer className="mt-6 mt-7-m mw-900 mh-auto">
+            <h3 className="fs-24 fw-semibold ta-center mb-5">
+              See more of our work
+            </h3>
+            <div className="x-m xj-center">
+              {otherCaseStudies.edges
+                .concat(otherCaseStudies.edges)
+                .slice(0, 2)
+                .map(({ node }) => (
+                  <Link key={node.id} to={'work/' + node.slug}>
+                    <div className="x-1 ph-2-m mb-4 mb-0-m">
+                      <div className="mb-2">
+                        <img
+                          alt={node.title}
+                          src={node.coverImage.fluid.src}
+                          srcSet={node.coverImage.fluid.srcSet}
+                        />
+                      </div>
+                      <h4 className="fs-18 fs-21-m fw-semibold mb-1">
+                        {node.title}
+                      </h4>
+                      <h6 className="fs-16 fs-18-m mb-2">{node.subtitle}</h6>
+                      <div className="fs-14 c-gray3">
+                        {node.projectScope.map((item, i) => (
+                          <>
+                            {i !== 0 && <span className="ph-1">&middot;</span>}
+                            <span>{item}</span>
+                          </>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+            </div>
           </footer>
-        ) : null}
+        )}
       </article>
       <Callout
         className="mb-5"
-        title="Ready to talk?"
+        title="Looking for help with your brand?"
         body="We specialize in helping you discover your brand identity."
         links={
           <CalloutLink className="fs-16">
@@ -111,8 +147,8 @@ export const pageQuery = graphql`
       title
       subtitle
       coverImage {
-        file {
-          url
+        fluid(maxWidth: 2400) {
+          ...GatsbyContentfulFluid
         }
       }
       date
@@ -135,10 +171,17 @@ export const pageQuery = graphql`
     allContentfulCaseStudy(filter: { slug: { ne: $slug } }) {
       edges {
         node {
+          id
           title
           subtitle
+          coverImage {
+            fluid(maxWidth: 760) {
+              ...GatsbyContentfulFluid
+            }
+          }
           date
           slug
+          projectScope
         }
       }
     }
