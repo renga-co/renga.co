@@ -27,7 +27,7 @@ body {
   color: #141414;
   background-color: #fffefc;
   font-family: 'Adelle Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -162,7 +162,7 @@ cite {
 
 @media only screen and (min-width: 767px) {
   body {
-    font-size: 1.3125rem;
+    font-size: 1.125rem;
   }
 
   .xo-0-m {
