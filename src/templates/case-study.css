@@ -1,0 +1,25 @@
+.CaseStudy-metaContainer {
+  margin-bottom: 2rem;
+}
+
+.CaseStudy-meta {
+  display: flex;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CaseStudy-meta > div {
+  flex: 1 0 auto;
+}
+
+.CaseStudy-meta ul {
+  list-style: none;
+}
+
+@media only screen and (min-width: 960px) {
+  .CaseStudy-meta {
+    position: absolute;
+    display: block;
+  }
+}

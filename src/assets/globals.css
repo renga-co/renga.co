@@ -23,6 +23,24 @@ html {
   font-size: 100%;
 }
 
+:root {
+  --gray1: #f2f2f2;
+  --gray2: #a9a9a9;
+  --gray3: #565656;
+  --gray4: #424242;
+  --gray5: #282828;
+  --gray6: #141414;
+  --fontSize24: 1.5rem;
+  --fontSize21: 1.3125rem;
+  --fontSize18: 1.125rem;
+  --fontSize16: 1rem;
+  --fontSize14: 0.875rem;
+
+  --maxWidthColumn: 600px;
+  --maxWidthWideColumn: 900px;
+  --maxWidthImageColumn: 1200px;
+}
+
 body {
   color: #141414;
   background-color: #fffefc;

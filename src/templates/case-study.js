@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import cx from 'classnames';
 import tinytime from 'tinytime';
 import Layout from '../components/layout';
 import MetaTags from '../components/meta-tags';
 import Content from '../components/content';
 import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
+import Icon from '../components/icon';
+import './case-study.css';
 
 const formatCaseStudyDate = tinytime('{MMMM} {YYYY}').render;
 
@@ -24,7 +27,7 @@ const CaseStudyPage = props => {
     : 'https:' + page.coverImage.file.url;
   const date = new Date(page.date);
 
-  console.log(page);
+  const headerImageMargin = `mb-3 mb-4-m`;
 
   return (
     <Layout>
@@ -33,20 +36,30 @@ const CaseStudyPage = props => {
         description={metaDescription}
         imageUrl={metaImage}
       />
-      <article className="mb-5">
-        <header className="mh-auto mb-3 mb-5-m" style={{ maxWidth: 650 }}>
-          <div>{formatCaseStudyDate(date)}</div>
-          <h1 className="fs-30 fs-36-m fw-semibold">{page.title}</h1>
-          <h2 className="fs-18 fs-24-m">{page.subtitle}</h2>
+      <article className="mb-5 mb-6-m">
+        <header
+          className={cx('mh-auto', headerImageMargin)}
+          style={{ maxWidth: 600 }}>
+          <div className="fs-14 c-gray4 mb-2">
+            <span>Case Study</span>
+            <span className="ph-1">&middot;</span>
+            <time datetime={date.toISOString()}>
+              {formatCaseStudyDate(date)}
+            </time>
+          </div>
+          <h1 className="fs-30 fw-semibold">{page.title}</h1>
+          <h2 className="fs-24 c-gray4" style={{ maxWidth: 550 }}>
+            {page.subtitle}
+          </h2>
         </header>
-        <div className="p-relative mw-1200 mh-auto mb-4">
+        <div className={cx('p-relative mw-1200 mh-auto', headerImageMargin)}>
           <img src={page.coverImage.file.url} alt={page.title} />
         </div>
-        <div className="p-relative mw-1200 mh-auto w-100p">
-          <aside className="p-absolute-m l-0 t-0 fs-14">
-            <div className="mb-2">
+        <div className="CaseStudy-metaContainer p-relative mw-1200 mh-auto w-100p">
+          <aside className="CaseStudy-meta p-absolute-m l-0 t-0 fs-14 lh-1d5">
+            <div className="mb-2-m">
               <h4 className="fw-semibold">Scope</h4>
-              <ul>
+              <ul className="c-gray4">
                 {page.projectScope.map(item => (
                   <li key={item}>{item}</li>
                 ))}
@@ -54,7 +67,7 @@ const CaseStudyPage = props => {
             </div>
             <div>
               <h4 className="fw-semibold">Team</h4>
-              <ul>
+              <ul className="c-gray4">
                 {page.projectMembers.map(item => (
                   <li key={item}>{item}</li>
                 ))}
@@ -75,11 +88,14 @@ const CaseStudyPage = props => {
         ) : null}
       </article>
       <Callout
+        className="mb-5"
         title="Ready to talk?"
         body="We specialize in helping you discover your brand identity."
         links={
           <CalloutLink className="fs-16">
-            <Link to="/Contact">Get in Touch</Link>
+            <Link to="/contact" className="x xa-center xj-center">
+              Get in Touch <Icon name="arrow-right" iconSize={18} />
+            </Link>
           </CalloutLink>
         }
       />
