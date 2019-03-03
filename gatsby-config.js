@@ -32,6 +32,7 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
+    '@contentful/gatsby-transformer-contentful-richtext',
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {

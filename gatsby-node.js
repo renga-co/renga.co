@@ -3,6 +3,7 @@ const slugify = require('slug');
 
 const templates = {
   blogPost: resolve('./src/templates/post.js'),
+  caseStudy: resolve('./src/templates/case-study.js'),
   default: resolve('./src/templates/page.js'),
   about: resolve('./src/templates/about.js'),
   brandWorkshop: resolve('./src/templates/brand-workshop.js'),
@@ -34,6 +35,15 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
+
+      caseStudies: allContentfulCaseStudy(limit: 1000) {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
     }
   `);
 
@@ -47,6 +57,18 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path,
       component: templates.blogPost,
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
+
+  query.data.caseStudies.edges.forEach(({ node }) => {
+    const path = `work/${node.slug}`;
+
+    createPage({
+      path,
+      component: templates.caseStudy,
       context: {
         slug: node.slug,
       },
