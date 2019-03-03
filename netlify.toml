@@ -1,10 +1,3 @@
 [build]
   publish = "public/"
   command = "yarn build"
-
-[context.deploy-preview]
-  command = "sed -i s/PREVIEW__CONTENTFUL_HOST/$PREVIEW_CONTENTFUL_HOST/g netlify.toml && sed -i s/PREVIEW__CONTENTFUL_ACCESS_TOKEN/$PREVIEW_CONTENTFUL_ACCESS_TOKEN/g netlify.toml && yarn build"
-
-[context.deploy-preview.environment]
-  CONTENTFUL_ACCESS_TOKEN = "PREVIEW__CONTENTFUL_ACCESS_TOKEN"
-  CONTENTFUL_HOST = "PREVIEW__CONTENTFUL_HOST"
