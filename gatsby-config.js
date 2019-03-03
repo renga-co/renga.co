@@ -1,5 +1,8 @@
 require('dotenv').config();
 
+const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types');
+const LOCALE = 'en-US';
+
 const canonicalUrl = 'https://renga.co';
 
 module.exports = {
@@ -32,7 +35,38 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
-    '@contentful/gatsby-transformer-contentful-richtext',
+    {
+      resolve: '@contentful/gatsby-transformer-contentful-richtext',
+      options: {
+        renderOptions: {
+          renderNode: {
+            [BLOCKS.EMBEDDED_ASSET]: node => {
+              const fields = node.data.target.fields;
+              const description = fields.description
+                ? fields.description[LOCALE]
+                : null;
+              const file = fields.file[LOCALE];
+
+              switch (file.contentType) {
+                case 'image/png':
+                case 'image/gif':
+                case 'image/jpg':
+                case 'image/jpeg':
+                case 'image/webp':
+                  const captionText = description
+                    ? `<figcaption>${description}</figcaption>`
+                    : '';
+                  return `<figure><img src="${
+                    file.url
+                  }" />${captionText}</figure>`;
+                default:
+                  return;
+              }
+            },
+          },
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
