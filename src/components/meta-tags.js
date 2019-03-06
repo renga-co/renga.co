@@ -36,11 +36,17 @@ const MetaTags = ({
       }
     `}
     render={({ site: { siteMetadata: meta } }) => {
-      const shortTitle = rawTitle ? rawTitle : defaultShortTitle;
+      const shortTitle = (rawTitle
+        ? rawTitle + isCaseStudy
+          ? ' | Case Study'
+          : ''
+        : defaultShortTitle
+      ).trim();
       const title = rawTitle ? `${rawTitle} | ${defaultTitle}` : defaultTitle;
       const description = rawDescription ? rawDescription : meta.description;
 
       const image = imageUrl ? imageUrl : `${meta.siteUrl}${meta.image}`;
+      const isArticle = isBlogPost || isCaseStudy;
 
       return (
         <Head>
@@ -48,15 +54,13 @@ const MetaTags = ({
           <meta name="description" content={description} />
 
           {/* OpenGraph tags */}
-          {isBlogPost || isCaseStudy ? (
-            <meta property="og:type" content="article" />
-          ) : null}
+          {isArticle ? <meta property="og:type" content="article" /> : null}
           <meta property="og:title" content={shortTitle} />
           <meta property="og:description" content={description} />
           <meta property="og:image" content={image} />
 
           {/* Twitter Card tags */}
-          {isCaseStudy ? (
+          {isArticle ? (
             <meta name="twitter:card" content="summary" />
           ) : (
             <meta name="twitter:card" content="summary_large_image" />
