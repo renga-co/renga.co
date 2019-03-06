@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 type Props = {
@@ -14,8 +14,6 @@ type Props = {
         srcSet: string,
       },
     },
-    projectScope: string[],
-    projectMembers: string[],
   },
 };
 
@@ -33,14 +31,6 @@ const CaseStudyPreview = ({ caseStudy }: Props) => {
         <div className="mb-1 mb-2-m">
           <h4 className="fs-18 fw-semibold">{caseStudy.title}</h4>
           <h6 className="fs-18 c-gray4">{caseStudy.subtitle}</h6>
-        </div>
-        <div className="fs-14 c-gray3">
-          {caseStudy.projectScope.map((item, i) => (
-            <Fragment key={item}>
-              {i !== 0 && <span className="ph-1">&middot;</span>}
-              <span>{item}</span>
-            </Fragment>
-          ))}
         </div>
       </div>
     </Link>
@@ -62,6 +52,5 @@ export const query = graphql`
       }
     }
     date
-    projectScope
   }
 `;
