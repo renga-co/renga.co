@@ -37,9 +37,7 @@ const MetaTags = ({
     `}
     render={({ site: { siteMetadata: meta } }) => {
       const shortTitle = (rawTitle
-        ? rawTitle + isCaseStudy
-          ? ' | Case Study'
-          : ''
+        ? rawTitle + (isCaseStudy ? ' | Case Study' : '')
         : defaultShortTitle
       ).trim();
       const title = rawTitle ? `${rawTitle} | ${defaultTitle}` : defaultTitle;
