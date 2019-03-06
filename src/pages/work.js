@@ -11,17 +11,15 @@ const WorkPage = props => {
   const { allContentfulCaseStudy: caseStudies } = props.data;
   return (
     <Layout>
-      <div className="mw-700 mh-auto">
-        <Header title="Work" subtitle="See some of favourite work." />
+      <div className="mw-700 mh-auto mb-3">
+        <Header title="Work" subtitle="See some of our favourite work." />
       </div>
       <section className="WorkGrid mw-900 mh-auto">
-        {caseStudies.edges
-          .concat(caseStudies.edges.slice().reverse())
-          .map(({ node }) => (
-            <div key={node.id} className="mb-4">
-              <CaseStudyPreview caseStudy={node} />
-            </div>
-          ))}
+        {caseStudies.edges.map(({ node }) => (
+          <div key={node.id} className="mb-4">
+            <CaseStudyPreview caseStudy={node} />
+          </div>
+        ))}
       </section>
     </Layout>
   );
