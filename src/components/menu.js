@@ -79,7 +79,7 @@ export default class Menu extends Component {
           </nav>
         </div>
         {this.state.isMenuOpen && (
-          <div className="d-none-m x xd-column mb-5 ta-center">
+          <div className="d-none-m x xd-column mb-5 ta-center fs-18">
             <Link
               className="Navigation-mobileMenuLink c-gray3 pa-3"
               activeClassName="c-gray6"

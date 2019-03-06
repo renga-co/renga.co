@@ -23,11 +23,32 @@ html {
   font-size: 100%;
 }
 
+:root {
+  --gray1: #f2f2f2;
+  --gray2: #a9a9a9;
+  --gray3: #565656;
+  --gray4: #424242;
+  --gray5: #282828;
+  --gray6: #141414;
+  --brown: #f5f1ec;
+  --offwhite: #fffefc;
+  --geraldine: #ff766a;
+  --fontSize24: 1.5rem;
+  --fontSize21: 1.3125rem;
+  --fontSize18: 1.125rem;
+  --fontSize16: 1rem;
+  --fontSize14: 0.875rem;
+
+  --maxWidthColumn: 600px;
+  --maxWidthWideColumn: 900px;
+  --maxWidthImageColumn: 1200px;
+}
+
 body {
   color: #141414;
   background-color: #fffefc;
   font-family: 'Adelle Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -162,7 +183,7 @@ cite {
 
 @media only screen and (min-width: 767px) {
   body {
-    font-size: 1.3125rem;
+    font-size: 1.125rem;
   }
 
   .xo-0-m {

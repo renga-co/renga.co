@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import cx from 'classnames';
 import Layout from '../components/layout';
@@ -106,17 +106,17 @@ const ServicesPage = props => {
       <Callout
         className="mt-4 mb-6 mw-450"
         title="Ready to start?"
+        body={
+          <p>
+            Even if you don’t see something you're looking for,
+            <br />
+            reach out and maybe we can help!
+          </p>
+        }
         links={
-          <Fragment>
-            <CalloutLink className="fs-16">
-              <ContactLink withArrowIcon>Get in touch</ContactLink>
-            </CalloutLink>
-            <p className="fs-14 mw-450 mt-2 c-gray4 lh-1d5">
-              If there’s something you’re looking for that you don’t see,
-              <br />
-              reach out and maybe we can help!
-            </p>
-          </Fragment>
+          <CalloutLink className="fs-16">
+            <ContactLink withArrowIcon>Get in touch</ContactLink>
+          </CalloutLink>
         }
       />
     </Layout>

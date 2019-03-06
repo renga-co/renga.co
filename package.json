@@ -23,6 +23,8 @@
     "tinytime": "^0.2.6"
   },
   "devDependencies": {
+    "@contentful/gatsby-transformer-contentful-richtext": "^13.0.1",
+    "@contentful/rich-text-types": "^13.0.0",
     "dotenv": "^6.2.0",
     "flow-bin": "^0.91.0",
     "gatsby-plugin-canonical-urls": "^2.0.8",
