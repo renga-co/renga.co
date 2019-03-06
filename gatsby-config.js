@@ -5,6 +5,10 @@ const LOCALE = 'en-US';
 
 const canonicalUrl = 'https://renga.co';
 
+const formatHeaders = (node, next) => {
+  return `<h1><span>${next(node.content)}</span></h1>`;
+};
+
 module.exports = {
   siteMetadata: {
     title: 'Renga',
@@ -46,6 +50,9 @@ module.exports = {
       options: {
         renderOptions: {
           renderNode: {
+            [BLOCKS.HEADING_1]: formatHeaders,
+            [BLOCKS.HEADING_2]: formatHeaders,
+            [BLOCKS.HEADING_3]: formatHeaders,
             [BLOCKS.EMBEDDED_ASSET]: node => {
               const fields = node.data.target.fields;
               const description = fields.description

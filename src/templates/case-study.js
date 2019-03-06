@@ -50,7 +50,7 @@ const CaseStudyPage = props => {
   return (
     <Layout>
       <MetaTags
-        title={page.title}
+        title={page.client}
         description={metaDescription}
         imageUrl={metaImage}
       />
@@ -76,7 +76,7 @@ const CaseStudyPage = props => {
           <img
             src={page.coverImage.fluid.src}
             srcSet={page.coverImage.fluid.srcSet}
-            alt={page.title}
+            alt={page.client}
           />
         </div>
         <div className="CaseStudy-metaContainer p-relative mw-1200 mh-auto w-100p">

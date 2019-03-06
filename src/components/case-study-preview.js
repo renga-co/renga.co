@@ -1,7 +1,7 @@
 // @flow
 
-import React from 'react';
-import { Link } from 'gatsby';
+import React, { Fragment } from 'react';
+import { Link, graphql } from 'gatsby';
 
 type Props = {
   caseStudy: {
@@ -41,10 +41,10 @@ const CaseStudyPreview = ({ caseStudy }: Props) => {
         </div>
         <div className="fs-14 c-gray3">
           {caseStudy.projectScope.map((item, i) => (
-            <>
+            <Fragment key={item}>
               {i !== 0 && <span className="ph-1">&middot;</span>}
               <span>{item}</span>
-            </>
+            </Fragment>
           ))}
         </div>
       </div>
