@@ -19,7 +19,7 @@ type Props = {
 
 const CaseStudyPreview = ({ caseStudy }: Props) => {
   return (
-    <Link to={'work/' + caseStudy.slug}>
+    <Link to={'/work/' + caseStudy.slug}>
       <div style={{ maxWidth: 450 }}>
         <div className="mb-2">
           <img
