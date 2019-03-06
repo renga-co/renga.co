@@ -12,10 +12,7 @@ const WorkPage = props => {
   return (
     <Layout>
       <div className="mw-700 mh-auto">
-        <Header
-          title="Work"
-          subtitle="See some of the work we're most proud of."
-        />
+        <Header title="Work" subtitle="See some of favourite work." />
       </div>
       <section className="WorkGrid mw-900 mh-auto">
         {caseStudies.edges
