@@ -53,6 +53,7 @@ const CaseStudyPage = props => {
         title={page.client}
         description={metaDescription}
         imageUrl={metaImage}
+        isCaseStudy
       />
       <article className="mb-5 mb-6-m">
         <header
