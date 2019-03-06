@@ -1,9 +1,12 @@
+// @flow
+
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import cx from 'classnames';
 import tinytime from 'tinytime';
 import Layout from '../components/layout';
 import MetaTags from '../components/meta-tags';
+import CaseStudyPreview from '../components/case-study-preview';
 import Content from '../components/content';
 import Callout from '../components/callout';
 import CalloutLink from '../components/type-callout-link';
@@ -11,6 +14,19 @@ import Icon from '../components/icon';
 import './case-study.css';
 
 const formatCaseStudyDate = tinytime('{MMMM} {YYYY}').render;
+const preventWidows = str => {
+  const lastSpaceIndex = str.lastIndexOf(' ');
+  const partA = str.substr(0, lastSpaceIndex);
+  const partB = str.substr(lastSpaceIndex + 1);
+
+  return (
+    <>
+      {partA}
+      &nbsp;
+      {partB}
+    </>
+  );
+};
 
 const CaseStudyPage = props => {
   const {
@@ -21,7 +37,7 @@ const CaseStudyPage = props => {
 
   const metaDescription = page.metaDescription
     ? page.metaDescription.metaDescription
-    : markdown.excerpt;
+    : page.subtitle;
   const metaImage = page.metaImage
     ? 'https:' + page.metaImage.file.url
     : 'https:' + page.coverImage.fluid.src;
@@ -43,14 +59,16 @@ const CaseStudyPage = props => {
           className={cx('mh-auto', headerImageMargin)}
           style={{ maxWidth: 600 }}>
           <div className="fs-14 c-gray4 mb-2">
-            <span>Case Study</span>
+            <span>{page.client}</span>
             <span className="ph-1">&middot;</span>
             <time dateTime={date.toISOString()}>
               {formatCaseStudyDate(date)}
             </time>
           </div>
-          <h1 className="fs-30 fw-semibold">{page.title}</h1>
-          <h2 className="fs-24 c-gray4" style={{ maxWidth: 550 }}>
+          <h1 className="fs-30 fs-36-m fw-semibold lh-1d25 mb-2">
+            {preventWidows(page.title)}
+          </h1>
+          <h2 className="fs-21 fs-24-m c-gray4" style={{ maxWidth: 550 }}>
             {page.subtitle}
           </h2>
         </header>
@@ -90,34 +108,14 @@ const CaseStudyPage = props => {
             <h3 className="fs-24 fw-semibold ta-center mb-5">
               See more of our work
             </h3>
-            <div className="x-m xj-center">
+            <div className="x xd-column xd-row-m xa-center xj-center">
               {otherCaseStudies.edges
-                .concat(otherCaseStudies.edges)
+                .concat(otherCaseStudies.edges.slice())
                 .slice(0, 2)
                 .map(({ node }) => (
-                  <Link key={node.id} to={'work/' + node.slug}>
-                    <div className="x-1 ph-2-m mb-4 mb-0-m">
-                      <div className="mb-2">
-                        <img
-                          alt={node.title}
-                          src={node.coverImage.fluid.src}
-                          srcSet={node.coverImage.fluid.srcSet}
-                        />
-                      </div>
-                      <h4 className="fs-18 fs-21-m fw-semibold mb-1">
-                        {node.title}
-                      </h4>
-                      <h6 className="fs-16 fs-18-m mb-2">{node.subtitle}</h6>
-                      <div className="fs-14 c-gray3">
-                        {node.projectScope.map((item, i) => (
-                          <>
-                            {i !== 0 && <span className="ph-1">&middot;</span>}
-                            <span>{item}</span>
-                          </>
-                        ))}
-                      </div>
-                    </div>
-                  </Link>
+                  <div key={node.id} className="ph-2-m mb-4 mb-0-m">
+                    <CaseStudyPreview caseStudy={node} />
+                  </div>
                 ))}
             </div>
           </footer>
@@ -144,6 +142,7 @@ export default CaseStudyPage;
 export const pageQuery = graphql`
   query CaseStudyByPath($slug: String!) {
     contentfulCaseStudy(slug: { eq: $slug }) {
+      client
       title
       subtitle
       coverImage {
@@ -168,20 +167,13 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulCaseStudy(filter: { slug: { ne: $slug } }) {
+    allContentfulCaseStudy(
+      filter: { slug: { ne: $slug }, public: { eq: true } }
+    ) {
       edges {
         node {
           id
-          title
-          subtitle
-          coverImage {
-            fluid(maxWidth: 760) {
-              ...GatsbyContentfulFluid
-            }
-          }
-          date
-          slug
-          projectScope
+          ...CaseStudyPreviewInformation
         }
       }
     }
