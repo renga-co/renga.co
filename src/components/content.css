@@ -98,16 +98,8 @@
 .Content--caseStudy h1,
 .Content--caseStudy h2,
 .Content--caseStudy h3 {
-  margin-top: 4rem;
   color: var(--gray6);
   font-size: var(--fontSize24);
-}
-
-.Content--caseStudy h1 span,
-.Content--caseStudy h2 span,
-.Content--caseStudy h3 span {
-  padding-top: 0.5rem;
-  border-top: 5px solid var(--brown);
 }
 
 .Content--caseStudy h4,
