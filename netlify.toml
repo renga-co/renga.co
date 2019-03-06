@@ -4,4 +4,4 @@
 
 # Deploy settings for a branch called "preview", which is deployed at preview.renga.co.
 [context.preview]
-  command = "yarn build && echo 'User-agent: *\nDisallow: /' > robots.txt"
+  command = "yarn build && echo 'User-agent: *\nDisallow: /' > public/robots.txt"
