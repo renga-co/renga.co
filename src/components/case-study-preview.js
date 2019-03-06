@@ -31,13 +31,8 @@ const CaseStudyPreview = ({ caseStudy }: Props) => {
           />
         </div>
         <div className="mb-1 mb-2-m">
-          <h4 className="d-inline fs-18 fs-21-m fw-semibold">
-            {caseStudy.title}
-            {'. '}
-          </h4>
-          <h6 className="d-inline d-block-m fs-18 fs-21-m c-gray4">
-            {caseStudy.subtitle}
-          </h6>
+          <h4 className="fs-18 fw-semibold">{caseStudy.title}</h4>
+          <h6 className="fs-18 c-gray4">{caseStudy.subtitle}</h6>
         </div>
         <div className="fs-14 c-gray3">
           {caseStudy.projectScope.map((item, i) => (

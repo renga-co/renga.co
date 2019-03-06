@@ -58,7 +58,7 @@ const CareerPosting = ({ posting, email, isOpen, onClick }) => {
           'pa-3': !isOpen,
         })}
         onClick={onClick}>
-        <h2 className="fs-21 fw-semibold">{posting.title}</h2>
+        <h2 className="fs-24 fw-semibold">{posting.title}</h2>
         <div className="us-none">{isOpen ? <IconUp /> : <IconDown />}</div>
       </a>
       {isOpen && (

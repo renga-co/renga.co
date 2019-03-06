@@ -18,7 +18,15 @@ const BlogIndexPage = ({ data }) => {
     <Layout>
       <MetaTags title="Blog" description={description} />
       <div className="mw-700 mh-auto">
-        <Header title="Our Blog" subtitle={description} />
+        <Header
+          title="Our Blog"
+          subtitle={
+            <span>
+              We love sharing our process of building a sustainable
+              creative&nbsp;brand.
+            </span>
+          }
+        />
         <div className="pv-3">
           {posts.map(({ node: post }) => (
             <Link to={`blog/${post.slug}`} key={post.id}>

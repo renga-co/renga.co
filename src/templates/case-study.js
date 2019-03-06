@@ -65,10 +65,10 @@ const CaseStudyPage = props => {
               {formatCaseStudyDate(date)}
             </time>
           </div>
-          <h1 className="fs-30 fs-36-m fw-semibold lh-1d25 mb-2">
+          <h1 className="fs-30 fs-36-m fw-semibold lh-1d25 mb-1 mb-2-m">
             {preventWidows(page.title)}
           </h1>
-          <h2 className="fs-21 fs-24-m c-gray4" style={{ maxWidth: 550 }}>
+          <h2 className="fs-18 fs-24-m c-gray4" style={{ maxWidth: 550 }}>
             {page.subtitle}
           </h2>
         </header>
@@ -109,14 +109,11 @@ const CaseStudyPage = props => {
               See more of our work
             </h3>
             <div className="x xd-column xd-row-m xa-center xj-center">
-              {otherCaseStudies.edges
-                .concat(otherCaseStudies.edges.slice())
-                .slice(0, 2)
-                .map(({ node }) => (
-                  <div key={node.id} className="ph-2-m mb-4 mb-0-m">
-                    <CaseStudyPreview caseStudy={node} />
-                  </div>
-                ))}
+              {otherCaseStudies.edges.slice(0, 2).map(({ node }) => (
+                <div key={node.id} className="ph-2-m mb-4 mb-0-m">
+                  <CaseStudyPreview caseStudy={node} />
+                </div>
+              ))}
             </div>
           </footer>
         )}
