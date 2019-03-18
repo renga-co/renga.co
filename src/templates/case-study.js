@@ -59,13 +59,15 @@ const CaseStudyPage = props => {
         <header
           className={cx('mh-auto', headerImageMargin)}
           style={{ maxWidth: 600 }}>
-          <div className="fs-14 c-gray4 mb-2">
-            <span>{page.client}</span>
-            <span className="ph-1">&middot;</span>
-            <time dateTime={date.toISOString()}>
-              {formatCaseStudyDate(date)}
-            </time>
-          </div>
+          <Link
+            to="/work"
+            className="x xa-stretch fs-16 c-gray4 mb-2"
+            style={{ marginLeft: -26 }}>
+            <Icon name="arrow-left" iconSize={16} size={24} />
+            <span style={{ paddingLeft: 4, lineHeight: '24px' }}>
+              Back to all work
+            </span>
+          </Link>
           <h1 className="fs-30 fs-36-m fw-semibold lh-1d25 mb-1 mb-2-m">
             {preventWidows(page.title)}
           </h1>
@@ -82,6 +84,14 @@ const CaseStudyPage = props => {
         </div>
         <div className="CaseStudy-metaContainer p-relative mw-1200 mh-auto w-100p">
           <aside className="CaseStudy-meta p-absolute-m l-0 t-0 fs-14 lh-1d5">
+            <div className="fs-14 c-gray4 mb-2">
+              <h4 className="fw-semibold">Client</h4>
+              <div>{page.client}</div>
+              <time dateTime={date.toISOString()}>
+                {formatCaseStudyDate(date)}
+              </time>
+            </div>
+
             <div className="mb-2-m">
               <h4 className="fw-semibold">Scope</h4>
               <ul className="c-gray4">
