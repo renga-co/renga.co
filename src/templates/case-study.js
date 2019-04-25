@@ -3,7 +3,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import cx from 'classnames';
-import tinytime from 'tinytime';
+import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Layout from '../components/layout';
 import MetaTags from '../components/meta-tags';
 import CaseStudyPreview from '../components/case-study-preview';
@@ -13,7 +14,46 @@ import CalloutLink from '../components/type-callout-link';
 import Icon from '../components/icon';
 import './case-study.css';
 
-const formatCaseStudyDate = tinytime('{MMMM} {YYYY}').render;
+const LOCALE = 'en-US';
+
+const richTextRenderOptions = {
+  renderNode: {
+    // We only adjust INLINES.HYPERLINK and not INLINES.ENTRY_HYPERLINK
+    // or INLINES.ASSET_HYPERLINK
+    [INLINES.HYPERLINK]: (node, children) => {
+      return <a href={node.data.uri} target="_blank" rel="noopener noreferrer">{children}</a>;
+    },
+    [BLOCKS.EMBEDDED_ASSET]: node => {
+      const fields = node.data.target.fields;
+      const description = fields.description
+        ? fields.description[LOCALE]
+        : null;
+      const file = fields.file[LOCALE];
+
+      switch (file.contentType) {
+        case 'image/png':
+        case 'image/gif':
+        case 'image/jpg':
+        case 'image/jpeg':
+        case 'image/webp':
+          const captionText = description ? (
+            <figcaption>{description}</figcaption>
+          ) : (
+            null
+          );
+          return (
+            <figure>
+              <img src={file.url} alt={description} />
+              {captionText}
+            </figure>
+          );
+        default:
+          return;
+      }
+    },
+  },
+};
+
 const preventWidows = str => {
   const lastSpaceIndex = str.lastIndexOf(' ');
   const partA = str.substr(0, lastSpaceIndex);
@@ -33,15 +73,13 @@ const CaseStudyPage = props => {
     contentfulCaseStudy: page,
     allContentfulCaseStudy: otherCaseStudies,
   } = props.data;
-  const { childContentfulRichText: markdown } = page.content;
 
   const metaDescription = page.metaDescription
     ? page.metaDescription.metaDescription
-    : page.subtitle;
+    : null;
   const metaImage = page.metaImage
     ? 'https:' + page.metaImage.file.url
     : 'https:' + page.coverImage.fluid.src;
-  const date = new Date(page.date);
 
   const showOtherCaseStudies =
     otherCaseStudies && otherCaseStudies.edges.length > 0;
@@ -72,7 +110,7 @@ const CaseStudyPage = props => {
             {preventWidows(page.title)}
           </h1>
           <h2 className="fs-18 fs-24-m c-gray4" style={{ maxWidth: 550 }}>
-            {page.subtitle}
+            {page.client}
           </h2>
         </header>
         <div className={cx('p-relative mw-1200 mh-auto', headerImageMargin)}>
@@ -84,14 +122,6 @@ const CaseStudyPage = props => {
         </div>
         <div className="CaseStudy-metaContainer p-relative mw-1200 mh-auto w-100p">
           <aside className="CaseStudy-meta p-absolute-m l-0 t-0 fs-14 lh-1d5">
-            <div className="fs-14 c-gray4 mb-2">
-              <h4 className="fw-semibold">Client</h4>
-              <div>{page.client}</div>
-              <time dateTime={date.toISOString()}>
-                {formatCaseStudyDate(date)}
-              </time>
-            </div>
-
             <div className="mb-2-m">
               <h4 className="fw-semibold">Scope</h4>
               <ul className="c-gray4">
@@ -110,10 +140,9 @@ const CaseStudyPage = props => {
             </div>
           </aside>
         </div>
-        <Content
-          isCaseStudy
-          dangerouslySetInnerHTML={{ __html: markdown.html }}
-        />
+        <Content isCaseStudy>
+          {documentToReactComponents(page.content.json, richTextRenderOptions)}
+        </Content>
         {showOtherCaseStudies && (
           <footer className="mt-6 mt-7-m mw-900 mh-auto">
             <h3 className="fs-24 fw-semibold ta-center mb-5">
@@ -152,19 +181,15 @@ export const pageQuery = graphql`
     contentfulCaseStudy(slug: { eq: $slug }) {
       client
       title
-      subtitle
       coverImage {
         fluid(maxWidth: 2400) {
           ...GatsbyContentfulFluid
         }
       }
-      date
       projectScope
       projectMembers
       content {
-        childContentfulRichText {
-          html
-        }
+        json
       }
       metaDescription {
         metaDescription
