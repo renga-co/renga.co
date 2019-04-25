@@ -7,9 +7,8 @@ type Props = {
   caseStudy: {
     slug: string,
     title: string,
-    subtitle: string,
     coverImage: {
-      fluid: {
+      fixed: {
         src: string,
         srcSet: string,
       },
@@ -30,7 +29,7 @@ const CaseStudyPreview = ({ caseStudy }: Props) => {
         </div>
         <div className="mb-1 mb-2-m">
           <h4 className="fs-18 fw-semibold">{caseStudy.title}</h4>
-          <h6 className="fs-18 c-gray4">{caseStudy.subtitle}</h6>
+          <h6 className="fs-18 c-gray4">{caseStudy.client}</h6>
         </div>
       </div>
     </Link>
@@ -43,10 +42,9 @@ export const query = graphql`
   fragment CaseStudyPreviewInformation on ContentfulCaseStudy {
     client
     title
-    subtitle
     slug
     coverImage {
-      fixed(width: 450, height: 260) {
+      fixed(width: 450, height: 260, quality: 80) {
         src
         srcSet
       }

@@ -1,8 +1,5 @@
 require('dotenv').config();
 
-const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types');
-const LOCALE = 'en-US';
-
 const canonicalUrl = 'https://renga.co';
 
 module.exports = {
@@ -39,38 +36,6 @@ module.exports = {
           process.env.CONTEXT !== 'production'
             ? process.env.CONTENTFUL_HOST_PREVIEW
             : process.env.CONTENTFUL_HOST,
-      },
-    },
-    {
-      resolve: '@contentful/gatsby-transformer-contentful-richtext',
-      options: {
-        renderOptions: {
-          renderNode: {
-            [BLOCKS.EMBEDDED_ASSET]: node => {
-              const fields = node.data.target.fields;
-              const description = fields.description
-                ? fields.description[LOCALE]
-                : null;
-              const file = fields.file[LOCALE];
-
-              switch (file.contentType) {
-                case 'image/png':
-                case 'image/gif':
-                case 'image/jpg':
-                case 'image/jpeg':
-                case 'image/webp':
-                  const captionText = description
-                    ? `<figcaption>${description}</figcaption>`
-                    : '';
-                  return `<figure><img src="${
-                    file.url
-                  }" />${captionText}</figure>`;
-                default:
-                  return;
-              }
-            },
-          },
-        },
       },
     },
     {
