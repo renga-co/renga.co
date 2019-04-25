@@ -46,6 +46,11 @@ module.exports = {
       options: {
         renderOptions: {
           renderNode: {
+            // We only adjust INLINES.HYPERLINK and not INLINES.ENTRY_HYPERLINK
+            // or INLINES.ASSET_HYPERLINK
+            [INLINES.HYPERLINK]: (node, next) => {
+              return `<a href="${node.data.uri}" target="_blank">${next(node.content)}</a>`;
+            },
             [BLOCKS.EMBEDDED_ASSET]: node => {
               const fields = node.data.target.fields;
               const description = fields.description
