@@ -99,8 +99,7 @@ const CaseStudyPage = props => {
           style={{ maxWidth: 600 }}>
           <Link
             to="/work"
-            className="x xa-stretch fs-16 c-gray4 mb-2"
-            style={{ marginLeft: -26 }}>
+            className="x xa-stretch fs-16 c-gray4 mb-2 case-study-back-button">
             <Icon name="arrow-left" iconSize={16} size={24} />
             <span style={{ paddingLeft: 4, lineHeight: '24px' }}>
               Back to all work

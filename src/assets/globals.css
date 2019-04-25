@@ -153,6 +153,10 @@ cite {
   background-position: bottom center;
 }
 
+.case-study-back-button {
+  margin-left: 0;
+}
+
 .va-middle {
   vertical-align: middle;
 }
@@ -212,5 +216,9 @@ cite {
 
   .t--0d5-m {
     top: -0.5em;
+  }
+
+  .case-study-back-button {
+    margin-left: -26px;
   }
 }
