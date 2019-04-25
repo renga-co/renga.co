@@ -67,6 +67,12 @@ export default class Menu extends Component {
             <Link
               className="c-gray3 h-black pa-1 ml-2"
               activeClassName="c-gray6"
+              to="/work">
+              Work
+            </Link>
+            <Link
+              className="c-gray3 h-black pa-1 ml-2"
+              activeClassName="c-gray6"
               to="/blog">
               Blog
             </Link>
@@ -93,6 +99,13 @@ export default class Menu extends Component {
               to="/services"
               onClick={this.handleMobileLinkClick}>
               Services
+            </Link>
+            <Link
+              className="Navigation-mobileMenuLink c-gray3 pa-3"
+              activeClassName="c-gray6"
+              to="/work"
+              onClick={this.handleMobileLinkClick}>
+              Work
             </Link>
             <Link
               className="Navigation-mobileMenuLink c-gray3 pa-3"

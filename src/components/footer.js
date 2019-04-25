@@ -22,12 +22,18 @@ const Footer = () => (
     <Divider />
     <FooterLink to="/services">Services</FooterLink>
     <Divider />
+    <FooterLink to="/work">Work</FooterLink>
+    <Divider />
     <FooterLink to="/blog">Blog</FooterLink>
     <div className="d-block d-inline-m">
       <Divider className="d-none d-inline-m" />
       <FooterLink to="/careers">Careers</FooterLink>
       <Divider />
-      <a className="h-black" href="https://renga.us9.list-manage.com/subscribe/post?u=116eb673d498b75ebfe2310ab&amp;id=1d0c69997b">Newsletter</a>
+      <a
+        className="h-black"
+        href="https://renga.us9.list-manage.com/subscribe/post?u=116eb673d498b75ebfe2310ab&amp;id=1d0c69997b">
+        Newsletter
+      </a>
       <Divider />
       <FooterLink to="/contact">Contact</FooterLink>
     </div>
