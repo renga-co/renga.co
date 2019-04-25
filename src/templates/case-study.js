@@ -181,7 +181,7 @@ export const pageQuery = graphql`
       client
       title
       coverImage {
-        fluid(maxWidth: 2400) {
+        fluid(maxWidth: 2400, quality: 80) {
           ...GatsbyContentfulFluid
         }
       }

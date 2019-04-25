@@ -8,7 +8,7 @@ type Props = {
     slug: string,
     title: string,
     coverImage: {
-      fluid: {
+      fixed: {
         src: string,
         srcSet: string,
       },
@@ -44,7 +44,7 @@ export const query = graphql`
     title
     slug
     coverImage {
-      fixed(width: 450, height: 260) {
+      fixed(width: 450, height: 260, quality: 80) {
         src
         srcSet
       }
