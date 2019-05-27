@@ -4798,6 +4798,13 @@ gatsby-plugin-catch-links@^2.0.2:
     "@babel/runtime" "^7.0.0"
     escape-string-regexp "^1.0.5"
 
+gatsby-plugin-drift@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-drift/-/gatsby-plugin-drift-1.0.0.tgz#2c26ac9f588908c888d3782f694d3e23cd06950f"
+  integrity sha512-rEyN8En+BK/SgSLb2mNrVTwMAQtnAJv5f0X444X8ikJJ8byAJFGOyHlbuK0rVl/QvMgcw9E65cW3PhY6wrVCuA==
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-feed@^2.0.5:
   version "2.0.13"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.13.tgz#4a457a81d28cbe1ebb6d944272711b0a0671bbd3"
