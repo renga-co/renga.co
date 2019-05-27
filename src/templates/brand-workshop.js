@@ -38,20 +38,6 @@ const Subtitle = ({ children }) => (
   </div>
 );
 
-const FreeForALimitedTimeBadge = ({ className }) => (
-  <div className={cx('xi xa-center c-geraldine', className)}>
-    <span
-      className="br-12 xi xa-center"
-      style={{
-        backgroundColor: 'rgba(255, 120, 108, 0.1)',
-        transform: 'translate(-2px, 1px)',
-      }}>
-      <Icon name="gift" iconSize={18} size={30} />
-    </span>
-    <span className="fs-18 fw-semibold pl-1">Free for a limited time</span>
-  </div>
-);
-
 function scrollToSignUpForm() {
   const container = document.getElementById('sign-up-form');
   const autofocusEl = container.querySelector('input[data-autofocus]');
@@ -80,7 +66,6 @@ const BrandWorkshopPage = props => {
             <TherapistWorkshop />
           </div>
           <div className="p-relative mb-4 w-50p-m xo-1 xo-2-m">
-            <FreeForALimitedTimeBadge className="mb-3 mb-4-m" />
             <Title className="mb-2 mb-4-m fs-36 lh-1d25">
               A brand workshop for your&nbsp;business
             </Title>
@@ -133,11 +118,10 @@ const BrandWorkshopPage = props => {
         className="mw-700 w-100p mh-auto ta-center pv-4 pv-6-m"
         id="sign-up-form">
         <div className="ta-center mb-4">
-          <h3 className="fs-24 mb-3 fw-semibold">Sign Up Now</h3>
+          <h3 className="fs-24 mb-3 fw-semibold">Send an Inquiry</h3>
           <Content>
             <p>
-              Fill out this form and we'll get in touch to organize a time for
-              us to do a one-on-one workshop.
+              Fill out this form and we'll get in touch about organizing a one-on-one&nbsp;workshop.
             </p>
           </Content>
         </div>
