@@ -39,6 +39,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-drift',
+      options: {
+        appId: '6t8pw9tsh6zt',
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: 'GTM-MXJ4Q46',
