@@ -39,7 +39,7 @@ const testimonials = [
 ];
 
 const IndexPage = () => (
-  <Layout>
+  <Layout className="hi">
     <div className="lh-1d5">
       <div>
         <div
@@ -124,7 +124,7 @@ const IndexPage = () => (
         <div className="TestimonialGrid mw-1200 ph-3 mt-5 mh-auto ta-left">
           {testimonials.map(t => (
             <div className="TestimonialGrid-testimonial mt-3 mt-0-m">
-              <div className="pa-2 bgc-brown br-12">{t.content}</div>
+              <div className="pv-2 ph-3 bgc-brown br-12">{t.content}</div>
               <div className="x xa-center mt-2">
                 <div
                   className="br-round bgc-brown mr-1"
