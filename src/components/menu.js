@@ -40,6 +40,12 @@ export default class Menu extends Component {
   };
 
   render() {
+    const links = [
+      { to: '/about', text: 'About' },
+      { to: '/services', text: 'Services' },
+      { to: '/contact', text: 'Contact' },
+    ];
+
     return (
       <div className="ph-3-m pb-3">
         <div className="x xa-center xj-spaceBetween pv-3 pv-4-m">
@@ -52,75 +58,27 @@ export default class Menu extends Component {
             </a>
           </nav>
           <nav className="d-none d-block-m fs-18 ml-3">
-            <Link
-              className="c-gray3 h-black pa-1"
-              activeClassName="c-gray6"
-              to="/about">
-              About
-            </Link>
-            <Link
-              className="c-gray3 h-black pa-1 ml-2"
-              activeClassName="c-gray6"
-              to="/services">
-              Services
-            </Link>
-            <Link
-              className="c-gray3 h-black pa-1 ml-2"
-              activeClassName="c-gray6"
-              to="/work">
-              Work
-            </Link>
-            <Link
-              className="c-gray3 h-black pa-1 ml-2"
-              activeClassName="c-gray6"
-              to="/blog">
-              Blog
-            </Link>
-            <Link
-              className="c-gray3 h-black pa-1 ml-2"
-              activeClassName="c-gray6"
-              to="/contact">
-              Contact
-            </Link>
+            {links.map(link => (
+              <Link
+                className="c-gray3 h-black pa-1 ml-2"
+                activeClassName="c-gray6"
+                to={link.to}>
+                {link.text}
+              </Link>
+            ))}
           </nav>
         </div>
         {this.state.isMenuOpen && (
           <div className="d-none-m x xd-column mb-5 ta-center fs-18">
+          {links.map(link => (
             <Link
               className="Navigation-mobileMenuLink c-gray3 pa-3"
               activeClassName="c-gray6"
-              to="/about"
+              to={link.to}
               onClick={this.handleMobileLinkClick}>
-              About
+              {link.text}
             </Link>
-            <Link
-              className="Navigation-mobileMenuLink c-gray3 pa-3"
-              activeClassName="c-gray6"
-              to="/services"
-              onClick={this.handleMobileLinkClick}>
-              Services
-            </Link>
-            <Link
-              className="Navigation-mobileMenuLink c-gray3 pa-3"
-              activeClassName="c-gray6"
-              to="/work"
-              onClick={this.handleMobileLinkClick}>
-              Work
-            </Link>
-            <Link
-              className="Navigation-mobileMenuLink c-gray3 pa-3"
-              activeClassName="c-gray6"
-              to="/blog"
-              onClick={this.handleMobileLinkClick}>
-              Blog
-            </Link>
-            <Link
-              className="Navigation-mobileMenuLink c-gray3 pa-3"
-              activeClassName="c-gray6"
-              to="/contact"
-              onClick={this.handleMobileLinkClick}>
-              Contact
-            </Link>
+          ))}
           </div>
         )}
       </div>
