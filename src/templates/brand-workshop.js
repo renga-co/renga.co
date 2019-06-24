@@ -1,5 +1,4 @@
 import React from 'react';
-import cx from 'classnames';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import MetaTags from '../components/meta-tags';
@@ -8,7 +7,6 @@ import CalloutLink from '../components/type-callout-link';
 import StepNumberBadge from '../components/type-step-number-badge';
 import ReferralList from '../components/referral-list';
 import ContactForm from '../components/contact-form';
-import Icon from '../components/icon';
 import Title from '../components/type-title';
 import TherapistWorkshop from '../components/therapist-workshop';
 import scrollTo from '../scroll-to';
