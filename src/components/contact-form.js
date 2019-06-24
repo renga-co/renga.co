@@ -17,7 +17,7 @@ const FormLabel = ({ className, children, optional, ...props }) => (
   <label
     className={cx(
       className,
-      'FormLabel d-block c-gray3 fw-semibold ls-loose tt-uppercase fs-14',
+      'FormLabel d-block c-gray3 fw-bold ls-loose tt-uppercase fs-14',
     )}
     {...props}>
     {children}
@@ -142,7 +142,7 @@ export default class ContactForm extends Component<Props> {
           </p>
         )}
         <p className="mt-4">
-          <Button className="mh-auto" style={{ maxWidth: 200 }} type="submit" disabled={isSubmitting}>
+          <Button large className="mh-auto" style={{ maxWidth: 200 }} type="submit" disabled={isSubmitting}>
             {isSubmitting ? 'Sending...' : 'Send'}
           </Button>
         </p>

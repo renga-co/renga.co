@@ -47,8 +47,8 @@ export default class Menu extends Component {
     ];
 
     return (
-      <div className="ph-3-m pb-3">
-        <div className="x xa-center xj-spaceBetween pv-3 pv-4-m">
+      <div className="p-relative ph-3-m pb-3 z-3">
+        <div className="x xa-center xj-spaceBetween pv-3">
           <Link className="d-block x xa-center h-fade" to="/">
             <Logo width="56" height="56" />
           </Link>

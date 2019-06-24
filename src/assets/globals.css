@@ -1,23 +1,4 @@
-@font-face {
-  font-family: 'Adelle Sans';
-  src: url('../assets/AdelleSans-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Adelle Sans';
-  src: url('../assets/AdelleSans-RegularItalic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Adelle Sans';
-  src: url('../assets/AdelleSans-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
+@import './adelle.css';
 
 html {
   font-size: 100%;
@@ -153,6 +134,29 @@ cite {
   background-position: bottom center;
 }
 
+.hero-line {
+  border-top: 1px rgba(0, 0, 0, 0.1) solid;
+}
+
+.hero-illustration {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: -20px;
+  height: 400px;
+  background-position: right center;
+  background-size: contain;
+}
+
+.hero-illustration-people {
+  left: 50%;
+  transform: translate(-50%, -99%);
+}
+
+/* .hero-collaboration g > g > path {
+  vector-effect: non-scaling-stroke;
+} */
+
 .case-study-back-button {
   margin-left: 0;
 }
@@ -220,5 +224,16 @@ cite {
 
   .case-study-back-button {
     margin-left: -26px;
+  }
+
+  .hero-illustration {
+    left: 30%;
+    height: 540px;
+  }
+
+  .hero-illustration-people {
+    left: auto;
+    transform: translateY(-99%);
+    right: 5rem;
   }
 }

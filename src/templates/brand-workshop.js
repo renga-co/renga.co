@@ -32,7 +32,7 @@ const points = [
 
 const Subtitle = ({ children }) => (
   <div className="ta-center mb-4">
-    <h3 className="fs-24 mb-3 fw-semibold">{children}</h3>
+    <h3 className="fs-24 mb-3 fw-bold">{children}</h3>
   </div>
 );
 
@@ -100,7 +100,7 @@ const BrandWorkshopPage = props => {
                       style={{ height: 1, top: -32, left: 0 }}
                     />
                   )}
-                  <h3 className="fs-18 fw-semibold mb-1">{point.title}</h3>
+                  <h3 className="fs-18 fw-bold mb-1">{point.title}</h3>
                   <p className="fs-18 c-gray4">{point.content}</p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ const BrandWorkshopPage = props => {
         className="mw-700 w-100p mh-auto ta-center pv-4 pv-6-m"
         id="sign-up-form">
         <div className="ta-center mb-4">
-          <h3 className="fs-24 mb-3 fw-semibold">Send an Inquiry</h3>
+          <h3 className="fs-24 mb-3 fw-bold">Send an Inquiry</h3>
           <Content>
             <p>
               Fill out this form and we'll get in touch about organizing a one-on-one&nbsp;workshop.

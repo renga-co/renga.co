@@ -8,7 +8,9 @@ import Icon from '../components/icon';
 import Layout from '../components/layout';
 import Button from '../components/button';
 import Title from '../components/type-title';
-import TherapistIllustration from '../components/therapist-illustration';
+import TherapistIllustration from '../components/illustration-therapist';
+import CollaborationIllustration from '../components/illustration-collaboration';
+import linesIllustrationUrl from '../assets/images/hero-shapes.svg';
 import squiggleAUrl from '../assets/images/squiggle-a.svg';
 
 const people = [
@@ -61,7 +63,7 @@ const PersonQuote = ({ person, isRightAligned }) => (
     })}>
     <blockquote
       className={cx(
-        'p-relative d-inlineBlock xo-2 fs-16 fs-24-m fw-semibold pa-2 pa-3-m br-30 ta-center t--0d5-m',
+        'p-relative d-inlineBlock xo-2 fs-16 fs-24-m fw-bold pa-2 pa-3-m br-30 ta-center t--0d5-m',
       )}
       style={{
         flex: '1 0 50%',
@@ -90,51 +92,54 @@ const PersonQuote = ({ person, isRightAligned }) => (
 const IndexPage = () => (
   <Layout>
     <div className="lh-1d5">
-      <div className="x xd-column xd-row-m ta-center xa-center mw-900 mh-auto mb-6">
-        <div className="mb-4 mb-0-m w-50p-m">
-          <Title className="mb-2 mb-4-m lh-1d25">
-            Renga is a <span className="intro-squiggle">brand therapy</span>{' '}
-            group from <span className="ws-noWrap">Toronto</span>.
-          </Title>
-          <div />
-          <CalloutLink className="fs-16">
-            <Link to="/contact" className="x xa-center xj-center">
-              Get in touch <Icon name="arrow-right" iconSize={18} />
-            </Link>
-          </CalloutLink>
+      <div>
+        <div
+          className="x xj-center xj-start-m mb-4 mb-0-m pt-3-m pb-6 pb-3-m ta-center mh-auto"
+          style={{ maxWidth: 1300 }}>
+          <div class="p-relative w-50p-m ta-left-m pt-5-m pb-5 pb-6-m mb-5 mb-4-m z-2">
+            <h3 class="fs-16 fs-18-m c-gray3 mb-1">
+              Renga is a brand strategy & <span class="ws-noWrap">design studio</span>
+            </h3>
+            <h1
+              className="fs-36 fs-48-m fw-bold c-gray5 mb-2 mb-3-m lh-1d25">
+              We build brand confidence
+            </h1>
+            <div class="x xa-stretch xj-center xj-start-m">
+              <span class="mr-1">
+                <Button small inline>
+                  <span
+                    className="p-relative x xa-center"
+                    style={{ top: -1, left: -4 }}>
+                    <Icon name="play" size={18} iconSize={13} />
+                  </span>
+                  View our reel
+                </Button>
+              </span>
+              <Link to="/contact">
+                <Button small inline style={{ height: '100%' }}>
+                  Get in touch
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="w-50p-m mw-450 mh-auto">
-          <TherapistIllustration />
+        <div class="p-relative mw-900 mh-auto">
+          <div
+            class="p-absolute z-1 hero-illustration-people">
+            <CollaborationIllustration />
+          </div>
+          <div className="p-relative hero-line z-2" />
         </div>
-      </div>
-      <div className="ta-center pa-3">
-        <div className="xi xd-column xd-row-m ta-left-m xa-center xj-spaceBetween fs-18 bgc-brown pv-2 pv-1-m pa-1 br-12">
-          <span
-            className="x xa-center d-block d-inline-m ph-1 c-gray4 p-relative"
-            style={{ transform: 'translateY(3px) rotate(-5deg)' }}>
-            <Icon name="gift" iconSize={20} />
-          </span>
-          <p className="pt-2 pv-0-m pr-4-m mb-3 mb-0-m c-gray4">
-            We’re offering a <strong>free branding workshop</strong> for a
-            limited time
-          </p>
-          <Link to="/brand-workshop">
-            <Button small inline>
-              <span className="ph-1">Learn more</span>
-              <Icon name="arrow-right" iconSize={18} />
-            </Button>
-          </Link>
-        </div>
+        <div
+          class="hero-illustration bgr-noRepeat pe-none"
+          style={{ backgroundImage: `url(${linesIllustrationUrl})` }}
+        />
       </div>
       <div className="mw-700 mh-auto ta-center pv-4">
         <Content>
-          <h3 className="fs-24 mb-3 fw-semibold">What is brand therapy?</h3>
-          <p>
-            Rather than a quick fix, it’s a method that listens, collaborates,
-            and empowers your brand to reach the right people by establishing
-            a&nbsp;strong&nbsp;core identity.
-          </p>
-          <p>Now, let's talk about why you’re here.</p>
+          <h3 className="fs-24 mb-3 fw-bold">
+            Do you have a healthy brand identity?
+          </h3>
         </Content>
         <div className="pv-4">
           {people.map((person, i) => (
@@ -146,33 +151,18 @@ const IndexPage = () => (
           ))}
         </div>
         <Content>
-          <p>
-            We know that each of our clients have their own unique challenges as
-            a growing business or brand, so we work alongside you to deliver a
-            custom solution that fits.
-          </p>
+          <p>If these questions resonate, you may have a brand identity problem.</p>
         </Content>
-        <div className="mt-4 x xd-column xd-row-m xa-center xj-center fs-16 lh-1d25">
-          <CalloutLink>
-            <ContactLink>Get in touch</ContactLink>
-          </CalloutLink>
-          <span
-            className="p-relative pv-2 pv-0-m ph-2-m fs-14 o-50p"
-            style={{ top: -1 }}>
-            or
-          </span>
-          <CalloutLink>
-            <Link to="/services">
-              See our services{' '}
-              <Icon
-                name="arrow-right"
-                className="p-relative"
-                style={{ top: 2 }}
-                iconSize={18}
-                size={18}
-              />
-            </Link>
-          </CalloutLink>
+        <div className="mt-4 x xd-column xd-row-m xa-center xj-center lh-1d25">
+          <Content>
+            <p>
+              All important decision making comes from a place of self-awareness,
+              so discovery leads our entire process. From there, our team gets
+              together and brings their unique blend of thinking to the creative
+              process. Finally, because we work so closely with you, we deliver
+              results that fit your brand’s identity.
+            </p>
+          </Content>
         </div>
         <div className="mt-6 ta-center c-geraldine pe-none us-none">
           <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />

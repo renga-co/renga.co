@@ -19,7 +19,7 @@ const PostPreview = props => {
           dateTime={date.toISOString()}>
           {utils.formatPostTimestamp(date)}
         </time>
-        <h3 className="PostPreview-title fs-24 fw-semibold mb-1">
+        <h3 className="PostPreview-title fs-24 fw-bold mb-1">
           {post.title}
         </h3>
         <p className="fs-18">{excerpt}</p>

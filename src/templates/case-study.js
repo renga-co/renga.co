@@ -105,7 +105,7 @@ const CaseStudyPage = props => {
               Back to all work
             </span>
           </Link>
-          <h1 className="fs-30 fs-36-m fw-semibold lh-1d25 mb-1 mb-2-m">
+          <h1 className="fs-30 fs-36-m fw-bold lh-1d25 mb-1 mb-2-m">
             {preventWidows(page.title)}
           </h1>
           <h2 className="fs-18 fs-24-m c-gray4" style={{ maxWidth: 550 }}>
@@ -122,7 +122,7 @@ const CaseStudyPage = props => {
         <div className="CaseStudy-metaContainer p-relative mw-1200 mh-auto w-100p">
           <aside className="CaseStudy-meta p-absolute-m l-0 t-0 fs-14 lh-1d5">
             <div className="mb-2-m">
-              <h4 className="fw-semibold">Scope</h4>
+              <h4 className="fw-bold">Scope</h4>
               <ul className="c-gray4">
                 {page.projectScope.map(item => (
                   <li key={item}>{item}</li>
@@ -130,7 +130,7 @@ const CaseStudyPage = props => {
               </ul>
             </div>
             <div>
-              <h4 className="fw-semibold">Team</h4>
+              <h4 className="fw-bold">Team</h4>
               <ul className="c-gray4">
                 {page.projectMembers.map(item => (
                   <li key={item}>{item}</li>
@@ -144,7 +144,7 @@ const CaseStudyPage = props => {
         </Content>
         {showOtherCaseStudies && (
           <footer className="mt-6 mt-7-m mw-900 mh-auto">
-            <h3 className="fs-24 fw-semibold ta-center mb-5">
+            <h3 className="fs-24 fw-bold ta-center mb-5">
               See more of our work
             </h3>
             <div className="x xd-column xd-row-m xa-center xj-center">
