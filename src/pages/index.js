@@ -1,13 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 import { Link } from 'gatsby';
-import CalloutLink from '../components/type-callout-link';
-import ContactLink from '../components/contact-link';
 import Content from '../components/content';
 import Icon from '../components/icon';
 import Layout from '../components/layout';
 import Button from '../components/button';
-import Title from '../components/type-title';
 import TherapistIllustration from '../components/illustration-therapist';
 import CollaborationIllustration from '../components/illustration-collaboration';
 import illustrationWavingUrl from '../assets/images/home-waving.svg';
@@ -73,31 +70,36 @@ const IndexPage = () => (
         </div>
         <div class="p-relative mw-900 mh-auto" />
       </div>
-      <div className="p-relative mw-900 bgc-brown br-30 ph-3 mh-auto ta-center">
-        <div class="p-absolute z-1 hero-illustration-people">
+      <div className="p-relative mw-1200 bgc-brown br-30 ph-3 mh-auto ta-center">
+        <div class="p-absolute z-1 HeroIllustrationPeople">
           <CollaborationIllustration />
         </div>
-        <div class="hero-illustration bgr-noRepeat pe-none" />
+        <div class="HeroIllustrationShapes bgr-noRepeat pe-none" />
         <div className="pv-4">
-          <h3 className="fs-24 fw-medium mb-3 fw-bold">
+          <h3 className="fs-24 fw-bold">
             Do you have a healthy brand identity?
           </h3>
-          <div className="pv-4" />
+          <div className="BrandIdentityQuestionGrid mw-700 mh-auto pv-3 pv-4-m fw-semibold">
+            <div className="pv-1 ph-3 br-12 x xj-center xj-end-m xa-center">Are investors<br />“just not getting it”?</div>
+            <div className="pv-1 ph-3 mt-1 mt-0-m br-12 x xj-center xa-center">Is senior leadership disagreeing<br />about the next steps?</div>
+            <div className="pv-1 ph-3 mt-1 mt-0-m br-12 x xj-center xj-end-m xa-center">Do your employees<br />describe your business<br />in different ways?</div>
+            <div className="pv-1 ph-3 mt-1 mt-0-m br-12 x xj-center xj-start-m xa-center ta-left-m">Are you trying new marketing<br />tactics without success?</div>
+          </div>
           <Content>
             <p>
-              If these questions resonate, you may have a brand identity
-              problem.
+              If these questions resonate, you may have a <span className="ws-noWrap">brand identity
+              problem.</span>
             </p>
           </Content>
         </div>
       </div>
-      <div className="mw-900 mh-auto ta-center pt-6 pe-none us-none">
-        <img src={illustrationTherapyUrl} />
+      <div className="mw-1200 mh-auto ta-center pt-6 pe-none us-none">
+        <img alt="" src={illustrationTherapyUrl} />
       </div>
       <div className="mw-700 ph-3 pt-5 mh-auto ta-center">
         <Content>
-          <h3 className="fs-24 mw-400 mb-3 fw-bold">
-            We like to describe our work as brand therapy
+          <h3 className="fs-24 lh-1d25 mw-400 mb-3 fw-bold">
+            We like to describe our work as <span className="ws-noWrap">brand therapy</span>
           </h3>
         </Content>
         <Content>
@@ -115,11 +117,9 @@ const IndexPage = () => (
       </div>
       <section>
         <div className="mw-700 ph-3 mh-auto ta-center">
-          <Content>
-            <h3 className="fs-24 mw-400 mb-3 fw-bold">
-              Hear from who we&rsquo;ve helped
-            </h3>
-          </Content>
+          <h3 className="fs-24 fw-bold mw-400">
+            Hear from who we&rsquo;ve helped
+          </h3>
         </div>
         <div className="TestimonialGrid mw-1200 ph-3 mt-5 mh-auto ta-left">
           {testimonials.map(t => (
@@ -131,7 +131,7 @@ const IndexPage = () => (
                   style={{ flexBasis: '3rem', width: '3rem', height: '3rem' }}
                 />
                 <div>
-                  <h5 className="fw-medium">{t.name}</h5>
+                  <h5 className="fw-semibold">{t.name}</h5>
                   <h6 className="fs-16 c-gray3">
                     {t.company}, {t.position}
                   </h6>
@@ -143,7 +143,7 @@ const IndexPage = () => (
       </section>
       <div className="mw-700 ph-3 mt-5 mt-6-m mb-4 mb-5-m mh-auto ta-center">
         <div className="mb-3 pe-none us-none">
-          <img src={illustrationWavingUrl} />
+          <img alt="" src={illustrationWavingUrl} />
         </div>
         <Content className="mb-3">
           <p>

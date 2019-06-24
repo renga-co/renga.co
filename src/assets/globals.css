@@ -142,27 +142,63 @@ cite {
   border-top: 1px rgba(0, 0, 0, 0.1) solid;
 }
 
-.hero-illustration {
+.HeroIllustrationShapes {
   background-image: url('../assets/images/hero-shapes.svg');
   position: absolute;
   top: 0;
-  left: 0;
+  left: -16px;
   right: 0;
+  width: 100vw;
   height: 400px;
   background-position: right center;
   background-size: contain;
-  transform: translate(40%, -110%);
+  transform: translate(0, -150%);
 }
 
-.hero-illustration-people {
+.HeroIllustrationPeople {
   left: 50%;
   transform: translate(-50%, -99%);
   width: 80%;
+  max-width: 300px;
 }
 
-/* .hero-collaboration g > g > path {
-  vector-effect: non-scaling-stroke;
-} */
+.BrandIdentityQuestionGrid {
+}
+
+.BrandIdentityQuestionGrid > div {
+  background-repeat: no-repeat;
+}
+
+.BrandIdentityQuestionGrid > div:nth-child(1) {
+  background-image: url('../assets/images/home-border-question-a.svg');
+  background-position: center;
+  padding-top: 10px;
+  padding-left: 24px;
+  height: 75px;
+}
+
+.BrandIdentityQuestionGrid > div:nth-child(2) {
+  background-image: url('../assets/images/home-border-question-b.svg');
+  background-position: center;
+  padding-top: 10px;
+  padding-left: 24px;
+  height: 75px;
+}
+
+.BrandIdentityQuestionGrid > div:nth-child(3) {
+  background-image: url('../assets/images/home-border-question-c.svg');
+  background-position: center;
+  padding-right: 24px;
+  height: 97px;
+}
+
+.BrandIdentityQuestionGrid > div:nth-child(4) {
+  background-image: url('../assets/images/home-border-question-d.svg');
+  background-position: center;
+  padding-top: 15px;
+  padding-right: 24px;
+  height: 97px;
+}
 
 .case-study-back-button {
   margin-left: 0;
@@ -233,15 +269,19 @@ cite {
     margin-left: -26px;
   }
 
-  .hero-illustration {
+  .HeroIllustrationShapes {
+    width: 900px;
     height: 540px;
+    left: auto;
+    right: 10rem;
+    transform: translate(40%, -120%);
   }
 
-  .hero-illustration-people {
+  .HeroIllustrationPeople {
     left: auto;
+    right: 10rem;
     transform: translateY(-99%);
-    right: 5rem;
-    max-width: 360px;
+    max-width: 350px;
   }
 
   .TestimonialGrid {
@@ -252,5 +292,25 @@ cite {
 
   .TestimonialGrid-testimonial {
 
+  }
+
+  .BrandIdentityQuestionGrid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
+  }
+
+  .BrandIdentityQuestionGrid > div:nth-child(1) {
+    background-position: right center;
+  }
+
+  .BrandIdentityQuestionGrid > div:nth-child(3) {
+    background-position: right center;
+  }
+
+  .BrandIdentityQuestionGrid > div:nth-child(4) {
+    background-position: left center;
   }
 }
