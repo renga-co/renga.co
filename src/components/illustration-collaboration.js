@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CollaborationIllustration = () => (
-  <svg width="350" height="230" viewBox="0 0 253 186" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="350" height="260" viewBox="0 0 253 186" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g>
   <path d="M69.5 64.6C69.5 64.6 66.6 66.9 57.7 67.3C48.8 67.7 43.3 64.8 41.4 71.2C39.5 77.6 53.1 92.9 53.1 92.9L47.6 93.7C47.2 90.8 44.4 88.8 41.5 89.2C38.6 89.6 36.6 92.4 37 95.3C37.4 98.2 40.2 100.2 43.1 99.8" stroke="black" vector-effect="non-scaling-stroke" stroke-width="1.9451" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M54 126.8L41.8 100" stroke="black" vector-effect="non-scaling-stroke" stroke-width="1.9451" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>

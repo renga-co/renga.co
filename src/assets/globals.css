@@ -139,13 +139,15 @@ cite {
 }
 
 .hero-illustration {
+  background-image: url('../assets/images/hero-shapes.svg');
   position: absolute;
-  top: -20px;
+  top: 0;
   left: 0;
-  right: -20px;
+  right: 0;
   height: 400px;
   background-position: right center;
   background-size: contain;
+  transform: translate(40%, -110%);
 }
 
 .hero-illustration-people {
@@ -227,7 +229,6 @@ cite {
   }
 
   .hero-illustration {
-    left: 30%;
     height: 540px;
   }
 
@@ -235,5 +236,15 @@ cite {
     left: auto;
     transform: translateY(-99%);
     right: 5rem;
+  }
+
+  .TestimonialGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
+  }
+
+  .TestimonialGrid-testimonial {
+
   }
 }
