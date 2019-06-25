@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import cx from 'classnames';
 import { Link } from 'gatsby';
 import { Dialog } from '@reach/dialog';
 import fitvids from 'fitvids';
@@ -7,7 +6,6 @@ import Content from '../components/content';
 import Icon from '../components/icon';
 import Layout from '../components/layout';
 import Button from '../components/button';
-import TherapistIllustration from '../components/illustration-therapist';
 import CollaborationIllustration from '../components/illustration-collaboration';
 import illustrationWavingUrl from '../assets/images/home-waving.svg';
 import illustrationTherapyUrl from '../assets/images/home-therapy.svg';
