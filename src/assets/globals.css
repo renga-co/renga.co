@@ -48,7 +48,8 @@ body,
 
 img,
 svg,
-video {
+video,
+iframe {
   vertical-align: top;
 }
 
@@ -138,8 +139,13 @@ cite {
   background-position: bottom center;
 }
 
-.hero-line {
-  border-top: 1px rgba(0, 0, 0, 0.1) solid;
+[data-reach-dialog-overlay],
+[data-reach-dialog-content] {
+  z-index: 999;
+}
+
+[data-reach-dialog-content] {
+  width: 95vw;
 }
 
 .HeroIllustrationShapes {
@@ -267,6 +273,12 @@ cite {
 
   .case-study-back-button {
     margin-left: -26px;
+  }
+
+  [data-reach-dialog-content] {
+    width: 60vw;
+    max-width: 800px;
+    max-height: 80vh;
   }
 
   .HeroIllustrationShapes {
