@@ -19,18 +19,21 @@ const testimonials = [
     position: 'MoneyClip, Business Development',
     content:
       'Our start-up will live or die on brand messaging. We were lucky to find a team that simultaneously wears creative, entrepreneur, and customer hats.',
+    portraitUrl: require('../assets/images/testimonial-alex.jpg'),
   },
   {
     name: 'Iain',
     position: 'Main St. Bakehouse, Owner',
     content:
       'Renga’s focus, attention to detail, and good design made it an easy experience for all of us. We were very happy with the outcome and have since established a well loved brand in our town.',
+    portraitUrl: require('../assets/images/testimonial-alex.jpg'),
   },
   {
     name: 'Alex',
     position: 'Public Speaker',
     content:
       'Renga is able to pull your brand out through a process that both clarifies and empowers your brand.',
+    portraitUrl: require('../assets/images/testimonial-alex.jpg'),
   },
 ];
 
@@ -168,8 +171,9 @@ const IndexPage = () => {
                 <div className="pv-2 ph-3 bgc-brown br-12">{t.content}</div>
                 <div className="x xa-center mt-2">
                   <div
-                    className="br-round bgc-brown mr-2"
+                    className="br-round bgc-brown mr-2 bgs-cover bgr-noRepeat"
                     style={{
+                      backgroundImage: `url(${t.portraitUrl})`,
                       flexBasis: '3rem',
                       flexShrink: '0',
                       width: '3rem',
