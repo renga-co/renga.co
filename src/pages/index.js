@@ -38,6 +38,8 @@ const testimonials = [
     content:
       'Renga is able to pull your brand out through a process that is both clarifying and empowering.',
     portraitUrl: require('../assets/images/testimonial-alex.jpg'),
+    to: '/brand-workshop',
+    toLabel: <>Learn about our workshop &rarr;</>
   },
 ];
 
@@ -222,16 +224,12 @@ const IndexPage = () => {
                   {t.content}
                 </div>
                 <div className="ph-3">
-                  {t.to ? (
+                  {t.to && (
                     <Link
                       to={t.to}
                       className="c-darkGeraldine tt-uppercase fs-14 ls-loose h-fade fw-bold">
-                      Read the case study &rarr;
+                      {t.toLabel || <>Read the case study &rarr;</>}
                     </Link>
-                  ) : (
-                    <span className="c-gray2 tt-uppercase fs-14 ls-loose fw-bold">
-                      Case Study Coming Soon
-                    </span>
                   )}
                 </div>
               </div>
