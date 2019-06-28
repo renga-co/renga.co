@@ -242,8 +242,7 @@ const IndexPage = () => {
           </div>
           <Content className="mb-3">
             <p>
-              We know every business has different problems. Drop us a note and
-              we’d be happy to talk with you about your brand and business.
+              We know every business has its <span className="ws-noWrap">own unique problems.</span> <br className="d-none d-inline-s" />Let's get to work with solving yours today.
             </p>
           </Content>
           <div class="x xj-center">
