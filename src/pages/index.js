@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import { Dialog } from '@reach/dialog';
-import fitvids from 'fitvids';
 import Content from '../components/content';
 import Icon from '../components/icon';
 import Layout from '../components/layout';
@@ -9,6 +8,11 @@ import Button from '../components/button';
 import CollaborationIllustration from '../components/illustration-collaboration';
 import illustrationWavingUrl from '../assets/images/home-waving.svg';
 import illustrationTherapyUrl from '../assets/images/home-therapy.svg';
+import formulaCollaborationUrl from '../assets/images/formula-collaboration.svg';
+import formulaDiscoveryUrl from '../assets/images/formula-discovery.svg';
+import formulaResultsUrl from '../assets/images/formula-results.svg';
+import formulaPlusUrl from '../assets/images/formula-plus.svg';
+import formulaEqualsUrl from '../assets/images/formula-equals.svg';
 import squiggleAUrl from '../assets/images/squiggle-a.svg';
 
 const testimonials = [
@@ -32,52 +36,46 @@ const testimonials = [
     name: 'Alex',
     position: 'Public Speaker',
     content:
-      'Renga is able to pull your brand out through a process that both clarifies and empowers your brand.',
+      'Renga is able to pull your brand out through a process that is both clarifying and empowering.',
     portraitUrl: require('../assets/images/testimonial-alex.jpg'),
   },
 ];
 
-const ReelVideo = () => {
-  useEffect(() => {
-    fitvids();
-  });
-
-  return (
-    <div>
+const ReelVideo = () => (
+  <div>
+    <div
+      class="wistia_responsive_padding"
+      style={{ paddingTop: '56.25%', position: 'relative' }}>
       <div
-        class="wistia_responsive_padding"
-        style={{ paddingTop: '56.25%', position: 'relative' }}>
-        <div
-          className="wistia_responsive_wrapper"
-          style={{
-            height: '100%',
-            left: 0,
-            position: 'absolute',
-            top: 0,
-            width: '100%',
-          }}>
-          <iframe
-            src="https://fast.wistia.net/embed/iframe/otstly6tor?seo=false&videoFoam=true&autoPlay=true"
-            title="2019 Brand Reel Video"
-            allowtransparency="true"
-            frameborder="0"
-            scrolling="no"
-            className="wistia_embed"
-            name="wistia_embed"
-            allowfullscreen
-            mozallowfullscreen
-            webkitallowfullscreen
-            oallowfullscreen
-            msallowfullscreen
-            width="100%"
-            height="100%"
-          />
-        </div>
+        className="wistia_responsive_wrapper"
+        style={{
+          height: '100%',
+          left: 0,
+          position: 'absolute',
+          top: 0,
+          width: '100%',
+        }}>
+        <iframe
+          src="https://fast.wistia.net/embed/iframe/otstly6tor?seo=false&videoFoam=true&autoPlay=true"
+          title="2019 Brand Reel Video"
+          allowtransparency="true"
+          frameborder="0"
+          scrolling="no"
+          className="wistia_embed"
+          name="wistia_embed"
+          allowfullscreen
+          mozallowfullscreen
+          webkitallowfullscreen
+          oallowfullscreen
+          msallowfullscreen
+          width="100%"
+          height="100%"
+        />
       </div>
-      <script src="https://fast.wistia.net/assets/external/E-v1.js" async />
     </div>
-  );
-};
+    <script src="https://fast.wistia.net/assets/external/E-v1.js" async />
+  </div>
+);
 
 const IndexPage = () => {
   const [open, setOpen] = useState(false);
@@ -129,7 +127,7 @@ const IndexPage = () => {
           <div class="HeroIllustrationShapes bgr-noRepeat pe-none" />
           <div className="pv-4">
             <h3 className="fs-24 fw-bold">
-              Do you have a healthy brand identity?
+              Does your business have a healthy brand identity?
             </h3>
             <div className="BrandIdentityQuestionGrid mw-700 mh-auto pv-3 pv-4-m fw-semibold">
               <div className="pv-1 ph-3 br-12 x xj-center xj-end-m xa-center">
@@ -157,7 +155,7 @@ const IndexPage = () => {
             </div>
             <Content>
               <p>
-                If these questions resonate, you may have a{' '}
+                If you said yes to any of those questions, you may have a{' '}
                 <span className="ws-noWrap">brand identity problem.</span>
               </p>
             </Content>
@@ -183,10 +181,14 @@ const IndexPage = () => {
             </p>
           </Content>
         </div>
-        <div className="pt-5 mh-auto ta-center mw-700">
-          <Content>
-            <p>a + b = results you can be proud of</p>
-          </Content>
+        <div className="pt-5 mh-auto ta-center mw-900">
+          <div className="x xd-column xd-row-m">
+          <img src={formulaDiscoveryUrl} />
+          <img className="pa-3 pa-4-m" src={formulaPlusUrl} />
+          <img src={formulaCollaborationUrl} />
+          <img className="pa-3 pa-4-m" src={formulaEqualsUrl} />
+          <img src={formulaResultsUrl} />
+          </div>
         </div>
         <div className="mv-6 ta-center c-geraldine pe-none us-none">
           <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
