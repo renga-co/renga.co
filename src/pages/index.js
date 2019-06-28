@@ -17,14 +17,14 @@ const testimonials = [
     position: 'MoneyClip, Business Development',
     content:
       'Our start-up will live or die on brand messaging. We were lucky to find a team that simultaneously wears creative, entrepreneur, and customer hats.',
-    portraitUrl: require('../assets/images/testimonial-alex.jpg'),
+    portraitUrl: require('../assets/images/testimonial-brian.jpg'),
   },
   {
     name: 'Iain',
     position: 'Main St. Bakehouse, Owner',
     content:
       'Renga’s focus, attention to detail, and good design made it an easy experience for all of us. We were very happy with the outcome and have since established a well loved brand in our town.',
-    portraitUrl: require('../assets/images/testimonial-alex.jpg'),
+    portraitUrl: require('../assets/images/testimonial-iain.jpg'),
   },
   {
     name: 'Alex',
@@ -40,15 +40,36 @@ const ReelVideo = () => {
     fitvids();
   });
 
-  return <iframe
-    src="https://player.vimeo.com/video/338827470"
-    width="640"
-    height="480"
-    frameBorder="0"
-    allow="autoplay; fullscreen"
-    allowFullScreen
-  />;
-}
+  return (
+    <div>
+      <div
+        class="wistia_responsive_padding"
+        style={{ paddingTop: '56.25%', position: 'relative' }}>
+        <div
+          className="wistia_responsive_wrapper"
+          style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%'}}>
+          <iframe
+            src="https://fast.wistia.net/embed/iframe/otstly6tor?seo=false&videoFoam=true&autoPlay=true"
+            title="2019 Brand Reel Video"
+            allowtransparency="true"
+            frameborder="0"
+            scrolling="no"
+            className="wistia_embed"
+            name="wistia_embed"
+            allowfullscreen
+            mozallowfullscreen
+            webkitallowfullscreen
+            oallowfullscreen
+            msallowfullscreen
+            width="100%"
+            height="100%"
+          />
+        </div>
+      </div>
+      <script src="https://fast.wistia.net/assets/external/E-v1.js" async />
+    </div>
+  );
+};
 
 const IndexPage = () => {
   const [open, setOpen] = useState(false);

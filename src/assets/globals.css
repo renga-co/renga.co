@@ -146,6 +146,8 @@ cite {
 
 [data-reach-dialog-content] {
   width: 95vw;
+  padding: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
 .HeroIllustrationShapes {
@@ -276,8 +278,8 @@ cite {
   }
 
   [data-reach-dialog-content] {
-    width: 60vw;
-    max-width: 800px;
+    width: 65vw;
+    max-width: 820px;
     max-height: 80vh;
   }
 
