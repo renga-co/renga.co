@@ -18,7 +18,7 @@ const testimonials = [
     content:
       'Our start-up will live or die on brand messaging. We were lucky to find a team that simultaneously wears creative, entrepreneur, and customer hats.',
     portraitUrl: require('../assets/images/testimonial-brian.jpg'),
-    to: '/work/moneyclip'
+    to: '/work/moneyclip',
   },
   {
     name: 'Iain',
@@ -26,7 +26,7 @@ const testimonials = [
     content:
       'Renga’s focus, attention to detail, and good design made it an easy experience for all of us. We were very happy with the outcome and have since established a well loved brand in our town.',
     portraitUrl: require('../assets/images/testimonial-iain.jpg'),
-    to: '/work/main-street-bakehouse'
+    to: '/work/main-street-bakehouse',
   },
   {
     name: 'Alex',
@@ -49,7 +49,13 @@ const ReelVideo = () => {
         style={{ paddingTop: '56.25%', position: 'relative' }}>
         <div
           className="wistia_responsive_wrapper"
-          style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%'}}>
+          style={{
+            height: '100%',
+            left: 0,
+            position: 'absolute',
+            top: 0,
+            width: '100%',
+          }}>
           <iframe
             src="https://fast.wistia.net/embed/iframe/otstly6tor?seo=false&videoFoam=true&autoPlay=true"
             title="2019 Brand Reel Video"
@@ -177,6 +183,11 @@ const IndexPage = () => {
             </p>
           </Content>
         </div>
+        <div className="pt-5 mh-auto ta-center mw-700">
+          <Content>
+            <p>a + b = results you can be proud of</p>
+          </Content>
+        </div>
         <div className="mv-6 ta-center c-geraldine pe-none us-none">
           <img alt="" style={{ maxWidth: 300 }} src={squiggleAUrl} />
         </div>
@@ -189,34 +200,38 @@ const IndexPage = () => {
           <div className="TestimonialGrid mw-1200 ph-3 mt-5 mh-auto ta-left">
             {testimonials.map(t => (
               <div className="TestimonialGrid-testimonial mt-4 mt-0-m">
-              <div className="x xa-center ph-3 mb-2">
-                <div
-                  className="br-round bgc-brown mr-2 bgs-cover bgr-noRepeat"
-                  style={{
-                    backgroundImage: `url(${t.portraitUrl})`,
-                    flexBasis: '3rem',
-                    flexShrink: '0',
-                    width: '3rem',
-                    height: '3rem',
-                  }}
-                />
-                <div className="fs-16 lh-1d25">
-                  <h5 className="fw-semibold">{t.name}</h5>
-                  <h6 className="c-gray3">{t.position}</h6>
+                <div className="x xa-center ph-3 mb-2">
+                  <div
+                    className="br-round bgc-brown mr-2 bgs-cover bgr-noRepeat"
+                    style={{
+                      backgroundImage: `url(${t.portraitUrl})`,
+                      flexBasis: '3rem',
+                      flexShrink: '0',
+                      width: '3rem',
+                      height: '3rem',
+                    }}
+                  />
+                  <div className="fs-16 lh-1d25">
+                    <h5 className="fw-semibold">{t.name}</h5>
+                    <h6 className="c-gray3">{t.position}</h6>
+                  </div>
                 </div>
-              </div>
-                <div className="pv-2 ph-3 bgc-brown br-12 mb-1">{t.content}</div>
+                <div className="pv-2 ph-3 bgc-brown br-12 mb-1">
+                  {t.content}
+                </div>
                 <div className="ph-3">
-
-                {t.to ? (
-                  <Link to={t.to} className="c-darkGeraldine tt-uppercase fs-14 ls-loose h-fade fw-bold">
-                    Read the case study &rarr;
-                  </Link>
-                ) : (
-                  <span className="c-gray2 tt-uppercase fs-14 ls-loose fw-bold">Case Study Coming Soon</span>
-                )}
+                  {t.to ? (
+                    <Link
+                      to={t.to}
+                      className="c-darkGeraldine tt-uppercase fs-14 ls-loose h-fade fw-bold">
+                      Read the case study &rarr;
+                    </Link>
+                  ) : (
+                    <span className="c-gray2 tt-uppercase fs-14 ls-loose fw-bold">
+                      Case Study Coming Soon
+                    </span>
+                  )}
                 </div>
-
               </div>
             ))}
           </div>
