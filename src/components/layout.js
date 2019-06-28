@@ -17,7 +17,7 @@ const Layout = ({ children, data }) => {
         <link rel="shortcut icon" href="/favicon.png" />
       </Helmet>
       <MetaTags description={meta.description} />
-      <main className="ph-2 ph-3-m x xd-column h-100p">
+      <main className="Container ph-2 ph-3-m x xd-column h-100p">
         <Menu />
         {children}
         <Footer />

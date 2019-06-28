@@ -4,20 +4,19 @@
   justify-content: center;
   color: white;
   background-color: #ff766a;
-  padding: 14px 18px;
+  padding: 14px 18px 12px;
   border-radius: 8px;
   font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 8px 16px 6px;
   text-align: center;
-  text-transform: uppercase;
   transition: background-color 50ms ease, color 100ms ease;
 }
 
-.Button.Button--small {
-  padding: 6px 12px;
-  font-size: 0.8rem;
+.Button.Button--large {
+  font-size: 1em;
+  padding: 14px 18px 12px;
 }
 
 .Button.Button--inline {

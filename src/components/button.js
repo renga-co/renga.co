@@ -5,14 +5,14 @@ import cx from 'classnames';
 import './button.css';
 
 type Props = {
-  small: boolean,
+  large: boolean,
   inline: boolean,
   isDisabled: boolean,
   isLoading: boolean,
 }
 
-const Button = ({ className, small, inline, ...props }: Props) => (
-  <button className={cx(className, 'Button bgc-geraldine', { 'Button--small': small, 'Button--inline': inline })} {...props} />
+const Button = ({ className, large, inline, ...props }: Props) => (
+  <button className={cx(className, 'Button bgc-geraldine', { 'Button--large': large, 'Button--inline': inline })} {...props} />
 );
 
 export default Button;

@@ -13,7 +13,7 @@ import aboutRengaUrl from '../assets/images/about-renga.svg';
 
 const SubtitleBlock = ({ children }) => (
   <div className="ta-center mb-5">
-    <Subtitle className="fw-semibold">{children}</Subtitle>
+    <Subtitle className="fw-bold">{children}</Subtitle>
   </div>
 );
 
