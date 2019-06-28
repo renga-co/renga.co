@@ -151,16 +151,15 @@ cite {
 }
 
 .HeroIllustrationShapes {
-  background-image: url('../assets/images/hero-shapes.svg');
+  background-image: url('../assets/images/hero-shapes-mobile.svg');
   position: absolute;
   top: 0;
   left: -16px;
   right: 0;
   width: 100vw;
-  height: 400px;
-  background-position: right center;
-  background-size: contain;
-  transform: translate(0, -150%);
+  height: 500px;
+  background-position: center;
+  transform: translate(0, -125%);
 }
 
 .HeroIllustrationPeople {
@@ -284,7 +283,9 @@ cite {
   }
 
   .HeroIllustrationShapes {
-    width: 900px;
+    background-image: url('../assets/images/hero-shapes.svg');
+    background-position: right center;
+    max-width: 900px;
     height: 540px;
     left: auto;
     right: 10rem;
@@ -295,7 +296,7 @@ cite {
     left: auto;
     right: 10rem;
     transform: translateY(-99%);
-    max-width: 350px;
+    max-width: 300px;
   }
 
   .TestimonialGrid {
@@ -326,5 +327,20 @@ cite {
 
   .BrandIdentityQuestionGrid > div:nth-child(4) {
     background-position: left center;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .HeroIllustrationShapes {
+    background-size: contain;
+    max-width: 900px;
+    width: 70%;
+    height: 540px;
+    left: auto;
+    right: 10rem;
+  }
+
+  .HeroIllustrationPeople {
+    max-width: 320px;
   }
 }

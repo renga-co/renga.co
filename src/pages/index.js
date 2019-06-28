@@ -80,11 +80,11 @@ const IndexPage = () => {
         <div>
           <div className="x xj-center xj-start-m mb-4 mb-0-m pt-3-m pb-6 pb-3-m ta-center mw-1200 mh-auto">
             <div class="p-relative w-50p-m ta-left-m pt-5-m pb-5 pb-6-m mb-5 mb-4-m z-2">
-              <h3 class="fs-16 fs-18-m c-gray3 mb-1">
+              <h3 class="fs-14 fs-16-s fs-18-m c-gray3 mb-1">
                 Renga is a brand strategy &{' '}
                 <span class="ws-noWrap">design studio</span>
               </h3>
-              <h1 className="fs-36 fs-48-m fw-bold c-gray5 mb-2 mb-3-m lh-1d25">
+              <h1 className="fs-24 fs-30-s fs-48-m fw-bold c-gray5 mb-2 mb-3-m lh-1d25 ws-noWrap">
                 We build brand confidence
               </h1>
               <div class="x xa-stretch xj-center xj-start-m">
