@@ -185,11 +185,11 @@ const IndexPage = () => {
         </div>
         <div className="pt-5 mh-auto ta-center mw-900">
           <div className="x xd-column xd-row-m">
-          <img src={formulaDiscoveryUrl} />
-          <img className="pa-3 pa-4-m" src={formulaPlusUrl} />
-          <img src={formulaCollaborationUrl} />
-          <img className="pa-3 pa-4-m" src={formulaEqualsUrl} />
-          <img src={formulaResultsUrl} />
+            <img alt="Lead with discovery" src={formulaDiscoveryUrl} />
+            <img alt="+" className="ph-3 pv-3" src={formulaPlusUrl} />
+            <img alt="Strategic collaboration" src={formulaCollaborationUrl} />
+            <img alt="=" className="ph-3 pv-3" src={formulaEqualsUrl} />
+            <img alt="Results you can be proud of" src={formulaResultsUrl} />
           </div>
         </div>
         <div className="mv-6 ta-center c-geraldine pe-none us-none">
