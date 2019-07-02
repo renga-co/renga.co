@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { Dialog } from '@reach/dialog';
 import Content from '../components/content';
@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     name: 'Iain',
-    position: 'Main St. Bakehouse, Owner',
+    position: 'Main St. Bakehouse, Founder',
     content:
       'Renga’s focus, attention to detail, and good design made it an easy experience for all of us. We were very happy with the outcome and have since established a well loved brand in our town.',
     portraitUrl: require('../assets/images/testimonial-iain.jpg'),
@@ -137,7 +137,7 @@ const IndexPage = () => {
                 <br />
                 “just not getting it”?
               </div>
-              <div className="pv-1 ph-3 mt-1 mt-0-m br-12 x xj-center xa-center">
+              <div className="pv-1 ph-3 mt-1 mt-0-m br-12 x xj-center ta-left-m">
                 Is senior leadership disagreeing
                 <br />
                 about the next steps?
