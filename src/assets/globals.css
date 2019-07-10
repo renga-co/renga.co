@@ -39,14 +39,6 @@ body {
   background-color: rgba(255, 118, 106, 0.25);
 }
 
-html,
-body,
-#___gatsby,
-#___gatsby > div,
-#___gatsby > div > div {
-  height: 100%;
-}
-
 img,
 svg,
 video,
